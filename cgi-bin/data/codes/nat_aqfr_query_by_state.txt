@@ -1,0 +1,377 @@
+#
+# National Water Information System
+# 2025/01/10
+#
+#
+# Date Retrieved: USGS Water Data for the Nation Help System
+#
+state_cd	nat_aqfr_cd	nat_aqfr_nm
+2s	10s	60s
+00	N9999OTHER	Other aquifers
+01	N100ALLUVL	Alluvial aquifers
+01	N300PNSLVN	Pennsylvanian aquifers
+01	N400PDMBRX	Piedmont and Blue Ridge crystalline-rock aquifers
+01	N500MSSPPI	Mississippian aquifers
+01	N500VLYRDG	Valley and Ridge aquifers
+01	N9999OTHER	Other aquifers
+01	S100CSLLWD	Coastal lowlands aquifer system
+01	S100MSEMBM	Mississippi embayment aquifer system
+01	S100SECSLP	Southeastern Coastal Plain aquifer system
+01	S100SURFCL	Surficial aquifer system
+01	S400FLORDN	Floridan aquifer system
+02	N100AKUNCD	Alaska unconsolidated-deposit aquifers
+02	N9999OTHER	Other aquifers
+04	N100BSNRGB	Basin and Range basin-fill aquifers
+04	N300COPLTS	Colorado Plateaus aquifers
+04	N400BSNRGC	Basin and Range carbonate-rock aquifers
+04	N9999OTHER	Other aquifers
+05	N100ALLUVL	Alluvial aquifers
+05	N100MSRVVL	Mississippi River Valley alluvial aquifer
+05	N9999OTHER	Other aquifers
+05	S100MSEMBM	Mississippi embayment aquifer system
+05	S400OZRKPL	Ozark Plateaus aquifer system
+05	S500EDRTRN	Edwards-Trinity aquifer system
+06	N100BSNRGB	Basin and Range basin-fill aquifers
+06	N100CACSTL	California Coastal Basin aquifers
+06	N100PCFNWB	Pacific Northwest basin-fill aquifers
+06	N100PCFNWV	Pacific Northwest volcanic-rock aquifers
+06	N400BSNRGC	Basin and Range carbonate-rock aquifers
+06	N9999OTHER	Other aquifers
+06	S100CNRLVL	Central Valley aquifer system
+08	N100ALLUVL	Alluvial aquifers
+08	N100HGHPLN	High Plains aquifer
+08	N300COPLTS	Colorado Plateaus aquifers
+08	N9999OTHER	Other aquifers
+08	S100RIOGRD	Rio Grande aquifer system
+08	S300DNVRBS	Denver Basin aquifer system
+09	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+09	N300ERLMZC	Early Mesozoic basin aquifers
+09	N400NYNECB	New York and New England carbonate-rock aquifers
+09	N600NECRSN	New York and New England crystalline-rock aquifers
+09	N9999OTHER	Other aquifers
+10	N100ALLUVL	Alluvial aquifers
+10	N400PDMBRX	Piedmont and Blue Ridge crystalline-rock aquifers
+10	N9999OTHER	Other aquifers
+10	S100NATLCP	Northern Atlantic Coastal Plain aquifer system
+11	N400PDMBRX	Piedmont and Blue Ridge crystalline-rock aquifers
+11	N9999OTHER	Other aquifers
+11	S100NATLCP	Northern Atlantic Coastal Plain aquifer system
+12	N400BISCYN	Biscayne aquifer
+12	N9999OTHER	Other aquifers
+12	S100CSLLWD	Coastal lowlands aquifer system
+12	S100SURFCL	Surficial aquifer system
+12	S400FLORDN	Floridan aquifer system
+12	S500INTRMD	Intermediate aquifer system
+13	N300PNSLVN	Pennsylvanian aquifers
+13	N400PDMBRX	Piedmont and Blue Ridge crystalline-rock aquifers
+13	N500VLYRDG	Valley and Ridge aquifers
+13	N9999OTHER	Other aquifers
+13	S100SECSLP	Southeastern Coastal Plain aquifer system
+13	S100SURFCL	Surficial aquifer system
+13	S400FLORDN	Floridan aquifer system
+15	N600HIVLCC	Hawaii volcanic-rock aquifers
+15	N9999OTHER	Other aquifers
+16	N100BSNRGB	Basin and Range basin-fill aquifers
+16	N100CMBPLB	Columbia Plateau basin-fill aquifers
+16	N100PCFNWB	Pacific Northwest basin-fill aquifers
+16	N100PCFNWV	Pacific Northwest volcanic-rock aquifers
+16	N400BSNRGC	Basin and Range carbonate-rock aquifers
+16	N600CMBPLV	Columbia Plateau basaltic-rock aquifers
+16	N600SKRVPB	Snake River Plain basin-fill aquifers
+16	N600SKRVPV	Snake River Plain basaltic-rock aquifers
+16	N9999OTHER	Other aquifers
+16	S100NRMTIB	Northern Rocky Mountains Intermontane Basins aquifer systems
+17	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+17	N100MSRVVL	Mississippi River Valley alluvial aquifer
+17	N300PNSLVN	Pennsylvanian aquifers
+17	N400SLRDVN	Silurian-Devonian aquifers
+17	N500MSSPPI	Mississippian aquifers
+17	N9999OTHER	Other aquifers
+17	S100MSEMBM	Mississippi embayment aquifer system
+17	S100SECSLP	Southeastern Coastal Plain aquifer system
+17	S300CAMORD	Cambrian-Ordovician aquifer system
+17	S400OZRKPL	Ozark Plateaus aquifer system
+18	N100ALLUVL	Alluvial aquifers
+18	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+18	N300PNSLVN	Pennsylvanian aquifers
+18	N400SLRDVN	Silurian-Devonian aquifers
+18	N500MSSPPI	Mississippian aquifers
+18	N9999OTHER	Other aquifers
+19	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+19	N300LCRTCS	Lower Cretaceous aquifers
+19	N400SLRDVN	Silurian-Devonian aquifers
+19	N400UPCRBN	Upper carbonate aquifer
+19	N500MSSPPI	Mississippian aquifers
+19	N9999OTHER	Other aquifers
+19	S300CAMORD	Cambrian-Ordovician aquifer system
+20	N100ALLUVL	Alluvial aquifers
+20	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+20	N100HGHPLN	High Plains aquifer
+20	N300LCRTCS	Lower Cretaceous aquifers
+20	N9999OTHER	Other aquifers
+20	S400OZRKPL	Ozark Plateaus aquifer system
+21	N100ALLUVL	Alluvial aquifers
+21	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+21	N100MSRVVL	Mississippi River Valley alluvial aquifer
+21	N300PNSLVN	Pennsylvanian aquifers
+21	N400ORDVCN	Ordovician aquifers
+21	N400SLRDVN	Silurian-Devonian aquifers
+21	N500MSSPPI	Mississippian aquifers
+21	N9999OTHER	Other aquifers
+21	S100MSEMBM	Mississippi embayment aquifer system
+22	N100ALLUVL	Alluvial aquifers
+22	N100MSRVVL	Mississippi River Valley alluvial aquifer
+22	N9999OTHER	Other aquifers
+22	S100CSLLWD	Coastal lowlands aquifer system
+22	S100MSEMBM	Mississippi embayment aquifer system
+22	S100TXCLUP	Texas coastal uplands aquifer system
+23	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+23	N400NYNECB	New York and New England carbonate-rock aquifers
+23	N600NECRSN	New York and New England crystalline-rock aquifers
+23	N9999OTHER	Other aquifers
+24	N100ALLUVL	Alluvial aquifers
+24	N300ERLMZC	Early Mesozoic basin aquifers
+24	N300PNSLVN	Pennsylvanian aquifers
+24	N400PDMBRC	Piedmont and Blue Ridge carbonate-rock aquifers
+24	N400PDMBRX	Piedmont and Blue Ridge crystalline-rock aquifers
+24	N500MSSPPI	Mississippian aquifers
+24	N500VLYRDG	Valley and Ridge aquifers
+24	N9999OTHER	Other aquifers
+24	S100NATLCP	Northern Atlantic Coastal Plain aquifer system
+25	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+25	N300ERLMZC	Early Mesozoic basin aquifers
+25	N400NYNECB	New York and New England carbonate-rock aquifers
+25	N600NECRSN	New York and New England crystalline-rock aquifers
+25	N9999OTHER	Other aquifers
+25	S100NATLCP	Northern Atlantic Coastal Plain aquifer system
+26	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+26	N300JCBSVL	Jacobsville aquifer
+26	N300MRSHLL	Marshall aquifer
+26	N300PNSLVN	Pennsylvanian aquifers
+26	N400SLRDVN	Silurian-Devonian aquifers
+26	N9999OTHER	Other aquifers
+26	S300CAMORD	Cambrian-Ordovician aquifer system
+27	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+27	N300LCRTCS	Lower Cretaceous aquifers
+27	N400UPCRBN	Upper carbonate aquifer
+27	N500PLOZOC	Paleozoic aquifers
+27	N9999OTHER	Other aquifers
+27	S300CAMORD	Cambrian-Ordovician aquifer system
+28	N100MSRVVL	Mississippi River Valley alluvial aquifer
+28	N9999OTHER	Other aquifers
+28	S100CSLLWD	Coastal lowlands aquifer system
+28	S100MSEMBM	Mississippi embayment aquifer system
+28	S100SECSLP	Southeastern Coastal Plain aquifer system
+29	N100ALLUVL	Alluvial aquifers
+29	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+29	N100MSRVVL	Mississippi River Valley alluvial aquifer
+29	N400SLRDVN	Silurian-Devonian aquifers
+29	N500MSSPPI	Mississippian aquifers
+29	N9999OTHER	Other aquifers
+29	S100MSEMBM	Mississippi embayment aquifer system
+29	S300CAMORD	Cambrian-Ordovician aquifer system
+29	S400OZRKPL	Ozark Plateaus aquifer system
+30	N100ALLUVL	Alluvial aquifers
+30	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+30	N100PCFNWV	Pacific Northwest volcanic-rock aquifers
+30	N300LCRTCS	Lower Cretaceous aquifers
+30	N300LTRTRY	Lower Tertiary aquifers
+30	N300UPCTCS	Upper Cretaceous aquifers
+30	N500PLOZOC	Paleozoic aquifers
+30	N9999OTHER	Other aquifers
+30	S100NRMTIB	Northern Rocky Mountains Intermontane Basins aquifer systems
+31	N100ALLUVL	Alluvial aquifers
+31	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+31	N100HGHPLN	High Plains aquifer
+31	N300LCRTCS	Lower Cretaceous aquifers
+31	N9999OTHER	Other aquifers
+32	N100BSNRGB	Basin and Range basin-fill aquifers
+32	N100PCFNWB	Pacific Northwest basin-fill aquifers
+32	N100PCFNWV	Pacific Northwest volcanic-rock aquifers
+32	N400BSNRGC	Basin and Range carbonate-rock aquifers
+32	N600SRNVDV	Southern Nevada volcanic-rock aquifers
+32	N9999OTHER	Other aquifers
+33	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+33	N600NECRSN	New York and New England crystalline-rock aquifers
+33	N9999OTHER	Other aquifers
+34	N100ALLUVL	Alluvial aquifers
+34	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+34	N300ERLMZC	Early Mesozoic basin aquifers
+34	N400NYNECB	New York and New England carbonate-rock aquifers
+34	N400PDMBRC	Piedmont and Blue Ridge carbonate-rock aquifers
+34	N400PDMBRX	Piedmont and Blue Ridge crystalline-rock aquifers
+34	N500VLYRDG	Valley and Ridge aquifers
+34	N9999OTHER	Other aquifers
+34	S100NATLCP	Northern Atlantic Coastal Plain aquifer system
+35	N100BSNRGB	Basin and Range basin-fill aquifers
+35	N100HGHPLN	High Plains aquifer
+35	N100PCSRVR	Pecos River Basin alluvial aquifer
+35	N300COPLTS	Colorado Plateaus aquifers
+35	N9999OTHER	Other aquifers
+35	S100RIOGRD	Rio Grande aquifer system
+35	S400RSWLBS	Roswell Basin aquifer system
+36	N100ALLUVL	Alluvial aquifers
+36	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+36	N300ERLMZC	Early Mesozoic basin aquifers
+36	N300NYSDSN	New York sandstone aquifers
+36	N400NYNECB	New York and New England carbonate-rock aquifers
+36	N500VLYRDG	Valley and Ridge aquifers
+36	N600NECRSN	New York and New England crystalline-rock aquifers
+36	N9999OTHER	Other aquifers
+36	S100NATLCP	Northern Atlantic Coastal Plain aquifer system
+37	N300ERLMZC	Early Mesozoic basin aquifers
+37	N400CSLHYN	Castle Hayne aquifer
+37	N400PDMBRC	Piedmont and Blue Ridge carbonate-rock aquifers
+37	N400PDMBRX	Piedmont and Blue Ridge crystalline-rock aquifers
+37	N500VLYRDG	Valley and Ridge aquifers
+37	N9999OTHER	Other aquifers
+37	S100NATLCP	Northern Atlantic Coastal Plain aquifer system
+37	S100SURFCL	Surficial aquifer system
+38	N100ALLUVL	Alluvial aquifers
+38	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+38	N300LCRTCS	Lower Cretaceous aquifers
+38	N300LTRTRY	Lower Tertiary aquifers
+38	N300UPCTCS	Upper Cretaceous aquifers
+38	N500PLOZOC	Paleozoic aquifers
+38	N9999OTHER	Other aquifers
+39	N100ALLUVL	Alluvial aquifers
+39	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+39	N300PNSLVN	Pennsylvanian aquifers
+39	N400SLRDVN	Silurian-Devonian aquifers
+39	N500MSSPPI	Mississippian aquifers
+39	N9999OTHER	Other aquifers
+40	N100ALLUVL	Alluvial aquifers
+40	N100HGHPLN	High Plains aquifer
+40	N300ADAVMS	Ada-Vamoosa aquifer
+40	N300CNRLOK	Central Oklahoma aquifer
+40	N300RSHSPG	Rush Springs aquifer
+40	N400ABKSMP	Arbuckle-Simpson aquifer
+40	N400BLAINE	Blaine aquifer
+40	N9999OTHER	Other aquifers
+40	S400OZRKPL	Ozark Plateaus aquifer system
+40	S500EDRTRN	Edwards-Trinity aquifer system
+41	N100BSNRGB	Basin and Range basin-fill aquifers
+41	N100CMBPLB	Columbia Plateau basin-fill aquifers
+41	N100PCFNWB	Pacific Northwest basin-fill aquifers
+41	N100PCFNWV	Pacific Northwest volcanic-rock aquifers
+41	N100WLMLWD	Willamette Lowland basin-fill aquifers
+41	N600CMBPLV	Columbia Plateau basaltic-rock aquifers
+41	N600SKRVPB	Snake River Plain basin-fill aquifers
+41	N600SKRVPV	Snake River Plain basaltic-rock aquifers
+41	N9999OTHER	Other aquifers
+42	N100ALLUVL	Alluvial aquifers
+42	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+42	N300ERLMZC	Early Mesozoic basin aquifers
+42	N300PNSLVN	Pennsylvanian aquifers
+42	N400NYNECB	New York and New England carbonate-rock aquifers
+42	N400PDMBRC	Piedmont and Blue Ridge carbonate-rock aquifers
+42	N400PDMBRX	Piedmont and Blue Ridge crystalline-rock aquifers
+42	N500MSSPPI	Mississippian aquifers
+42	N500VLYRDG	Valley and Ridge aquifers
+42	N9999OTHER	Other aquifers
+42	S100NATLCP	Northern Atlantic Coastal Plain aquifer system
+44	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+44	N600NECRSN	New York and New England crystalline-rock aquifers
+44	N9999OTHER	Other aquifers
+44	S100NATLCP	Northern Atlantic Coastal Plain aquifer system
+45	N400PDMBRX	Piedmont and Blue Ridge crystalline-rock aquifers
+45	N9999OTHER	Other aquifers
+45	S100SECSLP	Southeastern Coastal Plain aquifer system
+45	S100SURFCL	Surficial aquifer system
+45	S400FLORDN	Floridan aquifer system
+46	N100ALLUVL	Alluvial aquifers
+46	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+46	N100HGHPLN	High Plains aquifer
+46	N300LCRTCS	Lower Cretaceous aquifers
+46	N300LTRTRY	Lower Tertiary aquifers
+46	N300UPCTCS	Upper Cretaceous aquifers
+46	N500PLOZOC	Paleozoic aquifers
+46	N9999OTHER	Other aquifers
+47	N100ALLUVL	Alluvial aquifers
+47	N100MSRVVL	Mississippi River Valley alluvial aquifer
+47	N300PNSLVN	Pennsylvanian aquifers
+47	N400ORDVCN	Ordovician aquifers
+47	N400PDMBRX	Piedmont and Blue Ridge crystalline-rock aquifers
+47	N400SLRDVN	Silurian-Devonian aquifers
+47	N500MSSPPI	Mississippian aquifers
+47	N500VLYRDG	Valley and Ridge aquifers
+47	N9999OTHER	Other aquifers
+47	S100MSEMBM	Mississippi embayment aquifer system
+47	S100SECSLP	Southeastern Coastal Plain aquifer system
+48	N100ALLUVL	Alluvial aquifers
+48	N100HGHPLN	High Plains aquifer
+48	N100PCSRVR	Pecos River Basin alluvial aquifer
+48	N100SYMOUR	Seymour aquifer
+48	N400BLAINE	Blaine aquifer
+48	N9999OTHER	Other aquifers
+48	S100CSLLWD	Coastal lowlands aquifer system
+48	S100RIOGRD	Rio Grande aquifer system
+48	S100TXCLUP	Texas coastal uplands aquifer system
+48	S500EDRTRN	Edwards-Trinity aquifer system
+49	N100ALLUVL	Alluvial aquifers
+49	N100BSNRGB	Basin and Range basin-fill aquifers
+49	N100PCFNWB	Pacific Northwest basin-fill aquifers
+49	N100PCFNWV	Pacific Northwest volcanic-rock aquifers
+49	N300COPLTS	Colorado Plateaus aquifers
+49	N400BSNRGC	Basin and Range carbonate-rock aquifers
+49	N9999OTHER	Other aquifers
+50	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+50	N400NYNECB	New York and New England carbonate-rock aquifers
+50	N600NECRSN	New York and New England crystalline-rock aquifers
+50	N9999OTHER	Other aquifers
+51	N100ALLUVL	Alluvial aquifers
+51	N300ERLMZC	Early Mesozoic basin aquifers
+51	N300PNSLVN	Pennsylvanian aquifers
+51	N400PDMBRX	Piedmont and Blue Ridge crystalline-rock aquifers
+51	N500MSSPPI	Mississippian aquifers
+51	N500VLYRDG	Valley and Ridge aquifers
+51	N9999OTHER	Other aquifers
+51	S100NATLCP	Northern Atlantic Coastal Plain aquifer system
+53	N100CMBPLB	Columbia Plateau basin-fill aquifers
+53	N100PCFNWB	Pacific Northwest basin-fill aquifers
+53	N100PCFNWV	Pacific Northwest volcanic-rock aquifers
+53	N100WLMLWD	Willamette Lowland basin-fill aquifers
+53	N600CMBPLV	Columbia Plateau basaltic-rock aquifers
+53	N9999OTHER	Other aquifers
+53	S100NRMTIB	Northern Rocky Mountains Intermontane Basins aquifer systems
+53	S100PGTSND	Puget Sound aquifer system
+54	N100ALLUVL	Alluvial aquifers
+54	N300PNSLVN	Pennsylvanian aquifers
+54	N400PDMBRX	Piedmont and Blue Ridge crystalline-rock aquifers
+54	N500MSSPPI	Mississippian aquifers
+54	N500VLYRDG	Valley and Ridge aquifers
+54	N9999OTHER	Other aquifers
+55	N100GLCIAL	Sand and gravel aquifers (glaciated regions)
+55	N300JCBSVL	Jacobsville aquifer
+55	N400SLRDVN	Silurian-Devonian aquifers
+55	N9999OTHER	Other aquifers
+55	S300CAMORD	Cambrian-Ordovician aquifer system
+56	N100ALLUVL	Alluvial aquifers
+56	N100HGHPLN	High Plains aquifer
+56	N100PCFNWB	Pacific Northwest basin-fill aquifers
+56	N100PCFNWV	Pacific Northwest volcanic-rock aquifers
+56	N300COPLTS	Colorado Plateaus aquifers
+56	N300LCRTCS	Lower Cretaceous aquifers
+56	N300LTRTRY	Lower Tertiary aquifers
+56	N300UPCTCS	Upper Cretaceous aquifers
+56	N300WYTRTR	Wyoming Tertiary aquifers
+56	N500PLOZOC	Paleozoic aquifers
+56	N9999OTHER	Other aquifers
+56	S100NRMTIB	Northern Rocky Mountains Intermontane Basins aquifer systems
+60	N9999OTHER	Other aquifers
+62	N9999OTHER	Other aquifers
+66	N9999OTHER	Other aquifers
+67	N9999OTHER	Other aquifers
+69	N9999OTHER	Other aquifers
+71	N9999OTHER	Other aquifers
+72	N300STHCST	South Coast aquifer (Puerto Rico)
+72	N400NCSTLM	North Coast Limestone aquifer system (Puerto Rico)
+72	N9999OTHER	Other aquifers
+73	N9999OTHER	Other aquifers
+74	N9999OTHER	Other aquifers
+75	N9999OTHER	Other aquifers
+76	N9999OTHER	Other aquifers
+77	N9999OTHER	Other aquifers
+78	N400KNGSHL	Kingshill aquifer (Virgin Islands)
+78	N9999OTHER	Other aquifers
+79	N9999OTHER	Other aquifers

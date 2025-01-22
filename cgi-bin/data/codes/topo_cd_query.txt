@@ -1,0 +1,27 @@
+#
+# National Water Information System
+# 2025/01/10
+#
+#
+# Date Retrieved: USGS Water Data for the Nation Help System
+#
+gw_ref_cd	gw_ref_nm	gw_ref_ds
+1s	16s	102s
+A	Alluvial fan	Stream deposit of loose rock material where it issues from a narrow mountain valley upon a plain.
+B	Playa	Undrained desert basin in which water accumulates and is quickly evaporated.
+C	Stream channel	Bed in which a natural stream of water runs.
+D	Local depression	An area that has no external surface drainage.
+E	Dunes	Mounds and ridges of windblown, or eolian sand.
+F	Flat surface	May be part of a larger feature, such as a plateau, plain, or pediment.
+G	Flood plain	Smooth land surface adjacent to a river channel that is flooded when the river overflows its banks.
+H	Hilltop	Upper part of a hill or ridge above a well-defined break in slope.
+K	Sinkhole	Depression that results from the dissolving of soluble rocks and collapse into the solution cavity.
+L	Lake or Swamp	Inland lake, swamp, or marsh where the ground may be saturated or water stands above the land surface.
+M	Mangrove swamp	Tropical or subtropical marine swamp characterized by abundant mangrove trees.
+O	Offshore	Site along a coast or estuary that is continuously submerged.
+P	Pediment	Plain of combined erosion and deposition that forms at the foot of a mountain range.
+S	Hillside	Sloping side of hill, the area between the hilltop and valley flat.
+T	Alluvial terrace	Generally a flat surface, usually parallel to but elevated above a stream valley or coast line.
+U	Undulating	Topography is characteristic of areas which have many small depressions and low mounds.
+V	Valley flat	Low flat area between the valley walls and bordering a stream channel.
+W	Upland draw	Small natural drainageway

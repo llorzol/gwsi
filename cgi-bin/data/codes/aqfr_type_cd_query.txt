@@ -1,0 +1,14 @@
+#
+# National Water Information System
+# 2025/01/10
+#
+#
+# Date Retrieved: USGS Water Data for the Nation Help System
+#
+Code	Description
+1s	49s
+C	Confined single aquifer
+M	Confined multiple aquifers
+N	Unconfined multiple aquifer
+U	Unconfined single aquifer
+X	Mixed (confined and unconfined) multiple aquifers

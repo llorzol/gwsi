@@ -1,0 +1,548 @@
+# RDB data retrieved from Oracle.
+#
+# $Log$
+# tsql nwisor/@nwisor -rdb 'select * from gw_gwdd' |# 01/09/2025 13:22:13, nwis
+#
+parameter_cd	parameter_nm	col_width_nu	parameter_tp	parameter_var_nm	mtrc_unit_fc	mtrc_unit_prec_fc	insert_file_nm	insert_subfile_nm	start_byte_nu	parameter_len_nu	parameter_ptr_va	sig_fig_vector_tx	mandatory_fg	special_test_nu	edit_table_nm	head_1_tx	head_2_tx	head_3_tx	english_unit_tx	metric_unit_tx	missing_tx	reflist_insert_cd	reflist_update_cd	reflist_check_cd	valid_codes_nu	edit_table_nm_len_nu	record_type_nu	sub_record_type_nu	edit_option_tx	district_default_opt_nu	district_default_tx	table_nm	column_nm	gwdd_mn	gwdd_md
+5s	50s	9n	2s	32s	8s	2s	32s	32s	9n	9n	5s	10s	1s	9n	24s	32s	32s	32s	32s	32s	32s	1s	1s	1s	9n	9n	9n	9n	6s	9n	128s	32s	32s	8s	25d
+C0000	CHECKSUM	0		CHECKSUM					0	0			N	0							--	3	3	3	23450119	0	0	0	NNNNNN	0				nwis	02-JAN-2025 22:16:51
+C001	Site ID (station number)	7	22	SID	 0	 0	SITE	none	6	15	 0		Y	1	sid				SITE-ID	SITE-ID	--	6	6	6	0	3	1	0	YYYYYN	0		sitefile_##	site_no	nwis	02-JAN-2025 22:16:44
+C003	Data reliability	7	21	SCLASS	 0	 0	SITE	none	445	1	 0		X	34	sclass		 DATA	 RELI-	ABILITY	ABILITY	--	6	2	6	4	6	1	0	YYYYYY	0		sitefile_##	reliability_cd	nwis	02-JAN-2025 22:16:44
+C004	Source agency code	6	22	SAGNCY	 0	 0	SITE	none	1	5	 0		Y	0	sagncy		SOURCE	  OF	 DATA	 DATA	--	6	6	6	0	6	1	0	YYYYNY	0		sitefile_##	agency_cd	nwis	02-JAN-2025 22:16:44
+C005	Project number	7	23	SPRNO	 0	 0	SITE	none	519	12	 0		N	0	sprno			PROJECT	NUMBER	NUMBER	--	2	2	2	0	5	1	0	YNNNNN	0		sitefile_##	project_no	nwis	02-JAN-2025 22:16:44
+C006	District code	8	23	SDIST	 0	 0	SITE	none	182	3	 0		Y	2	sdist				DISTRICT	DISTRICT	--	6	6	6	55	5	1	0	YYYYYY	2	41	sitefile_##	district_cd	nwis	02-JAN-2025 22:16:44
+C007	State code	5	20	SSTATE	 0	 0	SITE	none	187	2	 0		Y	3	sstate				STATE	STATE	--	6	6	6	0	6	1	0	YYYYYY	2	41	sitefile_##	state_cd	nwis	02-JAN-2025 22:16:44
+C008	County code	6	20	SCNTY	 0	 0	SITE	none	189	3	 0		Y	4	scnty				COUNTY	COUNTY	--	6	6	6	0	5	1	0	YYYYYY	0		sitefile_##	county_cd	nwis	02-JAN-2025 22:16:44
+C009	Latitude	8	12	SLAT	 0	 0	SITE	none	120	10	 0	9999999992	X	5	slat			LATITUDE	(DDMMSS)	(DDMMSS)	--	6	2	6	0	4	1	0	YYYYYN	0		sitefile_##	lat_va	nwis	02-JAN-2025 22:16:44
+C010	Longitude	9	12	SLONG	 0	 0	SITE	none	131	11	 0	9999999992	X	6	slon			LONGITUDE	(DDDMMSS)	(DDDMMSS)	--	6	2	6	0	4	1	0	YYYYYN	0		sitefile_##	long_va	nwis	02-JAN-2025 22:16:44
+C011	Lat/Long accuracy code	8	22	SCORAC	 0	 0	SITE	none	171	1	 0		X	49	scorac	  LAT	  LONG	ACCURACY	  CODE	  CODE	--	6	2	6	13	6	1	0	YYYYYY	0		sitefile_##	coord_acy_cd	nwis	02-JAN-2025 22:16:44
+C012	Local well number	17	23	SNAME	 0	 0	SITE	none	70	24	 0		Y	41	sname				LOCAL WELL NUMBER	LOCAL WELL NUMBER	--	6	6	6	0	5	1	0	YYYYYN	0		sitefile_##	station_nm	nwis	02-JAN-2025 22:16:44
+C013	Land-net location	8	23	SLNDNT	 0	 0	SITE	none	192	23	 0		N	0	slndnt		 LAND-	  NET	LOCATION	LOCATION	--	2	2	2	-4	6	1	0	YYYYNY	0		sitefile_##	land_net_ds	nwis	02-JAN-2025 22:16:44
+C014	Name of location map	8	23	SMAP	 0	 0	SITE	none	215	20	 0		N	0	smap		LOCATION	  MAP	  NAME	  NAME	--	2	2	2	0	4	1	0	YYYYNN	0		sitefile_##	map_nm	nwis	02-JAN-2025 22:16:44
+C015	Scale of location map	8	11	SMSCAL	 0	 0	SITE	none	235	7	 0		N	0	smscal		LOCATION	  MAP	 SCALE	 SCALE	--	2	2	2	0	6	1	0	YYYYNN	0		sitefile_##	map_scale_fc	nwis	02-JAN-2025 22:16:44
+C016	Altitude of land surface	8	12	SDATUM	 0.3048	 0	SITE	none	242	8	 0	2223456662	N	7	sdatum	ALTITUDE	OF LAND	SURFACE	 (FEET)	(METERS)	--	2	2	2	0	6	1	0	YYYYYN	0		sitefile_##	alt_va	nwis	02-JAN-2025 22:16:44
+C017	Method altitude determined	10	21	SALTMT	 0	 0	SITE	none	250	1	 0		X	12	saltmt	  METHOD	 ALTITUDE	DETERMINED	  (CODE)	  (CODE)	--	6	6	6	15	6	1	0	YYYYYY	0		sitefile_##	alt_meth_cd	nwis	02-JAN-2025 22:16:44
+C018	Altitude accuracy	8	12	SALTAC	 0.3048	 0	SITE	none	251	3	 0	3333333332	X	12	saltac		ALTITUDE	ACCURACY	 (FEET)	(METERS)	--	6	2	6	-3	6	1	0	YYYYYY	0		sitefile_##	alt_acy_va	nwis	02-JAN-2025 22:16:44
+C019	Topographic setting	7	21	STOPO	 0	 0	SITE	none	282	1	 0		N	0	stopo		 TOPO-	GRAPHIC	SETTING	SETTING	--	2	2	2	18	5	1	0	YYYYNY	0		sitefile_##	topo_cd	nwis	02-JAN-2025 22:16:44
+C020	Hydrologic unit code	10	22	SHUC	 0	 0	SITE	none	264	16	 0		N	0	shuc		HYDROLOGIC	   UNIT	  (OWDC)	  (OWDC)	--	2	2	2	0	4	1	0	YYYYNY	0		sitefile_##	huc_cd	nwis	02-JAN-2025 22:16:44
+C021	Date well constructed	11	31	SCONDT	 0	 0	SITE	none	477	8	 0		N	8	mmdate		   DATE	   WELL	CONSTRUCTED	CONSTRUCTED	--	2	2	2	-1	6	1	0	YYYYYN	0		sitefile_##	construction_dt	nwis	02-JAN-2025 22:16:44
+C022	Altitude Datum	8	22	SALTDM	 0	 0	SITE	none	254	10	 0		X	63	saltdm		ALTITUDE	 DATUM	 (CODE)	 (CODE)	--	6	6	6	18	6	1	0	YYYYYY	0		sitefile_##	alt_datum_cd	nwis	02-JAN-2025 22:16:44
+C023	Primary use of site	7	21	SUSE1	 0	 0	SITE	none	485	1	 0		X	9	suse1	PRIMARY	  USE	  OF	 SITE	 SITE	--	2	2	2	18	5	1	0	YYYYYY	0		sitefile_##	site_use_1_cd	nwis	02-JAN-2025 22:16:44
+C024	Primary use of water	7	21	SWUSE1	 0	 0	SITE	none	488	1	 0		N	38	swuse	PRIMARY	  USE	  OF	 WATER	 WATER	--	2	2	2	20	5	1	0	YYYYYY	0		sitefile_##	water_use_1_cd	nwis	02-JAN-2025 22:16:44
+C025	Secondary use of water	9	21	SWUSE2	 0	 0	SITE	none	489	1	 0		N	38	swuse	SECONDARY	   USE	   OF	  WATER	  WATER	--	2	2	2	20	5	1	0	YYYYYY	0		sitefile_##	water_use_2_cd	nwis	02-JAN-2025 22:16:44
+C026	Tertiary use of water	8	21	SWUSE3	 0	 0	SITE	none	490	1	 0		N	38	swuse	TERTIARY	  USE	   OF	 WATER	 WATER	--	2	2	2	20	5	1	0	YYYYYY	0		sitefile_##	water_use_3_cd	nwis	02-JAN-2025 22:16:45
+C027	Hole depth	8	12	SHDEPT	 0.3048	 0	SITE	none	502	8	 0	3333333332	N	10	hdepth		 DEPTH	DRILLED	 (FEET)	(METERS)	--	2	2	2	-3	6	1	0	YYYYYY	0		sitefile_##	hole_depth_va	nwis	02-JAN-2025 22:16:45
+C028	Well depth	8	12	SWDEPT	 0.3048	 0	SITE	none	510	8	 0	3333333332	N	11	hdepth		 DEPTH	OF WELL	 (FEET)	(METERS)	--	2	2	2	-3	6	1	0	YYYYYY	0		sitefile_##	well_depth_va	nwis	02-JAN-2025 22:16:45
+C029	Source of depth data	6	21	SWDSRC	 0	 0	SITE	none	518	1	 0		N	0	dtsorc	SOURCE	  OF	DEPTH	 DATA	 DATA	--	2	2	2	9	6	1	0	YYYYNY	0		sitefile_##	depth_src_cd	nwis	02-JAN-2025 22:16:45
+C032	SITE record ready for web flag	7	21	SIWBFG	 0	 0	SITE	none	69	1	 0		N	43	siwbfg	 SITE	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	1	0	YYYYYY	0		sitefile_##	site_web_cd	nwis	02-JAN-2025 22:16:45
+C035	Method Lat/Long Determined	8	21	SCORMT	 0	 0	SITE	none	170	1	 0		X	49	scormt		LAT/LONG	 METHOD	 (CODE)	 (CODE)	--	6	2	6	14	6	1	0	YYYYYY	0		sitefile_##	coord_meth_cd	nwis	02-JAN-2025 22:16:45
+C036	Lat/Long Datum	8	22	SCORDM	 0	 0	SITE	none	172	10	 0		X	62	scordm		LAT/LONG	 DATUM	 (CODE)	 (CODE)	--	6	2	6	327	6	1	0	YYYYYY	0		sitefile_##	coord_datum_cd	nwis	02-JAN-2025 22:16:46
+C038	Date lift data collected	4	31	CDLDAT	 0	 0	CONS	LIFT	81	8	 0		N	15	mmdate		DATE	 OF	LIFT	LIFT	--	2	2	2	-1	6	2	5	YYYYYN	0		gw_lift_##	lift_dt	nwis	02-JAN-2025 22:16:46
+C039	National water use code	9	21	SNWUSE	 0	 0	SITE	none	491	2	 0		N	61	snwuse	NATIONAL	WATER USE	  CODE			--	2	2	2	12	6	1	0	YYYYNY	0		sitefile_##	nat_water_use_cd	nwis	02-JAN-2025 22:16:46
+C040	Date and time SITE record last updated (UTC)	11	33	SUPDAT			SITE	none	55	14			N	0		 DATE/TIME	SITE RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	1	0	YYYYYY	0		sitefile_##	site_md	nwis	02-JAN-2025 22:16:46
+C041	Country code	7	21	SCNTRY	 0	 0	SITE	none	185	2	 0		Y	0	scntry			COUNTRY	 CODE	 CODE	--	6	6	6	0	6	1	0	YYYYYY	2	US	sitefile_##	country_cd	nwis	02-JAN-2025 22:16:46
+C043	Type of lift	4	21	CDLTYP	 0	 0	CONS	LIFT	80	1	 0		Y	0	cdltyp		TYPE	 OF	LIFT	LIFT	--	6	6	6	11	6	2	5	YYYYNY	0		gw_lift_##	lift_cd	nwis	02-JAN-2025 22:16:46
+C044	Depth to intake	8	11	CDLINT	 0.3048	 0	CONS	LIFT	89	5	 0		N	21	hdepth	  PUMP	 INTAKE	SETTING	 (FEET)	(METERS)	--	2	2	2	-3	6	2	5	YYYYYY	0		gw_lift_##	intake_depth_va	nwis	02-JAN-2025 22:16:46
+C045	Type of power	5	21	CDLPWR	 0	 0	CONS	LIFT	94	1	 0		N	0	cdlpwr		TYPE	 OF	POWER	POWER	--	2	2	2	9	6	2	5	YYYYNY	0		gw_lift_##	power_cd	nwis	02-JAN-2025 22:16:46
+C046	Horsepower rating	6	12	CDLHPR	 0	 0	CONS	LIFT	95	7	 0	3333333332	N	0	cdlhpr			HORSE-	POWER	POWER	--	2	2	2	0	6	2	5	YYYYNN	0		gw_lift_##	hp_va	nwis	02-JAN-2025 22:16:46
+C048	Manufacturer of lift device	6	23	CDLMFR	 0	 0	CONS	LIFT	102	12	 0		N	0	cdlmfr	MAKER	  OF	 LIFT	DEVICE	DEVICE	--	2	2	2	0	6	2	5	YYYYNN	0		gw_lift_##	manufacturer_nm	nwis	02-JAN-2025 22:16:46
+C049	Serial number of lift device	7	23	CDLSER	 0	 0	CONS	LIFT	114	12	 0		N	0	cdlser	SERIAL	NUMBER	OF LIFT	DEVICE	DEVICE	--	2	2	2	0	6	2	5	YYYYNN	0		gw_lift_##	serial_no_va	nwis	02-JAN-2025 22:16:46
+C050	Name of power company	7	23	CDLPCO	 0	 0	CONS	LIFT	126	12	 0		N	0	cdlpco	 NAME	  OF	 POWER	COMPANY	COMPANY	--	2	2	2	0	6	2	5	YYYYNN	0		gw_lift_##	power_co_nm	nwis	02-JAN-2025 22:16:46
+C051	Power company account number	7	23	CDLACT	 0	 0	CONS	LIFT	138	10	 0		N	0	cdlact	POWER-	COMPANY	ACCOUNT	NUMBER	NUMBER	--	2	2	2	0	6	2	5	YYYYNN	0		gw_lift_##	power_co_acct_va	nwis	02-JAN-2025 22:16:46
+C052	Power-meter number	6	23	CDLMTR	 0	 0	CONS	LIFT	148	12	 0		N	0	cdlmtr		POWER-	METER	NUMBER	NUMBER	--	2	2	2	0	6	2	5	YYYYNN	0		gw_lift_##	power_meter_va	nwis	02-JAN-2025 22:16:46
+C053	Pump rating	6	12	CDLCNS	 0	 0	CONS	LIFT	160	8	 0	3333333335	N	0	cdlcns			 PUMP	RATING	RATING	--	2	2	2	-3	6	2	5	YYYYNY	0		gw_lift_##	pump_rating_fc	nwis	02-JAN-2025 22:16:46
+C054	Company that maintains lift device	7	23	CDLMNT	 0	 0	CONS	LIFT	171	12	 0		N	0	cdlmnt	 MAIN-	TAINER	OF LIFT	DEVICE	DEVICE	--	2	2	2	0	6	2	5	YYYYNN	0		gw_lift_##	maintainer_nm	nwis	02-JAN-2025 22:16:46
+C056	Type of standby power	7	21	CDLSBY	 0	 0	CONS	LIFT	188	1	 0		N	0	cdlpwr	 TYPE	  OF	STANDBY	 POWER	 POWER	--	2	2	2	9	6	2	5	YYYYNY	0		gw_lift_##	standby_cd	nwis	02-JAN-2025 22:16:46
+C057	Horsepower of standby power source	10	12	CDLSHP	 0	 0	CONS	LIFT	189	7	 0	3333333332	N	0	cdlshp	HORSEPOWER	OF STANDBY	  POWER	  SOURCE	  SOURCE	--	2	2	2	0	6	2	5	YYYYNN	0		gw_lift_##	standby_hp_va	nwis	02-JAN-2025 22:16:46
+C059	Sequence number of parent CONS record	8	10	CDHPNT	 0	 0	CONS	HOLE	25	3	 0		Y	0			 PARENT	SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	2	2	YYYYYY	0		gw_hole_##	cons_seq_nu	nwis	02-JAN-2025 22:16:46
+C060	Date of construction	12	31	CDCODT	 0	 0	CONS	CONS	80	8	 0		N	15	mmdate			  DATE OF	CONSTRUCTION	CONSTRUCTION	--	2	2	2	-1	6	2	1	YYYYYN	0		gw_cons_##	cons_dt	nwis	02-JAN-2025 22:16:46
+C061	User ID of person creating SITE record	8	23	SCRUID	 0	 0	SITE	none	25	8	 0		Y	0		 PERSON	CREATING	  SITE	 RECORD	 RECORD	--	6	6	6	0	0	1	0	YYYYYY	0		sitefile_##	site_cn	nwis	02-JAN-2025 22:16:46
+C062	User ID of person updating SITE record	8	23	SUPUID	 0	 0	SITE	none	47	8	 0		Y	0		 PERSON	UPDATING	  SITE	 RECORD	 RECORD	--	6	6	6	0	0	1	0	YYYYYY	0		sitefile_##	site_mn	nwis	02-JAN-2025 22:16:46
+C063	Name of contractor	10	23	CDCOCT	 0	 0	CONS	CONS	88	12	 0		N	0	cdcoct				CONTRACTOR	CONTRACTOR	--	2	2	2	0	6	2	1	YYYYNN	0		gw_cons_##	cons_contractor_nm	nwis	02-JAN-2025 22:16:46
+C064	Source of construction data	12	21	CDCOSC	 0	 0	CONS	CONS	100	1	 0		N	0	dtsorc		 SOURCE OF	CONSTRUCTION	    DATA	    DATA	--	2	2	2	9	6	2	1	YYYYNY	0		gw_cons_##	cons_src_cd	nwis	02-JAN-2025 22:16:46
+C065	Method of construction	6	21	CDCOME	 0	 0	CONS	CONS	101	1	 0		N	0	cdcome		METHOD	CONST-	RUCTED	RUCTED	--	2	2	2	13	6	2	1	YYYYNY	0		gw_cons_##	cons_meth_cd	nwis	02-JAN-2025 22:16:46
+C066	Type of finish	6	21	CDCOFI	 0	 0	CONS	CONS	102	1	 0		N	0	cdcofi		 TYPE	  OF	FINISH	FINISH	--	2	2	2	11	6	2	1	YYYYNY	0		gw_cons_##	finish_cd	nwis	02-JAN-2025 22:16:46
+C067	Type of surface seal	7	21	CDCOSL	 0	 0	CONS	CONS	103	1	 0		N	0	cdcosl		TYPE OF	SURFACE	 SEAL	 SEAL	--	2	2	2	5	6	2	1	YYYYNY	0		gw_cons_##	seal_cd	nwis	02-JAN-2025 22:16:46
+C068	Depth to bottom of seal	8	11	CDCOSD	 0.3048	 0	CONS	CONS	104	4	 0		N	11	hdepth	 BOTTOM	   OF	  SEAL	 (FEET)	(METERS)	--	2	2	2	-3	6	2	1	YYYYYY	0		gw_cons_##	seal_depth_va	nwis	02-JAN-2025 22:16:46
+C069	Method of development	11	21	CDCODM	 0	 0	CONS	CONS	108	1	 0		N	0	cdcodm			 METHOD OF	DEVELOPMENT	DEVELOPMENT	--	2	2	2	8	6	2	1	YYYYNY	0		gw_cons_##	dev_meth_cd	nwis	02-JAN-2025 22:16:46
+C070	Hours of development	11	12	CDCODV	 0	 0	CONS	CONS	109	3	 0	3333333332	N	0	cdcodv			 HOURS OF	DEVELOPMENT	DEVELOPMENT	--	2	2	2	0	6	2	1	YYYYNN	0		gw_cons_##	dev_du	nwis	02-JAN-2025 22:16:46
+C071	Special treatment during development	11	21	CDCOST	 0	 0	CONS	CONS	112	1	 0		N	0	cdcost	  SPECIAL	  TREAT-	MENT DURING	DEVELOPMENT	DEVELOPMENT	--	2	2	2	7	6	2	1	YYYYNY	0		gw_cons_##	special_treat_cd	nwis	02-JAN-2025 22:16:46
+C073	Depth to top of this interval	8	12	CDHTOP	 0.3048	 0	CONS	HOLE	80	8	 0	3333333332	Y	16	hdepth	  TOP	   OF	INTERVAL	 (FEET)	(METERS)	--	6	6	6	-3	6	2	2	YYYYYY	0		gw_hole_##	hole_top_va	nwis	02-JAN-2025 22:16:46
+C074	Depth to bottom of this interval	8	12	CDHBOT	 0.3048	 0	CONS	HOLE	88	8	 0	3333333332	N	16	hdepth	 BOTTOM	   OF	INTERVAL	 (FEET)	(METERS)	--	6	2	6	-3	6	2	2	YYYYYY	0		gw_hole_##	hole_bottom_va	nwis	02-JAN-2025 22:16:46
+C075	Diameter of this interval	8	12	CDHDIA	 2.540	 0	CONS	HOLE	96	5	 0	2333333332	N	0	cdhdia	DIAMETER	   OF	INTERVAL	  (IN)	  (CM)	--	2	2	2	-3	6	2	2	YYYYNY	0		gw_hole_##	hole_dia_va	nwis	02-JAN-2025 22:16:46
+C077	Depth to top of this casing string	8	12	CDCSTP	 0.3048	 0	CONS	CSNG	80	8	 0	3333333332	Y	17	cdcstp	  TOP	   OF	 CASING	 (FEET)	(METERS)	--	6	6	6	-3	6	2	3	YYYYYY	0		gw_csng_##	csng_top_va	nwis	02-JAN-2025 22:16:46
+C078	Depth to bottom of this casing string	8	12	CDCSBT	 0.3048	 0	CONS	CSNG	88	8	 0	3333333332	N	17	hdepth	 BOTTOM	   OF	 CASING	 (FEET)	(METERS)	--	6	2	6	-3	6	2	3	YYYYYY	0		gw_csng_##	csng_bottom_va	nwis	02-JAN-2025 22:16:46
+C079	Diameter of this casing string	8	12	CDCSDI	 2.540	 0	CONS	CSNG	96	5	 0	3333333332	N	0	cdcsdi	DIAMETER	   OF	 CASING	  (IN)	  (CM)	--	2	2	2	-3	6	2	3	YYYYNY	0		gw_csng_##	csng_dia_va	nwis	02-JAN-2025 22:16:46
+C080	Casing material	8	22	CDCSMT	 0	 0	CONS	CSNG	101	1	 0		N	0	cdcsmt			 CASING	MATERIAL	MATERIAL	--	2	2	2	27	6	2	3	YYYYNY	0		gw_csng_##	csng_material_cd	nwis	02-JAN-2025 22:16:46
+C081	Wall thickness of this casing	7	12	CDCSTK	 2.540	 0	CONS	CSNG	102	6	 0	3333333333	N	0	cdcstk	THICK-	NESS OF	CASING	 (IN)	 (CM)	--	2	2	2	0	6	2	3	YYYYNN	0		gw_csng_##	csng_thick_va	nwis	02-JAN-2025 22:16:46
+C083	Depth to top of this open interval	8	12	CDOTOP	 0.3048	 0	CONS	OPEN	80	8	 0	3333333332	Y	18	hdepth	 TOP OF	  OPEN	INTERVAL	 (FEET)	(METERS)	--	6	6	6	-3	6	2	4	YYYYYY	0		gw_open_##	open_top_va	nwis	02-JAN-2025 22:16:46
+C084	Depth to bottom of this open interval	9	12	CDOBOT	 0.3048	 0	CONS	OPEN	88	8	 0	3333333332	N	18	hdepth	BOTTOM OF	  OPEN	INTERVAL	 (FEET)	(METERS)	--	6	2	6	-3	6	2	4	YYYYYY	0		gw_open_##	open_bottom_va	nwis	02-JAN-2025 22:16:46
+C085	Type of openings in this interval	8	21	CDOTYP	 0	 0	CONS	OPEN	102	1	 0		Y	0	cdotyp			TYPE OF	OPENINGS	OPENINGS	--	6	6	6	10	6	2	4	YYYYNY	0		gw_open_##	open_cd	nwis	02-JAN-2025 22:16:46
+C086	Material in this interval	8	22	CDOMAT	 0	 0	CONS	OPEN	101	1	 0		N	0	cdomat				MATERIAL	MATERIAL	--	2	2	2	26	6	2	4	YYYYNY	0		gw_open_##	open_material_cd	nwis	02-JAN-2025 22:16:46
+C087	Diameter of this open interval	8	12	CDODIA	 2.540	 0	CONS	OPEN	96	5	 0	3333333332	N	0	cdodia	DIAMETER	   OF	INTERVAL	  (IN)	  (CM)	--	2	2	2	-3	6	2	4	YYYYNY	0		gw_open_##	open_dia_va	nwis	02-JAN-2025 22:16:46
+C088	Width of openings	8	12	CDOWID	 2.540	 0	CONS	OPEN	109	6	 0	3333333333	N	0	cdowid	 WIDTH	   OF	OPENINGS	  (IN)	  (CM)	--	2	2	2	0	6	2	4	YYYYNN	0		gw_open_##	open_width_va	nwis	02-JAN-2025 22:16:46
+C089	Length of openings	8	12	CDOLEN	 2.540	 0	CONS	OPEN	103	6	 0	3333333332	N	0	cdolen	 LENGTH	   OF	OPENINGS	  (IN)	  (CM)	--	2	2	2	0	6	2	4	YYYYNN	0		gw_open_##	open_len_va	nwis	02-JAN-2025 22:16:46
+C091	Depth to top of interval	8	12	LGTOP	 0.3048	 0	GEOH	GEOH	76	8	 0	3333333332	N	19	hdepth	 DEPTH	   TO	  TOP	 (FEET)	(METERS)	--	2	2	2	-3	6	5	1	YYYYYY	0		gw_geoh_##	lith_top_va	nwis	02-JAN-2025 22:16:46
+C092	Depth to bottom of interval	8	12	LGBOT	 0.3048	 0	GEOH	GEOH	84	8	 0	3333333332	N	19	hdepth	 DEPTH	   TO	 BOTTOM	 (FEET)	(METERS)	--	2	2	2	-3	6	5	1	YYYYYY	0		gw_geoh_##	lith_bottom_va	nwis	02-JAN-2025 22:16:46
+C093	Aquifer code	7	24	LGAQFR	 0	 0	GEOH	GEOH	92	8	 0		Y	0	saqufr			AQUIFER	 CODE	 CODE	--	6	6	6	0	6	5	1	YYYYYY	0		gw_geoh_##	lith_unit_cd	nwis	02-JAN-2025 22:16:46
+C095	Aquifer date	7	31	CNAQDT	 0	 0	GEOH	AQFR	76	8	 0		Y	15	mmdate			AQUIFER	 DATE	 DATE	--	6	6	6	-1	6	5	2	YYYYYN	0		gw_aqfr_##	aqfr_dt	nwis	02-JAN-2025 22:16:46
+C096	Lithology code	5	21	LGLITH	 0	 0	GEOH	GEOH	100	4	 0		N	0	lglith		LITH-	OLOGY	CODE	CODE	--	2	2	2	91	6	5	1	YYYYNY	0		gw_geoh_##	lith_cd	nwis	02-JAN-2025 22:16:46
+C097	Description of material	11	23	LGDESC	 0	 0	GEOH	GEOH	105	123	 0		N	42	lgdesc		DESCRIPTION	    OF	 MATERIAL	 MATERIAL	--	2	2	2	0	6	5	1	YYYYYN	0		gw_geoh_##	lith_ds	nwis	02-JAN-2025 22:16:46
+C098	Test type	4	25	HYTTYP	 0	 0	TEST	TEST	25	12	 0		Y	0	hyttyp		TEST	TYPE	CODE	CODE	--	9	9	6	7	6	6	1	YYYYYY	0		test_##	test_tp	nwis	02-JAN-2025 22:16:46
+C099	Test start date	5	31	HYTDAT	 0	 0	TEST	TEST	37	8	 0		Y	15	mmdate		TEST	START	DATE	DATE	--	6	6	6	-1	6	6	1	YYYYYY	0		test_##	test_start_dt	nwis	02-JAN-2025 22:16:47
+C100	Result unit id	7	24	HYRYUN	 0	 0	TEST	RSLT	162	8	 0		N	0	saqufr			RESULT	UNIT ID	UNIT ID	--	6	6	6	0	6	6	2	YYYYYY	0		gw_result_##	gw_result_unit_cd	nwis	02-JAN-2025 22:16:47
+C101	Result interval -top	8	12	HYRTOP	 0.3048	 0	TEST	RSLT	170	7	 0	3333333332	N	22	hdepth	 RESULT	INTERVAL	  -TOP	 (FEET)	(METERS)	--	2	2	2	-3	6	6	2	YYYYYY	0		gw_result_##	gw_result_top_va	nwis	02-JAN-2025 22:16:47
+C102	Result interval -bottom	8	12	HYRBOT	 0.3048	 0	TEST	RSLT	177	7	 0	3333333332	N	22	hdepth	 RESULT	INTERVAL	-BOTTOM	 (FEET)	(METERS)	--	2	2	2	-3	6	6	2	YYYYYY	0		gw_result_##	gw_result_bottom_va	nwis	02-JAN-2025 22:16:47
+C103	Result unit type	9	21	HYRTYP	 0	 0	TEST	RSLT	184	1	 0		N	0	hyhtyp			 RESULT	UNIT TYPE	UNIT TYPE	--	6	6	6	2	6	6	2	YYYYNY	0		gw_result_##	gw_result_unit_tp	nwis	02-JAN-2025 22:16:47
+C104	Result remarks	7	23	HYRRMK	 0	 0	TEST	RSLT	200	128	 0		N	0	hyrrmk			RESULT	REMARKS	REMARKS	--	2	2	2	0	6	6	2	YYYYNN	0		gw_result_##	gw_result_rmk_tx	nwis	02-JAN-2025 22:16:47
+C105	Result value	6	12	HYRVAL	 0	 0	TEST	RSLT	141	13	 0	3333333339	Y	0	hyrval			RESULT	VALUE	VALUE	--	6	6	6	0	6	6	2	YYYYYY	0		gw_result_##	gw_result_tx	nwis	02-JAN-2025 22:16:47
+C106	Result value accuracy code	8	21	HYRVAC	 0	 0	TEST	RSLT	161	1	 0		N	0	hyrvac	 RESULT	 VALUE	ACCURACY	  CODE	  CODE	--	6	6	6	4	6	6	2	YYYYYY	0		gw_result_##	gw_result_acy_cd	nwis	02-JAN-2025 22:16:47
+C107	Transmissivity	14	12	HYRTRN	 0	 0	TEST	RSLT	147	7	 0	3333333333	N	0	hyctrn			TRANSMISSIVITY	 (FT-SQ/DAY)	  (M-SQ/DAY)	--	2	2	2	0	6	6	2	YYYYNN	0		gw_result_##	gw_result_tx	nwis	02-JAN-2025 22:16:47
+C108	Horizontal conductivity	12	12	HYRHHY	 0	 0	TEST	RSLT	142	12	 0	3333333335	N	0	hychhy		 HORIZONTAL	CONDUCTIVITY	  (FT/DAY)	  (M/DAY)	--	2	2	2	0	6	6	2	YYYYNN	0		gw_result_##	gw_result_tx	nwis	02-JAN-2025 22:16:47
+C109	Vertical conductivity	12	12	HYRVHY	 0	 0	TEST	RSLT	142	12	 0	3333333335	N	0	hycvhy		  VERTICAL	CONDUCTIVITY	  (FT/DAY)	  (M/DAY)	--	2	2	2	0	6	6	2	YYYYNN	0		gw_result_##	gw_result_tx	nwis	02-JAN-2025 22:16:47
+C110	Storage coefficient	11	12	HYRSTR	 0	 0	TEST	RSLT	146	8	 0	3333333337	N	0	hycstr			  STORAGE	COEFFICIENT	COEFFICIENT	--	2	2	2	0	6	6	2	YYYYNN	0		gw_result_##	gw_result_tx	nwis	02-JAN-2025 22:16:47
+C111	Leakance	8	12	HYRLKC	 0	 0	TEST	RSLT	145	9	 0	3333333334	N	0	hyclkc			LEAKANCE	 (1/FT)	 (1/M)	--	2	2	2	0	6	6	2	YYYYNN	0		gw_result_##	gw_result_tx	nwis	02-JAN-2025 22:16:47
+C112	Diffusivity	11	11	HYRDIF	 0	 0	TEST	RSLT	141	13	 0		N	0	hycdif			DIFFUSIVITY	 (FT/DAY)	  (M/DAY)	--	2	2	2	0	6	6	2	YYYYNN	0		gw_result_##	gw_result_tx	nwis	02-JAN-2025 22:16:47
+C113	Specific storage	8	12	HYRSPS	 0	 0	TEST	RSLT	144	10	 0	3333333339	N	0	hycsps			SPECIFIC	STORAGE	STORAGE	--	2	2	2	0	6	6	2	YYYYNN	0		gw_result_##	gw_result_tx	nwis	02-JAN-2025 22:16:47
+C115	Begin year of data collection	10	11	MGDNBY	 0	 0	MISC	NETW	80	4	 0		Y	24	mmyear		BEGIN YEAR	 OF DATA	COLLECTION	COLLECTION	--	6	6	6	0	6	3	9	YYYYYN	0		gw_netw_##	netw_begin_dt	nwis	02-JAN-2025 22:16:47
+C116	End year of data collection	10	11	MGDNEY	 0	 0	MISC	NETW	84	4	 0		N	24	mmyear		 END YEAR	 OF DATA	COLLECTION	COLLECTION	--	2	2	2	0	6	3	9	YYYYYN	0		gw_netw_##	netw_end_dt	nwis	02-JAN-2025 22:16:47
+C117	Source agency for network data	12	22	MGDNSC	 0	 0	MISC	NETW	90	5	 0		N	0	sagncy			 AGENCY FOR	NETWORK DATA	NETWORK DATA	--	2	2	2	0	6	3	9	YYYYNY	0		gw_netw_##	netw_src_cd	nwis	02-JAN-2025 22:16:47
+C118	Frequency of data collection	10	22	MGDNFQ	 0	 0	MISC	NETW	95	1	 0		N	0	mgdnfq		FREQUENCY	 OF DATA	COLLECTION	COLLECTION	--	2	2	2	17	6	3	9	YYYYNY	0		gw_netw_##	netw_freq_cd	nwis	02-JAN-2025 22:16:47
+C119	Record type in MISC file	6	21	MGDTYP	 0	 0	MISC	PRMT	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	14	YYYYYY	0				nwis	02-JAN-2025 22:16:47
+C120	Type of analyses - QW network	8	21	MGDNTY	 0	 0	MISC	NETW	88	2	 0		N	35	mgdnty		  TYPE	   OF	ANALYSES	ANALYSES	--	2	2	2	16	6	3	9	YYYYYY	0		gw_netw_##	analyses_tp	nwis	02-JAN-2025 22:16:47
+C121	Permit name	6	23	MGDPNM	 0	 0	MISC	PRMT	78	64	 0		Y	0	mgdpnm			PERMIT	 NAME	 NAME	--	6	6	6	0	6	3	14	YYYYYY	0		permit_##	permit_tx	nwis	02-JAN-2025 22:16:47
+C122	Permitting Agency	10	22	MGDPAG	 0	 0	MISC	PRMT	142	5	 0		Y	0	sagncy			PERMITTING	  AGENCY	  AGENCY	--	6	6	6	0	6	3	14	YYYYYY	0		permit_##	party_id	nwis	02-JAN-2025 22:16:47
+C123	Permit type	6	21	MGDPCD	 0	 0	MISC	PRMT	147	4	 0		Y	0	mgdpcd			PERMIT	 TYPE	 TYPE	--	9	9	6	15	6	3	14	YYYYYY	0		permit_##	permit_cd	nwis	02-JAN-2025 22:16:47
+C124	Permit start date	6	36	MGDPSD	 0	 0	MISC	PRMT	151	8	 0		N	66	mmdate		PERMIT	START	 DATE	 DATE	--	2	2	2	-1	6	3	14	YYYYYY	0		permit_##	permit_start_dt	nwis	02-JAN-2025 22:16:47
+C125	Permit end date	6	35	MGDPED	 0	 0	MISC	PRMT	159	8	 0		N	66	mmdate		PERMIT	 END	 DATE	 DATE	--	2	2	2	-1	6	3	14	YYYYYY	0		permit_##	permit_end_dt	nwis	02-JAN-2025 22:16:47
+C126	Aquifer static level	8	12	CNAQSL	 0.3048	 0	GEOH	AQFR	84	7	 0	2223456662	N	21	cnaqsl	AQUIFER	 STATIC	 LEVEL	 (FEET)	(METERS)	--	2	2	2	0	6	5	2	YYYYYN	0		gw_aqfr_##	aqfr_static_lev_va	nwis	02-JAN-2025 22:16:47
+C127	Legal water body name	5	23	MGDPWB	 0	 0	MISC	PRMT	167	64	 0		N	0	mgdpwb	LEGAL	WATER	BODY	NAME	NAME	--	2	2	2	0	6	3	14	YYYYYY	0		permit_desc_##	legal_water_body_nm	nwis	02-JAN-2025 22:16:47
+C128	Permitted average flow	6	12	MGDPAF	 0	 0	MISC	PRMT	231	12	 0	9999999999	N	0	mgdpaf			PERMIT	 FLOW	 FLOW	--	2	2	2	0	6	3	14	YYYYYY	0		permit_desc_##	avg_fc	nwis	02-JAN-2025 22:16:47
+C129	Average flow significance	7	21	MGDPAS	 0	 0	MISC	PRMT	251	1	 0		N	0	mgdpas		AVERAGE	 FLOW	  SIG	  SIG	--	2	2	2	0	6	3	14	YYYYYY	0		permit_desc_##	avg_sg	nwis	02-JAN-2025 22:16:47
+C130	Average flow units	7	23	MGDPAU	 0	 0	MISC	PRMT	252	20	 0		X	71	mgdpau		AVERAGE	 FLOW	 UNITS	 UNITS	--	2	2	2	25	6	3	14	YYYYYY	0		permit_desc_##	avg_unit_id	nwis	02-JAN-2025 22:16:47
+C131	Average flow duration	7	21	MGDPAD	 0	 0	MISC	PRMT	272	1	 0		X	71	mgdpad		AVERAGE	 FLOW	  DUR	  DUR	--	2	2	2	3	6	3	14	YYYYYY	0		permit_desc_##	avg_du_cd	nwis	02-JAN-2025 22:16:47
+C132	Aquifer contribution	12	11	CNAQCN	 0	 0	GEOH	AQFR	91	3	 0		N	0	cnaqcn			  AQUIFER	CONTRIBUTION	CONTRIBUTION	--	2	2	2	-3	6	5	2	YYYYNY	0		gw_aqfr_##	aqfr_contrib_fc	nwis	02-JAN-2025 22:16:47
+C133	Method of data collection	10	21	MGDNMT	 0	 0	MISC	NETW	96	1	 0		N	0	mgdnmt		  METHOD	 OF DATA	COLLECTION	COLLECTION	--	2	2	2	5	6	3	9	YYYYNY	0		gw_netw_##	netw_meth_cd	nwis	02-JAN-2025 22:16:47
+C134	Permitted maximum flow	6	12	MGDPMF	 0	 0	MISC	PRMT	273	12	 0	9999999999	N	0	mgdpaf			PERMIT	 FLOW	 FLOW	--	2	2	2	0	6	3	14	YYYYYY	0		permit_desc_##	max_fc	nwis	02-JAN-2025 22:16:47
+C135	Maximum flow significance	7	21	MGDPMS	 0	 0	MISC	PRMT	293	1	 0		N	0	mgdpas		MAXIMUM	 FLOW	  SIG	  SIG	--	2	2	2	0	6	3	14	YYYYYY	0		permit_desc_##	max_sg	nwis	02-JAN-2025 22:16:47
+C136	Maximum flow units	7	23	MGDPMU	 0	 0	MISC	PRMT	294	20	 0		X	72	mgdpau		MAXIMUM	 FLOW	 UNITS	 UNITS	--	2	2	2	25	6	3	14	YYYYYY	0		permit_desc_##	max_unit_id	nwis	02-JAN-2025 22:16:47
+C137	Maximum flow duration	7	21	MGDPMD	 0	 0	MISC	PRMT	314	1	 0		X	72	mgdpad		MAXIMUM	 FLOW	  DUR	  DUR	--	2	2	2	3	6	3	14	YYYYYY	0		permit_desc_##	max_du_cd	nwis	02-JAN-2025 22:16:47
+C138	User ID of person creating DESC record	8	23	MGDPCU	 0	 0	MISC	PRMT	315	8	 0		N	0		 PERSON	CREATING	  DESC	 RECORD	 RECORD	--	2	2	2	0	0	3	14	YYYYYY	0		permit_desc_##	permit_desc_cn	nwis	02-JAN-2025 22:16:47
+C139	Date and time DESC record created (UTC)	11	33	MGDPCR			MISC	PRMT	323	14			N	0		 DATE/TIME	DESC RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	14	YYYYYY	0		permit_desc_##	permit_desc_cr	nwis	02-JAN-2025 22:16:47
+C140	User ID of person updating DESC record	8	23	MGDPUU	 0	 0	MISC	PRMT	337	8	 0		N	0		 PERSON	UPDATING	  DESC	 RECORD	 RECORD	--	2	2	2	0	0	3	14	YYYYYY	0		permit_desc_##	permit_desc_mn	nwis	02-JAN-2025 22:16:47
+C141	Date and time DESC record last updated (UTC)	11	33	MGDPUP			MISC	PRMT	345	14			N	0		 DATE/TIME	DESC RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	14	YYYYYY	0		permit_desc_##	permit_desc_md	nwis	02-JAN-2025 22:16:47
+C147	Record sequence number	8	11	DISEQ	 0	 0	DISC	none	21	3	 0		Y	0			 RECORD	SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	4	0	YYYYYY	0		gw_disc_##	disc_seq_nu	nwis	02-JAN-2025 22:16:47
+C148	Date discharge measured	9	31	DIDTE	 0	 0	DISC	none	24	8	 0		N	15	mmdate		  DATE	DISCHARGE	MEASURED	MEASURED	--	6	6	6	-1	6	4	0	YYYYYN	0		gw_disc_##	disc_dt	nwis	02-JAN-2025 22:16:47
+C150	Discharge	9	12	DIVAL	 .06308	+1	DISC	none	78	10	 0	3333333332	Y	0	dival			DISCHARGE	  (GPM)	  (LPS)	--	6	6	6	0	5	4	0	YYYYNN	0		gw_disc_##	disc_va	nwis	02-JAN-2025 22:16:47
+C151	Source of discharge data	9	21	DISRC	 0	 0	DISC	none	88	1	 0		N	0	dtsorc	 SOURCE	   OF	DISCHARGE	  DATA	  DATA	--	2	2	2	9	6	4	0	YYYYNY	0		gw_disc_##	disc_src_cd	nwis	02-JAN-2025 22:16:47
+C152	Method discharge measured	9	21	DIMET	 0	 0	DISC	none	89	1	 0		Y	20	dimet		 METHOD	DISCHARGE	MEASURED	MEASURED	--	6	6	6	16	5	4	0	YYYYNY	0		gw_disc_##	disc_meth_cd	nwis	02-JAN-2025 22:16:47
+C153	Production level	8	12	DIPROD	 0.3048	 0	DISC	none	90	8	 0	2223456662	N	58	mmdlvl	PUMPING	 WATER	 LEVEL	 (FEET)	(METERS)	--	2	2	2	0	6	4	0	YYYYYN	0		gw_disc_##	disc_prod_lev_va	nwis	02-JAN-2025 22:16:47
+C154	Static water level	8	12	DISTAT	 0.3048	 0	DISC	none	98	8	 0	2223456662	N	58	mmdlvl	 STATIC	 WATER	 LEVEL	 (FEET)	(METERS)	--	2	2	2	0	6	4	0	YYYYYN	0		gw_disc_##	disc_static_lev_va	nwis	02-JAN-2025 22:16:47
+C155	Source of water-level data	6	21	DILVSC	 0	 0	DISC	none	106	1	 0		N	0	dtsorc		WATER	LEVEL	SOURCE	SOURCE	--	2	2	2	9	6	4	0	YYYYNY	0		gw_disc_##	disc_lev_src_cd	nwis	02-JAN-2025 22:16:47
+C156	Method water-level measured	6	21	DILVME	 0	 0	DISC	none	107	1	 0		N	0	siwlmt		WATER	LEVEL	METHOD	METHOD	--	2	2	2	21	6	4	0	YYYYNY	0		gw_disc_##	disc_lev_meth_cd	nwis	02-JAN-2025 22:16:47
+C157	Duration of discharge before producing level	7	12	DIDUR	 0	 0	DISC	none	108	7	 0	3333333332	N	0	didur		PUMPING	PERIOD	(HOURS)	(HOURS)	--	2	2	2	0	5	4	0	YYYYNN	0		gw_disc_##	disc_du	nwis	02-JAN-2025 22:16:47
+C159	Date of ownership	9	31	MGDODA	 0	 0	MISC	OWNR	78	8	 0		N	59	mmdate		  DATE	   OF	OWNERSHIP	OWNERSHIP	--	2	2	2	-1	6	3	1	YYYYYN	0		site_owner_##	site_owner_start_dt	nwis	02-JAN-2025 22:16:47
+C161	Name of owner	5	26	MGDONM	 0	 0	MISC	OWNR	86	64	 0		Y	0	mgdonm				OWNER	OWNER	--	6	6	6	0	6	3	1	YYYYNN	0		party	party_nm	nwis	02-JAN-2025 22:16:47
+C165	Sequence number of REPR record	8	10	CDRNUM	 0	 0	CONS	REPR	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	2	6	YYYYYY	0		gw_repr_##	repr_seq_nu	nwis	02-JAN-2025 22:16:47
+C166	Nature of repairs	9	21	CDRNAT	 0	 0	CONS	REPR	80	1	 0		Y	0	cdrnat			NATURE OF	 REPAIRS	 REPAIRS	--	6	6	6	9	6	2	6	YYYYNY	0		gw_repr_##	repr_cd	nwis	02-JAN-2025 22:16:47
+C167	Date of repairs	7	31	CDRDAT	 0	 0	CONS	REPR	81	8	 0		N	15	mmdate			DATE OF	REPAIRS	REPAIRS	--	2	2	2	-1	6	2	6	YYYYYN	0		gw_repr_##	repr_dt	nwis	02-JAN-2025 22:16:47
+C169	Name of contractor who made repairs	10	23	CDRCTR	 0	 0	CONS	REPR	89	12	 0		N	0	cdrctr		CONTRACTOR	 WHO MADE	 REPAIRS	 REPAIRS	--	2	2	2	0	6	2	6	YYYYNN	0		gw_repr_##	repr_contractor_nm	nwis	02-JAN-2025 22:16:47
+C170	Percent change in performance after repairs	9	11	CDRCHG	 0	 0	CONS	REPR	101	3	 0		N	0	cdrchg	 CHANGE	 IN PER-	FORMANCE	(PERCENT)	(PERCENT)	--	2	2	2	-3	6	2	6	YYYYNY	0		gw_repr_##	change_va	nwis	02-JAN-2025 22:16:47
+C172	Name of spring	14	23	CDSNAM	 0	 0	CONS	SPNG	80	40	 0		N	0	cdsnam				NAME OF SPRING	NAME OF SPRING	--	2	2	2	0	6	2	7	YYYYNN	0		gw_spng_##	spng_nm	nwis	02-JAN-2025 22:16:47
+C173	Type of spring	6	21	CDSTYP	 0	 0	CONS	SPNG	120	1	 0		N	0	cdstyp		 TYPE	  OF	SPRING	SPRING	--	2	2	2	17	6	2	7	YYYYNY	0		gw_spng_##	spng_tp	nwis	02-JAN-2025 22:16:47
+C174	Permanence of spring	5	21	CDSPRM	 0	 0	CONS	SPNG	121	1	 0		N	0	cdsprm		PERM-	 AN-	ENCE	ENCE	--	2	2	2	7	6	2	7	YYYYNY	0		gw_spng_##	permanence_cd	nwis	02-JAN-2025 22:16:47
+C175	Sphere of discharge	9	21	CDSSPH	 0	 0	CONS	SPNG	122	1	 0		N	0	cdssph			SPHERE OF	DISCHARGE	DISCHARGE	--	2	2	2	2	6	2	7	YYYYNY	0		gw_spng_##	disc_sphere_cd	nwis	02-JAN-2025 22:16:47
+C176	Improvements	6	21	CDSIMP	 0	 0	CONS	SPNG	123	1	 0		N	0	cdsimp		 IM-	PROVE-	MENTS	MENTS	--	2	2	2	10	6	2	7	YYYYNY	0		gw_spng_##	improvement_cd	nwis	02-JAN-2025 22:16:47
+C177	Number of spring openings	8	11	CDSNOP	 0	 0	CONS	SPNG	124	3	 0		N	0	cdsnop		 NUMBER	   OF	 SPRING	OPENINGS	--	2	2	2	0	6	2	7	YNNNNN	0		gw_spng_##	openings_nu	nwis	02-JAN-2025 22:16:47
+C178	Flow variability	11	11	CDSVAR	 0	 0	CONS	SPNG	127	3	 0		N	0	cdsvar			   FLOW	VARIABILITY	VARIABILITY	--	2	2	2	0	6	2	7	YNNNNN	0		gw_spng_##	disc_variability_va	nwis	02-JAN-2025 22:16:47
+C179	Accuracy of flow variability	11	21	CDSACC	 0	 0	CONS	SPNG	130	1	 0		N	0	cdsacc		 ACCURACY	  OF FLOW	VARIABILITY	VARIABILITY	--	2	2	2	6	6	2	7	YYYYNY	0		gw_spng_##	disc_variability_cd	nwis	02-JAN-2025 22:16:47
+C181	Other data type	5	23	MGDODT	 0	 0	MISC	OTDT	78	38	 0		Y	0	mgdodt		OTHER	DATA	TYPE	TYPE	--	6	6	6	0	6	3	4	YYYYNN	0		gw_otdt_##	otdt_tx	nwis	02-JAN-2025 22:16:47
+C182	Other data location	8	21	MGDODL	 0	 0	MISC	OTDT	116	1	 0		N	0	mgdodl		 OTHER	  DATA	LOCATION	LOCATION	--	2	2	2	4	6	3	4	YYYYNY	0		gw_otdt_##	otdt_loc_cd	nwis	02-JAN-2025 22:16:47
+C184	Remark-date	6	31	MGDRDT	 0	 0	MISC	RMKS	78	8	 0		N	15	mmdate			REMARK	 DATE	 DATE	--	2	2	2	-1	6	3	13	YYYYYN	0		gw_rmks_##	rmks_dt	nwis	02-JAN-2025 22:16:47
+C185	Remark	6	23	MGDRMK	 0	 0	MISC	RMKS	86	256	 0		N	0	mgdrmk				REMARK	REMARK	--	2	2	2	0	6	3	13	YYYYNN	0		gw_rmks_##	rmks_tx	nwis	02-JAN-2025 22:16:47
+C187	Date of visit	5	31	MGDVDT	 0	 0	MISC	VIST	78	8	 0		Y	15	mmdate		DATE	 OF	VISIT	VISIT	--	6	6	6	-1	6	3	5	YYYYYN	0		gw_vist_##	vist_dt	nwis	02-JAN-2025 22:16:47
+C188	Person who made visit	6	23	MGDVPN	 0	 0	MISC	VIST	86	22	 0		N	0	mgdvpn	PERSON	 WHO	 MADE	VISIT	VISIT	--	2	2	2	0	6	3	5	YYYYNN	0		gw_vist_##	vist_person_nm	nwis	02-JAN-2025 22:16:47
+C190	Other identifier	10	23	MGDOID	 0	 0	MISC	OTID	78	15	 0		Y	0	mgdoid			  OTHER	IDENTIFIER	IDENTIFIER	--	6	6	6	0	6	3	3	YYYYNN	0		gw_otid_##	otid_id	nwis	02-JAN-2025 22:16:47
+C191	Assigner of other identifier	10	23	MGDOIA	 0	 0	MISC	OTID	93	15	 0		Y	0	mgdoia		 ASSIGNER	 OF OTHER	IDENTIFIER	IDENTIFIER	--	6	6	6	0	6	3	3	YYYYNN	0		gw_otid_##	assigner_nm	nwis	02-JAN-2025 22:16:47
+C193	Date and time of water-quality measurement	9	33	MGDQDT	 0	 0	MISC	QVAL	78	12	 0		Y	15	mmdate	DATE/TIME	 QUALITY	PARAMETER	MEASURED	MEASURED	--	6	6	6	-1	6	3	7	YYYYYN	0		qw_sample_##	sample_start_dt	nwis	02-JAN-2025 22:16:47
+C195	Aquifer sampled	7	24	MGDQAQ	 0	 0	MISC	QVAL	90	8	 0		N	0	saqufr			AQUIFER	SAMPLED	SAMPLED	--	2	2	2	0	6	3	7	YYYYYY	0		qw_sample_##	aqfr_cd	nwis	02-JAN-2025 22:16:47
+C196	Water-quality parameter code	9	22	MGDQPC	 0	 0	MISC	QVAL	98	5	 0		Y	0	mgdqpc	 WATER-	 QUALITY	PARAMETER	  CODE	  CODE	--	6	6	6	11	6	3	7	YYYYNY	0		qw_result_##	parameter_cd	nwis	02-JAN-2025 22:16:48
+C197	Value of water-quality parameter	9	12	MGDQVL	 0	 0	MISC	QVAL	103	9	 0	3333333332	Y	0	mgdqvl	VALUE OF	 WATER-	 QUALITY	PARAMETER	PARAMETER	--	6	6	6	0	6	3	7	YNNNNN	0		qw_result_##	result_va	nwis	02-JAN-2025 22:16:48
+C199	Type of log	9	21	MGDLTY	 0	 0	MISC	LOGS	78	2	 0		Y	0	mgdlty		  TYPE	 OF LOG	AVAILABLE	AVAILABLE	--	6	6	6	100	6	3	8	YYYYNY	0		gw_logs_##	logs_cd	nwis	02-JAN-2025 22:16:48
+C200	Depth to top of logged interval	8	12	MGDLTP	 0.3048	 0	MISC	LOGS	80	8	 0	3333333332	N	25	hdepth	  TOP	   OF	INTERVAL	 (FEET)	(METERS)	--	2	2	2	-3	6	3	8	YYYYYY	0		gw_logs_##	logs_top_va	nwis	02-JAN-2025 22:16:48
+C201	Depth to bottom of logged interval	8	12	MGDLBT	 0.3048	 0	MISC	LOGS	88	8	 0	3333333332	N	25	hdepth	 BOTTOM	   OF	INTERVAL	 (FEET)	(METERS)	--	2	2	2	-3	6	3	8	YYYYYY	0		gw_logs_##	logs_bottom_va	nwis	02-JAN-2025 22:16:48
+C202	Source of log data	6	21	MGDLSC	 0	 0	MISC	LOGS	96	1	 0		N	0	dtsorc	SOURCE	  OF	 LOG	 DATA	 DATA	--	2	2	2	9	6	3	8	YYYYNY	0		gw_logs_##	logs_src_cd	nwis	02-JAN-2025 22:16:48
+C204	Number of wells/laterals in a group	9	11	MGDSWN	 0	 0	MISC	SPEC	78	3	 0		N	0	mgdswn		NUMBER OF	WELLS IN	  GROUP	  GROUP	--	2	2	2	0	6	3	10	YNNNNN	0		gw_spec_##	wells_nu	nwis	02-JAN-2025 22:16:48
+C205	Depth of deepest well in group	8	12	MGDSWD	 0.3048	 0	MISC	SPEC	81	3	 0	3333333332	N	26	hdepth	DEEPEST	WELL IN	 GROUP	 (FEET)	(METERS)	--	2	2	2	-3	6	3	10	YYYYYY	0		gw_spec_##	deepest_well_va	nwis	02-JAN-2025 22:16:48
+C206	Depth of shallowest well in group	10	12	MGDSWS	 0.3048	 0	MISC	SPEC	84	3	 0	3333333332	N	26	hdepth	SHALLOWEST	 WELL IN	  GROUP	  (FEET)	 (METERS)	--	2	2	2	-3	6	3	10	YYYYYY	0		gw_spec_##	shallowest_well_va	nwis	02-JAN-2025 22:16:48
+C207	Method wells in group constructed	6	21	MGDSWM	 0	 0	MISC	SPEC	87	1	 0		N	0	mgdswm		METHOD	CONST-	RUCTED	RUCTED	--	2	2	2	5	6	3	10	YYYYNY	0		gw_spec_##	spec_cons_meth_cd	nwis	02-JAN-2025 22:16:48
+C209	Length of pond, tunnel, or drain	13	12	MGDSPL	 0.3048	 0	MISC	SPEC	95	5	 0	3333333332	N	0	mgdspl	  LENGTH OF	POND, TUNNEL,	  OR DRAIN	   (FEET)	  (METERS)	--	2	2	2	0	6	3	10	YNNNNN	0		gw_spec_##	ptd_len_va	nwis	02-JAN-2025 22:16:48
+C210	Width of pond, tunnel, or drain	13	12	MGDSPW	 0.3048	 0	MISC	SPEC	100	3	 0	3333333332	N	0	mgdspw	  WIDTH OF	POND, TUNNEL,	  OR DRAIN	   (FEET)	  (METERS)	--	2	2	2	0	6	3	10	YNNNNN	0		gw_spec_##	ptd_width_va	nwis	02-JAN-2025 22:16:48
+C211	Depth of pond, tunnel, or drain	13	12	MGDSPD	 0.3048	 0	MISC	SPEC	103	3	 0	3333333332	N	11	hdepth	  DEPTH OF	POND, TUNNEL,	  OR DRAIN	   (FEET)	  (METERS)	--	2	2	2	-3	6	3	10	YYYYYY	0		gw_spec_##	ptd_depth_va	nwis	02-JAN-2025 22:16:48
+C213	Cooperators id	11	23	MGDCID	 0	 0	MISC	COOP	78	10	 0		N	0	mgdcid			COOPERATORS	    ID	    ID	--	2	2	2	0	6	3	12	YYYYNN	0		gw_coop_##	coop_site_no	nwis	02-JAN-2025 22:16:48
+C214	Contractors number	12	23	MGDCRN	 0	 0	MISC	COOP	88	12	 0		N	0	mgdcrn		CONTRACTORS	REGISTRATION	   NUMBER	   NUMBER	--	2	2	2	0	6	3	12	YYYYNN	0		gw_coop_##	registration_no_va	nwis	02-JAN-2025 22:16:48
+C215	Inspection status	10	23	MGDCST	 0	 0	MISC	COOP	100	2	 0		N	0	mgdcst			INSPECTION	  STATUS	  STATUS	--	2	2	2	0	6	3	12	YYYYNN	0		gw_coop_##	coop_stat_cd	nwis	02-JAN-2025 22:16:48
+C216	Reason unapproved	10	23	MGDCAP	 0	 0	MISC	COOP	102	1	 0		N	0	mgdcap			  REASON	UNAPPROVED	UNAPPROVED	--	2	2	2	0	6	3	12	YYYYNN	0		gw_coop_##	unapproved_cd	nwis	02-JAN-2025 22:16:48
+C217	Date inspected	9	31	MGDCIN	 0	 0	MISC	COOP	103	8	 0		N	15	mmdate			  DATE	INSPECTED	INSPECTED	--	2	2	2	-1	6	3	12	YYYYYN	0		gw_coop_##	coop_inspect_dt	nwis	02-JAN-2025 22:16:48
+C218	Cooperators remarks	11	23	MGDCRK	 0	 0	MISC	COOP	111	25	 0		N	0	mgdcrk			COOPERATORS	  REMARKS	  REMARKS	--	2	2	2	0	6	3	12	YYYYNN	0		gw_coop_##	coop_remark_tx	nwis	02-JAN-2025 22:16:48
+C220	Number of wells/laterals in a group	9	11	MGDSWN	 0	 0	MISC	SPEC	78	3	 0		N	0	mgdswn		NUMBER OF	WELLS IN	  GROUP	  GROUP	--	2	2	2	0	6	3	10	YNNNNN	0		gw_spec_##	wells_nu	nwis	02-JAN-2025 22:16:48
+C221	Depth of lateral in collector well	14	12	MGDSLD	 0.3048	 0	MISC	SPEC	112	3	 0	3333333332	N	11	hdepth	   DEPTH TO	  LATERAL IN	COLLECTOR WELL	    (FEET)	   (METERS)	--	2	2	2	-3	6	3	10	YYYYYY	0		gw_spec_##	lateral_depth_va	nwis	02-JAN-2025 22:16:48
+C222	Length of lateral in collector well	14	12	MGDSLL	 0.3048	 0	MISC	SPEC	115	3	 0	3333333332	N	0	mgdsll	  LENGTH OF	  LATERAL IN	COLLECTOR WELL	    (FEET)	   (METERS)	--	2	2	2	0	6	3	10	YNNNNN	0		gw_spec_##	lateral_len_va	nwis	02-JAN-2025 22:16:48
+C223	Diameter of lateral in collector well	14	12	MGDSLS	 2.540	 0	MISC	SPEC	118	3	 0	3333333332	N	0	mgdsls	 DIAMETER OF	  LATERAL IN	COLLECTOR WELL	     (IN)	     (CM)	--	2	2	2	0	6	3	10	YNNNNN	0		gw_spec_##	lateral_dia_va	nwis	02-JAN-2025 22:16:48
+C224	Mesh of screen in lateral	9	12	MGDSLM	 2.540	 0	MISC	SPEC	121	3	 0	3333333332	N	0	mgdslm		 MESH OF	SCREEN IN	 LATERAL	 LATERAL	--	2	2	2	0	6	3	10	YNNNNN	0		gw_spec_##	lateral_mesh_va	nwis	02-JAN-2025 22:16:48
+C225	Format of log data	6	21	MGDLFM	 2.540	 0	MISC	LOGS	97	1	 0		N	0	mgdodf	FORMAT	  OF	 LOG	 DATA	 DATA	--	2	2	2	4	6	3	8	YNNNNN	0		gw_logs_##	logs_format_cd	nwis	02-JAN-2025 22:16:48
+C226	Location of log data	8	23	MGDLLC	 2.540	 0	MISC	LOGS	98	64	 0	 2	N	0	mgdllc	LOCATION	   OF	  LOG	  DATA	  DATA	--	2	2	2	0	6	3	8	YNNNNN	0		gw_logs_##	logs_loc_nm	nwis	02-JAN-2025 22:16:48
+C235	Water-level measurement date	6	31	WLDATE	 0	 0	LEV	none	21	8	 0		Y	15	mmdate		WATER-	LEVEL	 DATE	 DATE	--	6	6	6	-1	6	7	0	YYYYYN	0		gw_lev_##	lev_dt	nwis	02-JAN-2025 22:16:48
+C236	Date accuracy code	8	21	WLDACC	 0	 0	LEV	none	113	1	 0		N	0	dateac		  DATE	ACCURACY	  CODE	  CODE	--	2	2	2	3	6	7	0	YYYYNN	0		gw_lev_##	date_acy_cd	nwis	02-JAN-2025 22:16:48
+C237	Water-level below LSD	8	12	WLEVL	 0.3048	 0	LEV	none	85	7	 0	2223456662	N	27	mmdpth		 WATER	 LEVEL	 (FEET)	(METERS)	--	6	2	6	0	6	7	0	YYYYYN	0		gw_lev_##	lev_va	nwis	02-JAN-2025 22:16:48
+C238	Water-level status	6	22	WLSTAT	 0	 0	LEV	none	109	1	 0		N	28	siwlst		WATER-	LEVEL	STATUS	STATUS	--	2	2	2	23	6	7	0	YYYYYY	0		gw_lev_##	lev_status_cd	nwis	02-JAN-2025 22:16:48
+C239	Water-level method	6	21	WLMETH	 0	 0	LEV	none	110	1	 0		Y	60	siwlmt		WATER-	LEVEL	METHOD	METHOD	--	7	7	6	21	6	7	0	YYYYYY	2	S	gw_lev_##	lev_meth_cd	nwis	02-JAN-2025 22:16:48
+C240	Water-level reference code	9	21	WLREF	 0	 0	LEV	none	111	1	 0		N	51	wlref	 WATER-	  LEVEL	REFERENCE	  CODE	  CODE	--	2	2	2	6	5	7	0	YYYYYY	0		gw_lev_##	lev_statistics_cd	nwis	02-JAN-2025 22:16:48
+C241	Water-level below MP	6	12	WLEVMP	 .3048	 0	LEV	none	92	7	 0	2223456662	N	54	mmdpth	WATER	LEVEL	  MP	 FEET	METERS	--	6	2	6	0	6	7	0	YYYYYN	0		gw_lev_##	mp_lev_va	nwis	02-JAN-2025 22:16:48
+C242	Water-level referenced to Vertical Datum	7	12	WLEVSL	 .3048	 0	LEV	none	99	8	 0	2223456662	N	48	mmaltd	WAT LEV	TO VERT	 DATUM	 FEET	METERS	--	6	2	6	-3	6	7	0	YYYYYN	0		gw_lev_##	sl_lev_va	nwis	02-JAN-2025 22:16:48
+C243	Water-level type code	5	21	WLVENT	 0	 0	LEV	none	107	1	 0		Y	46	wlvent	WATER	LEVEL	TYPE	CODE	CODE	--	6	6	6	0	6	7	0	YYYYYN	0		gw_lev_##	lev_ent_cd	nwis	02-JAN-2025 22:16:48
+C244	Source of water-level	6	21	WLVSRC	 0	 0	LEV	none	108	1	 0		Y	0	siwlsc	WATER	LEVEL	SOURCE	 CODE	 CODE	--	9	9	6	10	6	7	0	YYYYYY	0		gw_lev_##	lev_src_cd	nwis	02-JAN-2025 22:16:48
+C245	Datum for altitude water surface	5	22	WLVDTM	 0	 0	LEV	none	114	10	 0		X	63	saltdm	WATER	LEVEL	DATUM	CODE	CODE	--	6	6	6	18	6	7	0	YYYYYY	2	NGVD29	gw_lev_##	sl_datum_cd	nwis	02-JAN-2025 22:16:48
+C246	ID of party making measurement	5	23	WLPRTY	 0	 0	LEV	none	124	6	 0		N	0	wlprty		WATER	LEVEL	PARTY	PARTY	--	2	2	2	0	6	7	0	YYYYNN	0		gw_lev_##	lev_party_tx	nwis	02-JAN-2025 22:16:48
+C247	Source Agency	6	22	WLSAGY	 0	 0	LEV	none	130	5	 0		X	64	sagncy			SOURCE	AGENCY	AGENCY	--	2	2	2	0	6	7	0	YYYYNY	0		gw_lev_##	lev_agency_cd	nwis	02-JAN-2025 22:16:48
+C248	Sequence number of parent MPNT record	9	10	WLMPSQ	 0	 0	LEV	none	135	3	 0		N	52		SEQUENCE	 NUMBER	   OF	MP RECORD	MP RECORD	--	2	2	2	0	0	7	0	YYYYYY	0		gw_lev_##	lev_mpnt_seq_nu	nwis	02-JAN-2025 22:16:48
+C249	Equipment ID	9	23	WLEQID	 0	 0	LEV	none	138	20	 0		N	0	wleqid			EQUIPMENT	   ID	   ID	--	2	2	2	0	6	7	0	YNNNNN	0		gw_lev_##	lev_eqpid_tx	nwis	02-JAN-2025 22:16:48
+C251	Misc value-1	7	12	MGDMV1	 0	 0	MISC	MSVL	78	7	 0	3333333332	N	0	mgdmv1			 MISC	VALUE-1	VALUE-1	--	2	2	2	0	6	3	11	YYYYNN	0		gw_msvl_##	msvl_1_va	nwis	02-JAN-2025 22:16:48
+C252	Misc value-2	7	23	MGDMV2	 0	 0	MISC	MSVL	85	11	 0		N	0	mgdmv2			 MISC	VALUE-2	VALUE-2	--	2	2	2	0	6	3	11	YYYYNN	0		gw_msvl_##	msvl_2_va	nwis	02-JAN-2025 22:16:48
+C253	Misc value-3	7	23	MGDMV3	 0	 0	MISC	MSVL	96	10	 0		N	0	mgdmv3			 MISC	VALUE-3	VALUE-3	--	2	2	2	0	6	3	11	YYYYNN	0		gw_msvl_##	msvl_3_va	nwis	02-JAN-2025 22:16:48
+C254	Sequence number of LIFT record	8	10	CDRNUM	 0	 0	CONS	LIFT	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	2	5	YYYYYY	0		gw_lift_##	lift_seq_nu	nwis	02-JAN-2025 22:16:48
+C255	Additional lift (above land surface)	8	12	CDLADL	 0.3048	 0	CONS	LIFT	168	3	 0	3333333332	N	0	cdladl	 ADDIT-	 IONAL	  LIFT	 (FEET)	(METERS)	--	2	2	2	0	6	2	5	YYYYNN	0				nwis	02-JAN-2025 22:16:48
+C256	Sequence number of parent GEOH record	8	10	CNASEQ	 0	 0	GEOH	AQFR	25	3	 0		Y	0			 PARENT	SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	5	2	YYYYYY	0		gw_aqfr_##	geoh_seq_nu	nwis	02-JAN-2025 22:16:48
+C257	Primary network	7	22	MGDNT1	 0	 0	MISC	NETW	102	1	 0		N	0	mgdnt1			PRIMARY	NETWORK	NETWORK	--	2	2	2	4	6	3	9	YYYYNY	0		gw_netw_##	netw_1_cd	nwis	02-JAN-2025 22:16:48
+C261	Format of other data	6	21	MGDODF	 0	 0	MISC	OTDT	117	1	 0		N	0	mgdodf	FORMAT	  OF	OTHER	 DATA	 DATA	--	2	2	2	4	6	3	4	YYYYNY	0		gw_otdt_##	otdt_format_cd	nwis	02-JAN-2025 22:16:48
+C262	Diameter of well group	8	12	MGDSWZ	 0.3048	 0	MISC	SPEC	88	7	 0	3333333332	N	0	mgdswz	DIAMETER	OF WELL	 GROUP	 (FEET)	(METERS)	--	2	2	2	0	6	3	10	YYYYNN	0		gw_spec_##	group_dia_va	nwis	02-JAN-2025 22:16:48
+C263	Bearing (azimuth) of pond, tunnel, or drain	17	12	MGDSPB	 0	 0	MISC	SPEC	106	3	 0	3333333332	N	0	mgdspb	BEARING (AZIMUTH)	OF POND, TUNNEL,	    OR DRAIN	    (DEGREES)	    (DEGREES)	--	2	2	2	0	6	3	10	YYYYNN	0		gw_spec_##	ptd_bearing_va	nwis	02-JAN-2025 22:16:48
+C264	Dip of tunnel	9	12	MGDSPA	 0	 0	MISC	SPEC	109	3	 0	3333333332	N	0	mgdspa	   DIP	   OF	 TUNNEL	(DEGREES)	(DEGREES)	--	2	2	2	-3	6	3	10	YYYYNN	0		gw_spec_##	dip_va	nwis	02-JAN-2025 22:16:48
+C265	Remark	7	23	MGDSRK	 0	 0	MISC	SPEC	124	256	 0		N	0	mgdsrk		SPECIAL	 CASES	REMARK	REMARK	--	2	2	2	0	6	3	10	YYYYNN	0		gw_spec_##	spec_rmk_tx	nwis	02-JAN-2025 22:16:48
+C266	Remark	6	23	MGDMRK	 0	 0	MISC	MSVL	113	256	 0		N	0	mgdmrk		 MISC	VALUES	REMARK	REMARK	--	2	2	2	0	6	3	11	YYYYNN	0		gw_msvl_##	msvl_rmk_tx	nwis	02-JAN-2025 22:16:48
+C267	Remark	6	23	WLRMK	 0	 0	LEV	none	158	256	 0		N	0	wlrmk		WATER	LEVEL	REMARK	REMARK	--	2	2	2	0	5	7	0	YYYYNN	0		gw_lev_##	lev_rmk_tx	nwis	02-JAN-2025 22:16:48
+C268	Rated capacity of the lift device	8	11	CDLCAP	 0	 0	CONS	LIFT	183	5	 0		N	0	cdlcap	 RATED	CAPACITY	OF LIFT	 DEVICE	 DEVICE	--	2	2	2	0	6	2	5	YYYYNN	0		gw_lift_##	capacity_va	nwis	02-JAN-2025 22:16:48
+C269	Reliability of the time datum	8	21	WLDTMR	 0	 0	LEV	none	414	1	 0		X	68	wldtmr		WL TIME	 DATUM	REL CODE	REL CODE	--	9	9	2	3	6	7	0	YYYYYY	0		gw_lev_##	tm_datum_rlblty_cd	nwis	02-JAN-2025 22:16:48
+C270	Well heading	12	23	HDLINE	 0	 0	OBS	none	69	115	 0		N	0	hdline		OBSERVATION	WELL HEADING	    LINE	    LINE	--	2	2	2	0	6	8	0	YYYYNN	0		gw_obs_##	heading_line_tx	nwis	02-JAN-2025 22:16:48
+C271	Barometric efficiency	10	11	HYRBRE	 0	 0	TEST	RSLT	151	3	 0		N	56	hycbre		BAROMETRIC	EFFICIENCY	(PERCENT)	(PERCENT)	--	2	2	2	-3	6	6	2	YYYYNN	0		gw_result_##	gw_result_tx	nwis	02-JAN-2025 22:16:48
+C272	Specific capacity	12	12	DISPCP	 12.418	 0	DISC	none	115	8	 0	3333333332	N	0	dispcp		  SPECIFIC	  CAPACITY	(GAL/MIN/FT)	 (L/MIN/M)	--	2	2	2	0	6	4	0	YYYYNN	0		gw_disc_##	spec_cap_va	nwis	02-JAN-2025 22:16:48
+C276	Accuracy code	8	22	WLACC	 0	 0	LEV	none	112	1	 0		X	55	wlacc			ACCURACY	  CODE	  CODE	--	6	2	6	5	5	7	0	YYYYYY	0		gw_lev_##	lev_acy_cd	nwis	02-JAN-2025 22:16:48
+C277	Historical altitude	10	12	CDALTV	 0.3048	 0	CONS	ALTH	80	8	 0	2223456662	Y	0	mmaltd		HISTORICAL	 ALTITUDE	  (FEET)	 (METERS)	--	6	6	6	-3	6	2	9	YYYYYY	0		alt_datum_hist_##	alt_datum_hist_va	nwis	02-JAN-2025 22:16:48
+C278	Historical altitude datum	10	22	CDALTD	 0	 0	CONS	ALTH	88	10	 0		Y	0	saltdm	HISTORICAL	 ALTITUDE	  DATUM	  (CODE)	  (CODE)	--	6	6	6	18	6	2	9	YYYYNN	0		alt_datum_hist_##	alt_datum_geo_cd	nwis	02-JAN-2025 22:16:48
+C279	Historical altitude accuracy	10	12	CDALAC	 0.3048	 0	CONS	ALTH	98	3	 0	3333333332	Y	0	saltac	HISTORICAL	 ALTITUDE	 ACCURACY	  (FEET)	 (METERS)	--	6	6	6	-3	6	2	9	YYYYNN	0		alt_datum_hist_##	alt_datum_hist_acy_va	nwis	02-JAN-2025 22:16:48
+C280	Method historical altitude determined	10	22	CDALMC	 0	 0	CONS	ALTH	101	5	 0		Y	0	cdalmc	  METHOD	 ALTITUDE	DETERMINED	  (CODE)	  (CODE)	--	6	6	6	15	6	2	9	YYYYNN	0		alt_datum_hist_##	alt_datum_hist_meth_cd	nwis	02-JAN-2025 22:16:48
+C281	Source of historical altitude data	10	21	CDALSC	 0	 0	CONS	ALTH	106	1	 0		Y	0	siwlsc	SOURCE OF	HISTORICAL	 ALTITUDE	   DATA	   DATA	--	9	9	6	10	6	2	9	YYYYNN	0		alt_datum_hist_##	alt_datum_hist_src_cd	nwis	02-JAN-2025 22:16:48
+C282	Historical altitude source agency	10	22	CDALAG	 0	 0	CONS	ALTH	107	5	 0		X	75	sagncy	HISTORICAL	 ALTITUDE	  SOURCE	  AGENCY	  AGENCY	--	2	2	2	0	6	2	9	YYYYNY	0		alt_datum_hist_##	alt_datum_hist_agency_cd	nwis	02-JAN-2025 22:16:48
+C283	Reason for altitude change	10	21	CDALRS	 0	 0	CONS	ALTH	112	5	 0		Y	0	cdalrs	HISTORICAL	 ALTITUDE	  REASON	FOR CHANGE	FOR CHANGE	--	9	9	6	18	6	2	9	YYYYYY	0		alt_datum_hist_##	alt_datum_hist_rsn_cd	nwis	02-JAN-2025 22:16:49
+C284	Altitude adjustment behavior	10	21	CDALAB	 0	 0	CONS	ALTH	117	3	 0		Y	76	cdalab	HISTORICAL	 ALTITUDE	ADJUSTMENT	 BEHAVIOR	 BEHAVIOR	--	6	6	6	2	6	2	9	YYYYYY	0		alt_datum_hist_##	alt_datum_hist_adj_cd	nwis	02-JAN-2025 22:16:49
+C285	Interpolation date of this altitude	13	31	CDALID	 0	 0	CONS	ALTH	120	8	 0		N	15	mmdate	INTERPOLATION	    DATE	   OF THIS	  ALTITUDE	  ALTITUDE	--	2	2	2	-1	6	2	9	YYYYNN	0		alt_datum_hist_##	alt_datum_hist_interp_dt	nwis	02-JAN-2025 22:16:49
+C286	Histrical altitude remark	10	23	CDALRM	 0	 0	CONS	ALTH	128	256	 0		N	0	cdalrm		HISTORICAL	 ALTITUDE	  REMARK	  REMARK	--	2	2	2	0	6	2	9	YYYYNN	0		alt_datum_hist_##	alt_datum_hist_tx	nwis	02-JAN-2025 22:16:49
+C296	Test end date	4	31	HYTEDT	 0	 0	TEST	TEST	141	8	 0		N	65	mmdate		TEST	END	DATE	DATE	--	2	2	2	-1	6	6	1	YYYYYN	0		test_##	test_end_dt	nwis	02-JAN-2025 22:16:49
+C297	Test end time	4	32	HYTETM	 0	 0	TEST	TEST	149	4	 0		N	65	mmtime		TEST	END	TIME	TIME	--	2	2	2	-3	6	6	1	YYYYYN	0		test_##	test_end_dt	nwis	02-JAN-2025 22:16:49
+C298	Test end date accuracy	8	23	HYTESG	 0	 0	TEST	TEST	155	1	 0		N	0	mmdacy	  TEST	  END	  DATE	ACCURACY	ACCURACY	--	6	6	6	6	6	6	1	YYYYNN	0		test_##	test_end_dt_acy_cd	nwis	02-JAN-2025 22:16:49
+C299	Test source code	6	21	HYTSRC	 0	 0	TEST	TEST	162	1	 0		Y	0	hytsrc		 TEST	SOURCE	 CODE	 CODE	--	9	9	6	9	6	6	1	YYYYNN	0		test_##	test_src_cd	nwis	02-JAN-2025 22:16:49
+C300	Test remarks	6	23	HYTRMK	 0	 0	TEST	TEST	188	128	 0		N	0	hytrmk			 TEST	REMARK	REMARK	--	2	2	2	0	6	6	1	YYYYNN	0		test_##	test_rmk_tx	nwis	02-JAN-2025 22:16:49
+C301	Secondary use of site	9	21	SUSE2	 0	 0	SITE	none	486	1	 0		N	37	suse1	SECONDARY	   USE	   OF	  SITE	  SITE	--	2	2	2	18	5	1	0	YYYYYY	0		sitefile_##	site_use_2_cd	nwis	02-JAN-2025 22:16:49
+C302	Tertiary use of site	8	21	SUSE3	 0	 0	SITE	none	487	1	 0		N	37	suse1	TERTIARY	  USE	   OF	  SITE	  SITE	--	2	2	2	18	5	1	0	YYYYYY	0		sitefile_##	site_use_3_cd	nwis	02-JAN-2025 22:16:49
+C303	Date and time SITE record created (UTC)	11	33	SCRDAT			SITE	none	33	14			N	0		 DATE/TIME	SITE RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	1	0	YYYYYY	0		sitefile_##	site_cr	nwis	02-JAN-2025 22:16:49
+C304	Contributing unit	5	21	LGCONT	 0	 0	GEOH	GEOH	104	1	 0		N	39	lgcont	CON-	TRIB-	UTING	UNIT	UNIT	--	2	2	2	5	6	5	1	YYYYYY	0		gw_geoh_##	contrib_unit_cd	nwis	02-JAN-2025 22:16:49
+C305	Test source agency	6	22	HYTSAG	 0	 0	TEST	TEST	163	5	 0		X	73	sagncy		 TEST	SOURCE	AGENCY	AGENCY	--	2	2	2	0	6	6	1	YYYYNY	0		test_##	test_agency_cd	nwis	02-JAN-2025 22:16:49
+C306	Porosity	8	12	HYRPOR	 0	 0	TEST	RSLT	150	4	 0	3333333333	N	0	hycpor			POROSITY	(RATIO)	(RATIO)	--	2	2	2	-3	6	6	2	YYYYNN	0		gw_result_##	gw_result_tx	nwis	02-JAN-2025 22:16:49
+C307	Agency that analyzes samples	9	22	MGDNAA	 0	 0	MISC	NETW	97	5	 0		N	0	sagncy			ANALYZING	 AGENCY	 AGENCY	--	2	2	2	0	6	3	9	YYYYNY	0		gw_netw_##	anal_agency_cd	nwis	02-JAN-2025 22:16:49
+C308	Test party	5	23	HYTPTY	 0	 0	TEST	TEST	168	20	 0		N	0	hytpty			TEST	PARTY	PARTY	--	2	2	2	0	6	6	1	YYYYNN	0		test_##	test_party_tx	nwis	02-JAN-2025 22:16:49
+C309	Water-level drawdown	8	12	DIDRDN	 0.3048	 0	DISC	none	123	8	 0	3333333332	N	0	didrdn			DRAWDOWN	 (FEET)	(METERS)	--	2	2	2	0	6	4	0	YYYYNN	0		gw_disc_##	drawdown_va	nwis	02-JAN-2025 22:16:49
+C310	Accuracy of discharge measured	9	21	DIACY	 0	 0	DISC	none	131	1	 0		N	0	diacy		ACCURACY	DISCHARGE	MEASURED	MEASURED	--	2	2	2	4	5	4	0	YYYYNY	0		gw_disc_##	disc_acy_cd	nwis	02-JAN-2025 22:16:49
+C311	Sequence number of RMKS record	8	10	MGDSEQ	 0	 0	MISC	RMKS	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	3	13	YYYYYY	0		gw_rmks_##	rmks_seq_nu	nwis	02-JAN-2025 22:16:49
+C312	Sequence number of OTDT record	8	10	MGDSEQ	 0	 0	MISC	OTDT	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	3	4	YYYYYY	0		gw_otdt_##	otdt_seq_nu	nwis	02-JAN-2025 22:16:49
+C313	Sequence number of MSVL record	8	10	MGDSEQ	 0	 0	MISC	MSVL	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	3	11	YYYYYY	0		gw_msvl_##	msvl_seq_nu	nwis	02-JAN-2025 22:16:49
+C314	Misc value-4	7	11	MGDMV4	 0	 0	MISC	MSVL	106	7	 0		N	0	mgdmv4			 MISC	VALUE-4	VALUE-4	--	2	2	2	0	6	3	11	YYYYNN	0		gw_msvl_##	msvl_4_va	nwis	02-JAN-2025 22:16:49
+C315	Sequence numberof OBS record	8	10	HDSEQ	 0	 0	OBS	none	21	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	8	0	YYYYYY	0		gw_obs_##	obs_seq_nu	nwis	02-JAN-2025 22:16:49
+C321	Begin date for use of this measuring point	15	31	CDMPBD	 0	 0	CONS	MPNT	80	8	 0		N	29	mmdate	  BEGIN DATE	    FOR USE	    OF THIS	MEASURING POINT	MEASURING POINT	--	2	2	2	-1	6	2	8	YYYYYN	0		gw_mpnt_##	mpnt_begin_dt	nwis	02-JAN-2025 22:16:49
+C322	End date for use of this measuring point	15	31	CDMPED	 0	 0	CONS	MPNT	88	8	 0		N	29	mmdate	   END DATE	    FOR USE	    OF THIS	MEASURING POINT	MEASURING POINT	--	2	2	2	-1	6	2	8	YYYYYN	0		gw_mpnt_##	mpnt_end_dt	nwis	02-JAN-2025 22:16:49
+C323	Height of this measuring point	15	12	CDMPHT	 .3048	 0	CONS	MPNT	96	6	 0	2223444442	N	40	cdmpht	    HEIGHT	    OF THIS	MEASURING POINT	    (FEET)	   (METERS)	--	2	2	2	0	6	2	8	YYYYYN	0		gw_mpnt_##	mpnt_height_va	nwis	02-JAN-2025 22:16:49
+C324	Description of this measuring point	13	23	CDMPRM	 0	 0	CONS	MPNT	124	94	 0		N	0	cdmprm		 DESCRIPTION	OF THIS MEAS-	 URING POINT	 URING POINT	--	2	2	2	0	6	2	8	YYYYNN	0		gw_mpnt_##	mpnt_ds	nwis	02-JAN-2025 22:16:49
+C325	Altitude of measuring point	9	12	CDMPAL	 .3048	 0	CONS	MPNT	102	8	 0	2223456662	N	47	mmaltd	MEASURING	  POINT	ALTITUDE	  FEET	 METERS	--	2	2	2	-3	6	2	8	YYYYYN	0		gw_mpnt_##	mpnt_alt_va	nwis	02-JAN-2025 22:16:49
+C326	Method altitude determined	10	21	CDMPME	 0	 0	CONS	MPNT	110	1	 0		X	44	saltmt	  METHOD	 ALTITUDE	DETERMINED	   CODE	   CODE	--	6	2	6	15	6	2	8	YYYYYY	0		gw_mpnt_##	mpnt_alt_meth_cd	nwis	02-JAN-2025 22:16:49
+C327	Altitude accuracy	8	12	CDMPAC	 .3048	 0	CONS	MPNT	111	3	 0	3333333332	X	44	saltac	   MP	ALTITUDE	ACCURACY	  CODE	  CODE	--	6	2	0	-3	6	2	8	YYYYYN	0		gw_mpnt_##	mpnt_alt_acy_va	nwis	02-JAN-2025 22:16:49
+C328	Altitude datum	8	22	CDMPDM	 0	 0	CONS	MPNT	114	10	 0		X	63	saltdm	   MP	ALTITUDE	 DATUM	  CODE	  CODE	--	6	6	6	18	6	2	8	YYYYYY	0		gw_mpnt_##	mpnt_alt_datum_cd	nwis	02-JAN-2025 22:16:49
+C350	Owner type code	5	21	MGDOTP	 0	 0	MISC	OWNR	428	2	 0		Y	0	mgdotp		OWNER	TYPE	CODE	CODE	--	9	7	6	7	6	3	1	YYYYNY	0		addr	site_owner_cd	nwis	02-JAN-2025 22:16:49
+C351	Phone number	6	26	MGDOPH	 0	 0	MISC	OWNR	150	24	 0		N	0	mgdoph			PHONE	NUMBER	NUMBER	--	2	2	2	0	6	3	1	YYYYYY	0		addr	addr_phone_no	nwis	02-JAN-2025 22:16:49
+C352	Access to name	6	23	MGDOPA	 0	 0	MISC	OWNR	174	1	 0		N	0	mgdopa		OWNER	 NAME	ACCESS	ACCESS	--	2	2	2	5	6	3	1	YYYYYY	0		party	accs_cd	nwis	02-JAN-2025 22:16:49
+C353	Address line 1	7	28	MGDOA1	 0	 0	MISC	OWNR	175	64	 0		N	0	mgdoa1		ADDRESS	 LINE	   1	   1	--	2	2	2	0	6	3	1	YYYYYY	0		addr	line_1_tx	nwis	02-JAN-2025 22:16:49
+C354	Address line 2	7	28	MGDOA2	 0	 0	MISC	OWNR	239	64	 0		N	0	mgdoa2		ADDRESS	 LINE	   2	   2	--	2	2	2	0	6	3	1	YYYYYY	0		addr	line_2_tx	nwis	02-JAN-2025 22:16:49
+C355	City name	4	28	MGDOCY	 0	 0	MISC	OWNR	303	64	 0		N	0	mgdocy			CITY	NAME	NAME	--	2	2	2	0	6	3	1	YYYYYY	0		addr	city_nm	nwis	02-JAN-2025 22:16:49
+C356	Postal code	6	28	MGDOPC	 0	 0	MISC	OWNR	367	2	 0		N	0	mgdopc			POSTAL	 CODE	 CODE	--	2	2	2	0	6	3	1	YYYYYY	0		addr	addr_post_cd	nwis	02-JAN-2025 22:16:49
+C357	Zip code	4	28	MGDOZC	 0	 0	MISC	OWNR	369	10	 0		N	0	mgdozc			ZIP	CODE	CODE	--	2	2	2	0	6	3	1	YYYYYY	0		addr	zip_cd	nwis	02-JAN-2025 22:16:49
+C358	Country name	7	28	MGDOCN	 0	 0	MISC	OWNR	379	48	 0		N	0	mgdocn			COUNTRY	 NAME	 NAME	--	2	2	2	0	6	3	1	YYYYYY	0		addr	addr_country_nm	nwis	02-JAN-2025 22:16:49
+C359	Access to phone/address	7	23	MGDOAA	 0	 0	MISC	OWNR	427	1	 0		N	0	mgdopa	 OWNER	 PHONE	ADDRESS	ACCESS	ACCESS	--	2	2	2	5	6	3	1	YYYYYY	0		addr	accs_cd	nwis	02-JAN-2025 22:16:49
+C360	Owner alias name	5	26	MGDOAL	 0	 0	MISC	OWNR	430	64	 0		N	0			OWNER	ALIAS	NAME	NAME	--	2	2	2	0	0	3	1	YYYYYY	0		addr	party_alias_nm	nwis	02-JAN-2025 22:16:49
+C361	Date of contact	7	31	MGDODA	 0	 0	MISC	OCNT	78	8	 0		N	59	mmdate		 DATE	  OF	CONTACT	CONTACT	--	2	2	2	-1	6	3	2	YYYYYN	0		site_contact_##	site_contact_start_dt	nwis	02-JAN-2025 22:16:49
+C362	Name of contact	7	26	MGDONM	 0	 0	MISC	OCNT	86	64	 0		Y	0	mgdonm				CONTACT	CONTACT	--	6	6	6	0	6	3	2	YYYYNN	0		party	party_nm	nwis	02-JAN-2025 22:16:49
+C363	Phone number	6	26	MGDOPH	 0	 0	MISC	OCNT	150	24	 0		N	0	mgdoph			PHONE	NUMBER	NUMBER	--	2	2	2	0	6	3	2	YYYYYY	0		addr	addr_phone_no	nwis	02-JAN-2025 22:16:49
+C364	Access to name	7	23	MGDOPA	 0	 0	MISC	OCNT	174	1	 0		N	0	mgdopa		CONTACT	 NAME	ACCESS	ACCESS	--	2	2	2	5	6	3	2	YYYYYY	0		party	accs_cd	nwis	02-JAN-2025 22:16:49
+C365	Address line 1	7	28	MGDOA1	 0	 0	MISC	OCNT	175	64	 0		N	0	mgdoa1		ADDRESS	 LINE	   1	   1	--	2	2	2	0	6	3	2	YYYYYY	0		addr	line_1_tx	nwis	02-JAN-2025 22:16:49
+C366	Address line 2	7	28	MGDOA2	 0	 0	MISC	OCNT	239	64	 0		N	0	mgdoa2		ADDRESS	 LINE	   2	   2	--	2	2	2	0	6	3	2	YYYYYY	0		addr	line_2_tx	nwis	02-JAN-2025 22:16:49
+C367	City name	4	28	MGDOCY	 0	 0	MISC	OCNT	303	64	 0		N	0	mgdocy			CITY	NAME	NAME	--	2	2	2	0	6	3	2	YYYYYY	0		addr	city_nm	nwis	02-JAN-2025 22:16:49
+C368	Postal code	6	28	MGDOPC	 0	 0	MISC	OCNT	367	2	 0		N	0	mgdopc			POSTAL	 CODE	 CODE	--	2	2	2	0	6	3	2	YYYYYY	0		addr	addr_post_cd	nwis	02-JAN-2025 22:16:49
+C369	Zip code	4	28	MGDOZC	 0	 0	MISC	OCNT	369	10	 0		N	0	mgdozc			ZIP	CODE	CODE	--	2	2	2	0	6	3	2	YYYYYY	0		addr	zip_cd	nwis	02-JAN-2025 22:16:49
+C370	Country name	7	28	MGDOCN	 0	 0	MISC	OCNT	379	48	 0		N	0	mgdocn			COUNTRY	 NAME	 NAME	--	2	2	2	0	6	3	2	YYYYYY	0		addr	addr_country_nm	nwis	02-JAN-2025 22:16:49
+C371	Access to phone/address	7	23	MGDOAA	 0	 0	MISC	OCNT	427	1	 0		N	0	mgdopa	CONTACT	 PHONE	ADDRESS	ACCESS	ACCESS	--	2	2	2	5	6	3	2	YYYYYY	0		addr	accs_cd	nwis	02-JAN-2025 22:16:49
+C372	Contact alias name	7	26	MGDOAL	 0	 0	MISC	OCNT	430	64	 0		N	0			CONTACT	 ALIAS	 NAME	 NAME	--	2	2	2	0	0	3	2	YYYYYY	0		addr	party_alias_nm	nwis	02-JAN-2025 22:16:49
+C373	End date of contact	7	31	MGDOED	 0	 0	MISC	OCNT	494	8	 0		N	59	mmdate		  END	DATE OF	CONTACT	CONTACT	--	2	2	2	-1	6	3	2	YYYYYN	0		site_contact_##	site_contact_end_dt	nwis	02-JAN-2025 22:16:49
+C374	End date of ownership	9	31	MGDOED	 0	 0	MISC	OWNR	494	8	 0		N	59	mmdate		   END	 DATE OF	OWNERSHIP	OWNERSHIP	--	2	2	2	-1	6	3	1	YYYYYN	0		site_owner_##	site_owner_end_dt	nwis	02-JAN-2025 22:16:49
+C393	Date of water-quality measurement	9	31	MGDQSD	 0	 0	MISC	QVAL	78	8	 0		Y	15	mmdate	  DATE	 QUALITY	PARAMETER	MEASURED	MEASURED	--	6	6	6	-1	6	3	7	YYYYYN	0				nwis	02-JAN-2025 22:16:49
+C394	Time of water-quality measurement	9	32	MGDQST	 0	 0	MISC	QVAL	86	4	 0		N	0	mmtime	  TIME	 QUALITY	PARAMETER	MEASURED	MEASURED	--	3	6	3	-3	6	3	7	YYYYYN	0				nwis	02-JAN-2025 22:16:49
+C395	Date of water-quality measurement	9	31	MGDQSD	 0	 0	MISC	QUAL	78	8	 0		Y	15	mmdate	  DATE	 QUALITY	PARAMETER	MEASURED	MEASURED	--	6	6	6	-1	6	3	6	YYYYYN	0				nwis	02-JAN-2025 22:16:49
+C396	Time of water-quality measurement	9	32	MGDQST	 0	 0	MISC	QUAL	86	4	 0		N	0	mmtime	  TIME	 QUALITY	PARAMETER	MEASURED	MEASURED	--	3	6	3	-3	6	3	6	YYYYYN	0				nwis	02-JAN-2025 22:16:49
+C401	Water Level date accuracy code	8	23	WLTDSG	 0	 0	LEV	none	33	1	 0		Y	0	wltdsg		  DATE	ACCURACY	  CODE	  CODE	--	6	6	6	5	6	7	0	YYYYYY	0		gw_lev_##	lev_dt_acy_cd	nwis	02-JAN-2025 22:16:49
+C402	Water level time datum	5	22	HYTTDM	 0	 0	LEV	none	34	6	 0		X	67	time_datum	WATER	LEVEL	TIME	DATUM	DATUM	--	6	6	6	0	10	7	0	YYYYNY	0		gw_lev_##	lev_tz_cd	nwis	02-JAN-2025 22:16:49
+C403	User ID of person creating CONS record	8	23	CDCUID	 0	 0	CONS	CONS	35	8	 0		N	0		 PERSON	CREATING	  CONS	 RECORD	 RECORD	--	2	2	2	0	0	2	1	YYYYYY	0		gw_cons_##	cons_cn	nwis	02-JAN-2025 22:16:49
+C404	Date and time CONS record created (UTC)	11	33	CDCRDT			CONS	CONS	43	14			N	0		 DATE/TIME	CONS RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	1	YYYYYY	0		gw_cons_##	cons_cr	nwis	02-JAN-2025 22:16:49
+C405	User ID of person updating CONS record	8	23	CDUUID	 0	 0	CONS	CONS	57	8	 0		N	0		 PERSON	UPDATING	  CONS	 RECORD	 RECORD	--	2	2	2	0	0	2	1	YYYYYY	0		gw_cons_##	cons_mn	nwis	02-JAN-2025 22:16:49
+C406	User ID of person creating HOLE record	8	23	CDCUID	 0	 0	CONS	HOLE	35	8	 0		N	0		 PERSON	CREATING	  HOLE	 RECORD	 RECORD	--	2	2	2	0	0	2	2	YYYYYY	0		gw_hole_##	hole_cn	nwis	02-JAN-2025 22:16:49
+C407	Date and time HOLE record created (UTC)	11	33	CDCRDT			CONS	HOLE	43	14			N	0		 DATE/TIME	HOLE RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	2	YYYYYY	0		gw_hole_##	hole_cr	nwis	02-JAN-2025 22:16:49
+C408	User ID of person updating HOLE record	8	23	CDUUID	 0	 0	CONS	HOLE	57	8	 0		N	0		 PERSON	UPDATING	  HOLE	 RECORD	 RECORD	--	2	2	2	0	0	2	2	YYYYYY	0		gw_hole_##	hole_mn	nwis	02-JAN-2025 22:16:49
+C409	User ID of person creating CSNG record	8	23	CDCUID	 0	 0	CONS	CSNG	35	8	 13		N	0		 PERSON	CREATING	  CSNG	 RECORD	 RECORD	--	2	2	2	0	0	2	3	YYYYYY	0		gw_csng_##	csng_cn	nwis	02-JAN-2025 22:16:49
+C410	Date and time CSNG record created (UTC)	11	33	CDCRDT			CONS	CSNG	43	14			N	0		 DATE/TIME	CSNG RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	3	YYYYYY	0		gw_csng_##	csng_cr	nwis	02-JAN-2025 22:16:49
+C411	User ID of person updating CSNG record	8	23	CDUUID	 0	 0	CONS	CSNG	57	8	 0		N	0		 PERSON	UPDATING	  CSNG	 RECORD	 RECORD	--	2	2	2	0	0	2	3	YYYYYY	0		gw_csng_##	csng_mn	nwis	02-JAN-2025 22:16:49
+C412	User ID of person creating OPEN record	8	23	CDCUID	 0	 0	CONS	OPEN	35	8	 0		N	0		 PERSON	CREATING	  OPEN	 RECORD	 RECORD	--	2	2	2	0	0	2	4	YYYYYY	0		gw_open_##	open_cn	nwis	02-JAN-2025 22:16:49
+C413	Date and time OPEN record created (UTC)	11	33	CDCRDT			CONS	OPEN	43	14			N	0		 DATE/TIME	OPEN RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	4	YYYYYY	0		gw_open_##	open_cr	nwis	02-JAN-2025 22:16:49
+C414	User ID of person updating OPEN record	8	23	CDUUID	 0	 0	CONS	OPEN	57	8	 0		N	0		 PERSON	UPDATING	  OPEN	 RECORD	 RECORD	--	2	2	2	0	0	2	4	YYYYYY	0		gw_open_##	open_mn	nwis	02-JAN-2025 22:16:49
+C415	User ID of person creating LIFT record	8	23	CDCUID	 0	 0	CONS	LIFT	35	8	 0		N	0		 PERSON	CREATING	  LIFT	 RECORD	 RECORD	--	2	2	2	0	0	2	5	YYYYYY	0		gw_lift_##	lift_cn	nwis	02-JAN-2025 22:16:49
+C416	Date and time LIFT record created (UTC)	11	33	CDCRDT			CONS	LIFT	43	14			N	0		 DATE/TIME	LIFT RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	5	YYYYYY	0		gw_lift_##	lift_cr	nwis	02-JAN-2025 22:16:49
+C417	User ID of person updating LIFT record	8	23	CDUUID	 0	 0	CONS	LIFT	57	8	 0		N	0		 PERSON	UPDATING	  LIFT	 RECORD	 RECORD	--	2	2	2	0	0	2	5	YYYYYY	0		gw_lift_##	lift_mn	nwis	02-JAN-2025 22:16:49
+C418	User ID of person creating REPR record	8	23	CDCUID	 0	 0	CONS	REPR	35	8	 0		N	0		 PERSON	CREATING	  REPR	 RECORD	 RECORD	--	2	2	2	0	0	2	6	YYYYYY	0		gw_repr_##	repr_cn	nwis	02-JAN-2025 22:16:49
+C419	Date and time REPR record created (UTC)	11	33	CDCRDT			CONS	REPR	43	14			N	0		 DATE/TIME	REPR RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	6	YYYYYY	0		gw_repr_##	repr_cr	nwis	02-JAN-2025 22:16:49
+C420	User ID of person updating REPR record	8	23	CDUUID	 0	 0	CONS	REPR	57	8	 0		N	0		 PERSON	UPDATING	  REPR	 RECORD	 RECORD	--	2	2	2	0	0	2	6	YYYYYY	0		gw_repr_##	repr_mn	nwis	02-JAN-2025 22:16:49
+C421	User ID of person creating SPNG record	8	23	CDCUID	 0	 0	CONS	SPNG	35	8	 0		N	0		 PERSON	CREATING	  SPNG	 RECORD	 RECORD	--	2	2	2	0	0	2	7	YYYYYY	0		gw_spng_##	spng_cn	nwis	02-JAN-2025 22:16:49
+C422	Date and time SPNG record created (UTC)	11	33	CDCRDT			CONS	SPNG	43	14			N	0		 DATE/TIME	SPNG RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	7	YYYYYY	0		gw_spng_##	spng_cr	nwis	02-JAN-2025 22:16:49
+C423	User ID of person updating SPNG record	8	23	CDUUID	 0	 0	CONS	SPNG	57	8	 0		N	0		 PERSON	UPDATING	  SPNG	 RECORD	 RECORD	--	2	2	2	0	0	2	7	YYYYYY	0		gw_spng_##	spng_mn	nwis	02-JAN-2025 22:16:49
+C424	User ID of person creating MPNT record	8	23	CDCUID	 0	 0	CONS	MPNT	35	8	 0		N	0		 PERSON	CREATING	  MPNT	 RECORD	 RECORD	--	2	2	2	0	0	2	8	YYYYYY	0		gw_mpnt_##	mpnt_cn	nwis	02-JAN-2025 22:16:49
+C425	Date and time MPNT record created (UTC)	11	33	CDCRDT			CONS	MPNT	43	14			N	0		 DATE/TIME	MPNT RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	8	YYYYYY	0		gw_mpnt_##	mpnt_cr	nwis	02-JAN-2025 22:16:49
+C426	User ID of person updating MPNT record	8	23	CDUUID	 0	 0	CONS	MPNT	57	8	 0		N	0		 PERSON	UPDATING	  MPNT	 RECORD	 RECORD	--	2	2	2	0	0	2	8	YYYYYY	0		gw_mpnt_##	mpnt_mn	nwis	02-JAN-2025 22:16:49
+C427	User ID of person creating LEV record	8	23	WLCUID	 0	 0	LEV	none	40	8	 0		N	0		 PERSON	CREATING	  LEV	 RECORD	 RECORD	--	2	2	2	0	0	7	0	YYYYYY	0		gw_lev_##	lev_cn	nwis	02-JAN-2025 22:16:49
+C428	Date and time LEV record created (UTC)	10	33	WLCRDT			LEV	none	48	14			N	0		DATE/TIME	LEV RECORD	 CREATED	  (UTC)	  (UTC)	--	2	2	2	0	0	7	0	YYYYYY	0		gw_lev_##	lev_cr	nwis	02-JAN-2025 22:16:49
+C429	User ID of person updating LEV record	8	23	WLUUID	 0	 0	LEV	none	62	8	 0		N	0		 PERSON	UPDATING	  LEV	 RECORD	 RECORD	--	2	2	2	0	0	7	0	YYYYYY	0		gw_lev_##	lev_mn	nwis	02-JAN-2025 22:16:49
+C430	User ID of person creating DISC record	8	23	DICUID	 0	 0	DISC	none	32	8	 0		N	0		 PERSON	CREATING	  DISC	 RECORD	 RECORD	--	2	2	2	0	0	4	0	YYYYYY	0		gw_disc_##	disc_cn	nwis	02-JAN-2025 22:16:49
+C431	Date and time DISC record created (UTC)	11	33	DICRDT			DISC	none	40	14			N	0		 DATE/TIME	DISC RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	4	0	YYYYYY	0		gw_disc_##	disc_cr	nwis	02-JAN-2025 22:16:49
+C432	User ID of person updating DISC record	8	23	DIUUID	 0	 0	DISC	none	54	8	 0		N	0		 PERSON	UPDATING	  DISC	 RECORD	 RECORD	--	2	2	2	0	0	4	0	YYYYYY	0		gw_disc_##	disc_mn	nwis	02-JAN-2025 22:16:49
+C433	User ID of person creating OWNR record	8	23	MGDCUI	 0	 0	MISC	OWNR	33	8	 0		N	0		 PERSON	CREATING	  OWNR	 RECORD	 RECORD	--	2	2	2	0	0	3	1	YYYYYY	0		site_owner_##	site_owner_cn	nwis	02-JAN-2025 22:16:49
+C434	Date and time OWNR record created (UTC)	11	33	MGDCRD			MISC	OWNR	41	14			N	0		 DATE/TIME	OWNR RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	1	YYYYYY	0		site_owner_##	site_owner_cr	nwis	02-JAN-2025 22:16:49
+C435	User ID of person updating OWNR record	8	23	MGDUUI	 0	 0	MISC	OWNR	55	8	 0		N	0		 PERSON	UPDATING	  OWNR	 RECORD	 RECORD	--	2	2	2	0	0	3	1	YYYYYY	0		site_owner_##	site_owner_mn	nwis	02-JAN-2025 22:16:49
+C436	User ID of person creating OTID record	8	23	MGDCUI	 0	 0	MISC	OTID	33	8	 0		N	0		 PERSON	CREATING	  OTDT	 RECORD	 RECORD	--	2	2	2	0	0	3	3	YYYYYY	0		gw_otid_##	otid_cn	nwis	02-JAN-2025 22:16:49
+C437	Date and time OTID record created (UTC)	11	33	MGDCRD			MISC	OTID	41	14			N	0		 DATE/TIME	OTID RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	3	YYYYYY	0		gw_otid_##	otid_cr	nwis	02-JAN-2025 22:16:49
+C438	User ID of person updating OTID record	8	23	MGDUUI	 0	 0	MISC	OTID	55	8	 0		N	0		 PERSON	UPDATING	  OTID	 RECORD	 RECORD	--	2	2	2	0	0	3	3	YYYYYY	0		gw_otid_##	otid_mn	nwis	02-JAN-2025 22:16:49
+C439	User ID of person creating OTDT record	8	23	MGDCUI	 0	 0	MISC	OTDT	33	8	 0		N	0		 PERSON	CREATING	  OTDT	 RECORD	 RECORD	--	2	2	2	0	0	3	4	YYYYYY	0		gw_otdt_##	otdt_cn	nwis	02-JAN-2025 22:16:49
+C440	Date and time OTDT record created (UTC)	11	33	MGDCRD			MISC	OTDT	41	14			N	0		 DATE/TIME	OTDT RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	4	YYYYYY	0		gw_otdt_##	otdt_cr	nwis	02-JAN-2025 22:16:49
+C441	User ID of person updating OTDT record	8	23	MGDUUI	 0	 0	MISC	OTDT	55	8	 0		N	0		 PERSON	UPDATING	  OTDT	 RECORD	 RECORD	--	2	2	2	0	0	3	4	YYYYYY	0		gw_otdt_##	otdt_mn	nwis	02-JAN-2025 22:16:49
+C442	User ID of person creating VIST record	8	23	MGDCUI	 0	 0	MISC	VIST	33	8	 0		N	0		 PERSON	CREATING	  VIST	 RECORD	 RECORD	--	2	2	2	0	0	3	5	YYYYYY	0		gw_vist_##	vist_cn	nwis	02-JAN-2025 22:16:49
+C443	Date and time VIST record created (UTC)	11	33	MGDCRD			MISC	VIST	41	14			N	0		 DATE/TIME	VIST RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	5	YYYYYY	0		gw_vist_##	vist_cr	nwis	02-JAN-2025 22:16:49
+C444	User ID of person updating VIST record	8	23	MGDUUI	 0	 0	MISC	VIST	55	8	 0		N	0		 PERSON	UPDATING	  VIST	 RECORD	 RECORD	--	2	2	2	0	0	3	5	YYYYYY	0		gw_vist_##	vist_mn	nwis	02-JAN-2025 22:16:49
+C445	User ID of person creating QVAL record	8	23	MGDCUI	 0	 0	MISC	QVAL	33	8	 0		N	0		 PERSON	CREATING	  QVAL	 RECORD	 RECORD	--	2	2	2	0	0	3	7	YYYYYY	0		qw_sample_##	sample_cn	nwis	02-JAN-2025 22:16:49
+C446	Date and time QVAL record created (UTC)	11	33	MGDCRD			MISC	QVAL	41	14			N	0		 DATE/TIME	QVAL RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	7	YYYYYY	0		qw_sample_##	sample_cr	nwis	02-JAN-2025 22:16:49
+C447	User ID of person updating QVAL record	8	23	MGDUUI	 0	 0	MISC	QVAL	55	8	 0		N	0		 PERSON	UPDATING	  QVAL	 RECORD	 RECORD	--	2	2	2	0	0	3	7	YYYYYY	0		qw_sample_##	sample_mn	nwis	02-JAN-2025 22:16:49
+C448	User ID of person creating LOGS record	8	23	MGDCUI	 0	 0	MISC	LOGS	33	8	 0		N	0		 PERSON	CREATING	  LOGS	 RECORD	 RECORD	--	2	2	2	0	0	3	8	YYYYYY	0		gw_logs_##	logs_cn	nwis	02-JAN-2025 22:16:49
+C449	Date and time LOGS record created (UTC)	11	33	MGDCRD			MISC	LOGS	41	14			N	0		 DATE/TIME	LOGS RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	8	YYYYYY	0		gw_logs_##	logs_cr	nwis	02-JAN-2025 22:16:49
+C450	User ID of person updating LOGS record	8	23	MGDUUI	 0	 0	MISC	LOGS	55	8	 0		N	0		 PERSON	UPDATING	  LOGS	 RECORD	 RECORD	--	2	2	2	0	0	3	8	YYYYYY	0		gw_logs_##	logs_mn	nwis	02-JAN-2025 22:16:49
+C451	User ID of person creating NETW record	8	23	MGDCUI	 0	 0	MISC	NETW	33	8	 0		N	0		 PERSON	CREATING	  NETW	 RECORD	 RECORD	--	2	2	2	0	0	3	9	YYYYYY	0		gw_netw_##	netw_cn	nwis	02-JAN-2025 22:16:49
+C452	Date and time NETW record created (UTC)	11	33	MGDCRD			MISC	NETW	41	14			N	0		 DATE/TIME	NETW RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	9	YYYYYY	0		gw_netw_##	netw_cr	nwis	02-JAN-2025 22:16:49
+C453	User ID of person updating NETW record	8	23	MGDUUI	 0	 0	MISC	NETW	55	8	 0		N	0		 PERSON	UPDATING	  NETW	 RECORD	 RECORD	--	2	2	2	0	0	3	9	YYYYYY	0		gw_netw_##	netw_mn	nwis	02-JAN-2025 22:16:49
+C454	User ID of person creating SPEC record	8	23	MGDCUI	 0	 0	MISC	SPEC	33	8	 0		N	0		 PERSON	CREATING	  SPEC	 RECORD	 RECORD	--	2	2	2	0	0	3	10	YYYYYY	0		gw_spec_##	spec_cn	nwis	02-JAN-2025 22:16:49
+C455	Date and time SPEC record created (UTC)	11	33	MGDCRD			MISC	SPEC	41	14			N	0		 DATE/TIME	SPEC RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	10	YYYYYY	0		gw_spec_##	spec_cr	nwis	02-JAN-2025 22:16:49
+C456	User ID of person updating SPEC record	8	23	MGDUUI	 0	 0	MISC	SPEC	55	8	 0		N	0		 PERSON	UPDATING	  SPEC	 RECORD	 RECORD	--	2	2	2	0	0	3	10	YYYYYY	0		gw_spec_##	spec_mn	nwis	02-JAN-2025 22:16:49
+C457	User ID of person creating MSVL record	8	23	MGDCUI	 0	 0	MISC	MSVL	33	8	 0		N	0		 PERSON	CREATING	  MSVL	 RECORD	 RECORD	--	2	2	2	0	0	3	11	YYYYYY	0		gw_msvl_##	msvl_cn	nwis	02-JAN-2025 22:16:49
+C458	Date and time MSVL record created (UTC)	11	33	MGDCRD			MISC	MSVL	41	14			N	0		 DATE/TIME	MSVL RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	11	YYYYYY	0		gw_msvl_##	msvl_cr	nwis	02-JAN-2025 22:16:49
+C459	User ID of person updating MSVL record	8	23	MGDUUI	 0	 0	MISC	MSVL	55	8	 0		N	0		 PERSON	UPDATING	  MSVL	 RECORD	 RECORD	--	2	2	2	0	0	3	11	YYYYYY	0		gw_msvl_##	msvl_mn	nwis	02-JAN-2025 22:16:49
+C460	User ID of person creating COOP record	8	23	MGDCUI	 0	 0	MISC	COOP	33	8	 0		N	0		 PERSON	CREATING	  COOP	 RECORD	 RECORD	--	2	2	2	0	0	3	12	YYYYYY	0		gw_coop_##	coop_cn	nwis	02-JAN-2025 22:16:49
+C461	Date and time COOP record created (UTC)	11	33	MGDCRD			MISC	COOP	41	14			N	0		 DATE/TIME	COOP RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	12	YYYYYY	0		gw_coop_##	coop_cr	nwis	02-JAN-2025 22:16:49
+C462	User ID of person updating COOP record	8	23	MGDUUI	 0	 0	MISC	COOP	55	8	 0		N	0		 PERSON	UPDATING	  COOP	 RECORD	 RECORD	--	2	2	2	0	0	3	12	YYYYYY	0		gw_coop_##	coop_mn	nwis	02-JAN-2025 22:16:49
+C463	User ID of person creating RMKS record	8	23	MGDCUI	 0	 0	MISC	RMKS	33	8	 0		N	0		 PERSON	CREATING	  RMKS	 RECORD	 RECORD	--	2	2	2	0	0	3	13	YYYYYY	0		gw_rmks_##	rmks_cn	nwis	02-JAN-2025 22:16:49
+C464	Date and time RMKS record created (UTC)	11	33	MGDCRD			MISC	RMKS	41	14			N	0		 DATE/TIME	RMKS RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	13	YYYYYY	0		gw_rmks_##	rmks_cr	nwis	02-JAN-2025 22:16:49
+C465	User ID of person updating RMKS record	8	23	MGDUUI	 0	 0	MISC	RMKS	55	8	 0		N	0		 PERSON	UPDATING	  RMKS	 RECORD	 RECORD	--	2	2	2	0	0	3	13	YYYYYY	0		gw_rmks_##	rmks_mn	nwis	02-JAN-2025 22:16:49
+C466	User ID of person creating GEOH record	8	23	LGCUID	 0	 0	GEOH	GEOH	31	8	 0		N	0		 PERSON	CREATING	  GEOH	 RECORD	 RECORD	--	2	2	2	0	0	5	1	YYYYYY	0		gw_geoh_##	geoh_cn	nwis	02-JAN-2025 22:16:49
+C467	Date and time GEOH record created (UTC)	11	33	LGCRDT			GEOH	GEOH	39	14			N	0		 DATE/TIME	GEOH RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	5	1	YYYYYY	0		gw_geoh_##	geoh_cr	nwis	02-JAN-2025 22:16:49
+C468	User ID of person updating GEOH record	8	23	LGUUID	 0	 0	GEOH	GEOH	53	8	 0		N	0		 PERSON	UPDATING	  GEOH	 RECORD	 RECORD	--	2	2	2	0	0	5	1	YYYYYY	0		gw_geoh_##	geoh_mn	nwis	02-JAN-2025 22:16:49
+C469	User ID of person creating AQFR record	8	23	LGCUID	 0	 0	GEOH	AQFR	31	8	 0		N	0		 PERSON	CREATING	  AQFR	 RECORD	 RECORD	--	2	2	2	0	0	5	2	YYYYYY	0		gw_aqfr_##	aqfr_cn	nwis	02-JAN-2025 22:16:49
+C470	Date and time AQFR record created (UTC)	11	33	LGCRDT			GEOH	AQFR	39	14			N	0		 DATE/TIME	AQFR RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	5	2	YYYYYY	0		gw_aqfr_##	aqfr_cr	nwis	02-JAN-2025 22:16:49
+C471	User ID of person updating AQFR record	8	23	LGUUID	 0	 0	GEOH	AQFR	53	8	 0		N	0		 PERSON	UPDATING	  AQFR	 RECORD	 RECORD	--	2	2	2	0	0	5	2	YYYYYY	0		gw_aqfr_##	aqfr_mn	nwis	02-JAN-2025 22:16:49
+C472	User ID of person creating OBS record	8	23	HDRCUID	 0	 0	OBS	none	24	8	 0		N	0		 PERSON	CREATING	  OBS	 RECORD	 RECORD	--	2	2	2	0	0	8	0	YYYYYY	0		gw_obs_##	obs_cn	nwis	02-JAN-2025 22:16:49
+C473	Date and time OBS record created (UTC)	10	33	HDRCRT			OBS	none	32	14			N	0		DATE/TIME	OBS RECORD	 CREATED	  (UTC)	  (UTC)	--	2	2	2	0	0	8	0	YYYYYY	0		gw_obs_##	obs_cr	nwis	02-JAN-2025 22:16:49
+C474	User ID of person updating OBS record	8	23	HDUUID	 0	 0	OBS	none	46	8	 0		N	0		 PERSON	UPDATING	  OBS	 RECORD	 RECORD	--	2	2	2	0	0	8	0	YYYYYY	0		gw_obs_##	obs_mn	nwis	02-JAN-2025 22:16:49
+C475	User ID of person creating TEST record	8	23	HYCUID	 0	 0	TEST	TEST	96	8	 0		N	0		 PERSON	CREATING	  TEST	 RECORD	 RECORD	--	2	2	2	0	0	6	1	YYYYYY	0		test_##	test_cn	nwis	02-JAN-2025 22:16:49
+C476	Date and time TEST record created (UTC)	11	33	HYCRDT			TEST	TEST	104	14			N	0		 DATE/TIME	TEST RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	6	1	YYYYYY	0		test_##	test_cr	nwis	02-JAN-2025 22:16:49
+C477	User ID of person updating TEST record	8	23	HYUUID	 0	 0	TEST	TEST	118	8	 0		N	0		 PERSON	UPDATING	  TEST	 RECORD	 RECORD	--	2	2	2	0	0	6	1	YYYYYY	0		test_##	test_mn	nwis	02-JAN-2025 22:16:49
+C478	User ID of person creating RSLT record	8	23	HYCUID	 0	 0	TEST	RSLT	96	8	 0		N	0		 PERSON	CREATING	  RSLT	 RECORD	 RECORD	--	2	2	2	0	0	6	2	YYYYYY	0		gw_result_##	gw_result_cn	nwis	02-JAN-2025 22:16:49
+C479	Date and time RSLT record created (UTC)	11	33	HYCRDT			TEST	RSLT	104	14			N	0		 DATE/TIME	RSLT RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	6	2	YYYYYY	0		gw_result_##	gw_result_cr	nwis	02-JAN-2025 22:16:49
+C480	User ID of person updating RSLT record	8	23	HYUUID	 0	 0	TEST	RSLT	118	8	 0		N	0		 PERSON	UPDATING	  RSLT	 RECORD	 RECORD	--	2	2	2	0	0	6	2	YYYYYY	0		gw_result_##	gw_result_mn	nwis	02-JAN-2025 22:16:49
+C481	User ID of person creating RSIT record	8	23	HYCUID	 0	 0	TEST	RSIT	96	8	 0		N	0		 PERSON	CREATING	  RSIT	 RECORD	 RECORD	--	2	2	2	0	0	6	3	YYYYYY	0		gw_result_site_##	gw_result_site_cn	nwis	02-JAN-2025 22:16:49
+C482	Date and time RSIT record created (UTC)	11	33	HYCRDT			TEST	RSIT	104	14			N	0		 DATE/TIME	RSIT RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	6	3	YYYYNN	0		gw_result_site_##	gw_result_site_cr	nwis	02-JAN-2025 22:16:50
+C483	User ID of person updating RSIT record	8	23	HYUUID	 0	 0	TEST	RSIT	118	8	 0		N	0		 PERSON	UPDATING	  RSIT	 RECORD	 RECORD	--	2	2	2	0	0	6	3	YYYYNN	0		gw_result_site_##	gw_result_site_mn	nwis	02-JAN-2025 22:16:50
+C484	User ID of person creating PRMT record	8	23	MGDCUI	 0	 0	MISC	PRMT	33	8	 0		N	0		 PERSON	CREATING	  PRMT	 RECORD	 RECORD	--	2	2	2	0	0	3	14	YYYYYY	0		permit_##	permit_cn	nwis	02-JAN-2025 22:16:50
+C485	Date and time PRMT record created (UTC)	11	33	MGDCRD			MISC	PRMT	41	14			N	0		 DATE/TIME	PRMT RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	14	YYYYYY	0		permit_##	permit_cr	nwis	02-JAN-2025 22:16:50
+C486	User ID of person updating PRMT record	8	23	MGDUUI	 0	 0	MISC	PRMT	55	8	 0		N	0		 PERSON	UPDATING	  PRMT	 RECORD	 RECORD	--	2	2	2	0	0	3	14	YYYYYY	0		permit_##	permit_mn	nwis	02-JAN-2025 22:16:50
+C487	Test type	4	25	HYTTYP	 0	 0	TEST	RSLT	25	12	 0		Y	0	hyttyp		TEST	TYPE	CODE	CODE	--	9	9	6	7	6	6	2	YYYYYY	0		gw_result_##	test_tp	nwis	02-JAN-2025 22:16:50
+C488	Test start date	5	31	HYTDAT	 0	 0	TEST	RSLT	37	8	 0		Y	15	mmdate		TEST	START	DATE	DATE	--	6	6	6	-1	6	6	2	YYYYYY	0		gw_result_##	test_start_dt	nwis	02-JAN-2025 22:16:50
+C489	Test Start Time	5	32	HYTTIM	 0	 0	TEST	RSLT	45	4	 0		N	0	mmtime		TEST	START	TIME	TIME	--	2	2	2	-3	6	6	2	YYYYYY	0		gw_result_##	test_start_dt	nwis	02-JAN-2025 22:16:50
+C490	Test type	4	25	HYTTYP	 0	 0	TEST	RSIT	25	12	 0		Y	0	hyttyp		TEST	TYPE	CODE	CODE	--	9	9	6	7	6	6	3	YYYYYY	0		gw_result_site_##	test_tp	nwis	02-JAN-2025 22:16:50
+C491	Test start date	5	31	HYTDAT	 0	 0	TEST	RSIT	37	8	 0		Y	15	mmdate		TEST	START	DATE	DATE	--	6	6	6	-1	6	6	3	YYYYYY	0		gw_result_site_##	test_start_dt	nwis	02-JAN-2025 22:16:50
+C492	Test Start Time	5	32	HYTTIM	 0	 0	TEST	RSIT	45	4	 0		N	0	mmtime		TEST	START	TIME	TIME	--	2	2	2	-3	6	6	3	YYYYYY	0		gw_result_site_##	test_start_dt	nwis	02-JAN-2025 22:16:50
+C493	Test method code	6	25	HYRMCD	 0	 0	TEST	RSIT	51	5	 0		Y	0	hyrmcd		 TEST	METHOD	 CODE	 CODE	--	6	6	6	0	6	6	3	YYYYYY	0		gw_result_site_##	meth_cd	nwis	02-JAN-2025 22:16:50
+C494	Test data type	4	25	HYRDTP	 0	 0	TEST	RSIT	56	13	 0		Y	0	hyrdtp		TEST	DATA	TYPE	TYPE	--	6	6	6	29	6	6	3	YYYYYY	0		gw_result_site_##	data_tp	nwis	02-JAN-2025 22:16:50
+C495	Result source code	6	21	HYRSRC	 0	 0	TEST	RSLT	185	1	 0		Y	0	siwlsc		RESULT	SOURCE	 CODE	 CODE	--	9	9	6	10	6	6	2	YYYYNN	0		gw_result_##	gw_result_src_cd	nwis	02-JAN-2025 22:16:50
+C496	Result source agency	6	22	HYRSAG	 0	 0	TEST	RSLT	186	5	 0		X	74	sagncy		RESULT	SOURCE	AGENCY	AGENCY	--	2	2	2	0	6	6	2	YYYYNY	0		gw_result_##	gw_result_agency_cd	nwis	02-JAN-2025 22:16:50
+C497	Result approval date	8	31	HYRADT	 0	 0	TEST	RSLT	191	8	 0		N	65	mmdate		 RESULT	APPROVAL	  DATE	  DATE	--	6	6	6	-1	6	6	2	YYYYYY	0		gw_result_##	gw_result_approval_dt	nwis	02-JAN-2025 22:16:50
+C498	Result approval date accuracy	8	21	HYRDSG	 0	 0	TEST	RSLT	199	1	 0		N	0	dateac	 RESULT	APPROVAL	  DATE	ACCURACY	ACCURACY	--	6	6	6	3	6	6	2	YYYYNN	0		gw_result_##	gw_result_approval_sg	nwis	02-JAN-2025 22:16:50
+C499	Related site agency code	7	22	HYSAGY	 0	 0	TEST	RSIT	69	5	 0		Y	0	sagncy	RELATED	 SITE	AGENCY	 CODE	 CODE	--	6	6	6	0	6	6	3	YYYYNY	0		gw_result_site_##		nwis	02-JAN-2025 22:16:50
+C500	Related site station number	7	22	HYSID	 0	 0	TEST	RSIT	74	15	 0		Y	1	sid	RELATED	 SITE	STATION	NUMBER	NUMBER	--	6	6	6	0	3	6	3	YYYYYN	0		gw_result_site_##		nwis	02-JAN-2025 22:16:50
+C501	Test date accuracy	8	23	HYTDSG	 0	 0	TEST	TEST	89	1	 0		Y	0	mmdacy	  TEST	 START	  DATE	ACCURACY	ACCURACY	--	6	6	6	6	6	6	1	YYYYYY	0		test_##	test_start_dt_acy_cd	nwis	02-JAN-2025 22:16:50
+C502	Test start time datum	5	22	HYTTDM	 0	 0	TEST	TEST	90	6	 0		X	69	time_datum	TEST	BEGIN	TIME	DATUM	DATUM	--	6	6	6	0	10	6	1	YYYYNY	0		test_##	test_start_tz_cd	nwis	02-JAN-2025 22:16:50
+C503	Test end time datum	5	22	HYTEDM	 0	 0	TEST	TEST	156	6	 0		X	70	time_datum	TEST	 END	TIME	DATUM	DATUM	--	6	6	6	0	10	6	1	YYYYNY	0		test_##	test_end_tz_cd	nwis	02-JAN-2025 22:16:50
+C504	Related site remarks	7	23	HYSRMK	 0	 0	TEST	RSIT	141	128	 0		N	0	hysrmk		RELATED	 SITE	REMARK	REMARK	--	2	2	2	0	6	6	3	YYYYNN	0		gw_result_site_##	gw_result_site_rmk_tx	nwis	02-JAN-2025 22:16:50
+C702	Date and time DISC record last updated (UTC)	11	33	DIUPDT			DISC	none	62	14			N	0		 DATE/TIME	DISC RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	4	0	YYYYYY	0		gw_disc_##	disc_md	nwis	02-JAN-2025 22:16:50
+C703	Discharge type	9	21	DITYPE	 0	 0	DISC	none	77	1	 0		Y	0	ditype			 TYPE OF	DISCHARGE	DISCHARGE	--	6	6	6	2	6	4	0	YYYYNY	0		gw_disc_##	disc_tp	nwis	02-JAN-2025 22:16:50
+C706	Network data type	4	21	MGDNDT	 0	 0	MISC	NETW	78	2	 0		Y	0	mgdndt			DATA	TYPE	TYPE	--	6	6	6	3	6	3	9	YYYYNY	0		gw_netw_##	netw_cd	nwis	02-JAN-2025 22:16:50
+C707	Date and time OBS record last updated (UTC)	10	33	HDUPDT			OBS	none	54	14			N	0		DATE/TIME	OBS RECORD	 UPDATED	  (UTC)	  (UTC)	--	2	2	2	0	0	8	0	YYYYYY	0		gw_obs_##	obs_md	nwis	02-JAN-2025 22:16:50
+C708	Network secondary	9	22	MGDNT2	 0	 0	MISC	NETW	103	1	 0		N	0	mgdnt1			 NETWORK	SECONDARY	SECONDARY	--	2	2	2	4	6	3	9	YYYYNN	0		gw_netw_##	netw_2_cd	nwis	02-JAN-2025 22:16:50
+C709	Measurement time	11	32	WLTIME	 0	 0	LEV	none	29	4	 0		N	50	mmtime			MEASUREMENT	   TIME	   TIME	--	3	6	3	-3	6	7	0	YYYYNY	0		gw_lev_##	lev_tm	nwis	02-JAN-2025 22:16:50
+C710	Date and time LEV record last updated (UTC)	10	33	WLUPDT			LEV	none	70	14			N	0		DATE/TIME	LEV RECORD	 UPDATED	  (UTC)	  (UTC)	--	2	2	2	0	0	7	0	YYYYYY	0		gw_lev_##	lev_md	nwis	02-JAN-2025 22:16:50
+C711	Date site established/inventoried	12	31	SINVDT	 0	 0	SITE	none	414	8	 0		N	15	mmdate		 DATE SITE	ESTABLISHED/	INVENTORIED	INVENTORIED	--	2	2	2	-1	6	1	0	YYYYYN	0		sitefile_##	inventory_dt	nwis	02-JAN-2025 22:16:50
+C712	Data availability in other Ground Water files	12	21	SGWFLE	 0	 0	SITE	none	446	30	 0		N	0		    DATA	AVAILABLITIY	  IN OTHER	  GW FILES	  GW FILES	--	2	2	2	0	0	1	0	YYYYYY	0		sitefile_##	gw_file_cd	nwis	02-JAN-2025 22:16:50
+C713	Aquifer type code	7	21	SAQTYP	 0	 0	SITE	none	493	1	 0		N	0	saqtyp			AQUIFER	 TYPE	 TYPE	--	2	2	2	5	6	1	0	YYYYNY	0		sitefile_##	aqfr_type_cd	nwis	02-JAN-2025 22:16:50
+C714	Aquifer code	7	24	SAQUFR	 0	 0	SITE	none	494	8	 0		N	0	saqufr			AQUIFER	 CODE	 CODE	--	2	2	2	0	6	1	0	YYYYYY	0		sitefile_##	aqfr_cd	nwis	02-JAN-2025 22:16:50
+C715	National aquifer code	8	24	SNAQCD	 0	 0	SITE	none	531	10	 0		N	0	snaqcd		NATIONAL	AQUIFER	  CODE	  CODE	--	2	2	2	0	6	1	0	YYYYYY	0		sitefile_##	nat_aqfr_cd	nwis	02-JAN-2025 22:16:50
+C718	Sequence number of OWNR record	8	10	MGDSEQ	 0	 0	MISC	OWNR	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	3	1	YYYYYY	0		site_owner_##	site_owner_nu	nwis	02-JAN-2025 22:16:50
+C721	Sequence number of GEOH record	8	10	LGSEQ	 0	 0	GEOH	GEOH	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	5	1	YYYYYY	0		gw_geoh_##	geoh_seq_nu	nwis	02-JAN-2025 22:16:50
+C723	Sequence number of CONS record	6	10	CDRNUM	 0	 0	CONS	CONS	25	3	 0		Y	0				RECORD	NUMBER	NUMBER	--	6	6	6	0	0	2	1	YYYYYY	0		gw_cons_##	cons_seq_nu	nwis	02-JAN-2025 22:16:50
+C724	Sequence number of HOLE record	8	10	CDRNUM	 0	 0	CONS	HOLE	28	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	2	2	YYYYYY	0		gw_hole_##	hole_seq_nu	nwis	02-JAN-2025 22:16:50
+C725	Sequence number of CSNG record	8	10	CDRNUM	 0	 0	CONS	CSNG	28	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	2	3	YYYYYY	0		gw_csng_##	csng_seq_nu	nwis	02-JAN-2025 22:16:50
+C726	Sequence number of OPEN record	8	10	CDRNUM	 0	 0	CONS	OPEN	28	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	2	4	YYYYYY	0		gw_open_##	open_seq_nu	nwis	02-JAN-2025 22:16:50
+C727	Sequence number of SPNG record	8	10	CDRNUM	 0	 0	CONS	SPNG	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	2	7	YYYYYY	0		gw_spng_##	spng_seq_nu	nwis	02-JAN-2025 22:16:50
+C728	Sequence number of MPNT record	8	10	CDRNUM	 0	 0	CONS	MPNT	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	2	8	YYYYYY	0		gw_mpnt_##	mpnt_seq_nu	nwis	02-JAN-2025 22:16:50
+C729	Sequence number of SPEC record	8	10	MGDSEQ	 0	 0	MISC	SPEC	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	3	10	YYYYYY	0		gw_spec_##	spec_seq_nu	nwis	02-JAN-2025 22:16:50
+C730	Sequence number of NETW record	8	10	MGDSEQ	 0	 0	MISC	NETW	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	3	9	YYYYYY	0		gw_netw_##	netw_seq_nu	nwis	02-JAN-2025 22:16:50
+C731	Record type in TEST file	6	24	HYTYP	 0	 0	TEST	TEST	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	6	1	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C732	Record type in TEST file	6	24	HYTYP	 0	 0	TEST	RSLT	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	6	2	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C733	Record type in TEST file	6	24	HYTYP	 0	 0	TEST	RSIT	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	6	3	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C734	Sequence number of COOP record	8	10	MGDSEQ	 0	 0	MISC	COOP	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	3	12	YYYYYY	0		gw_coop_##	coop_seq_nu	nwis	02-JAN-2025 22:16:50
+C735	Record type in CONS file	6	21	CDRTYP	 0	 0	CONS	ALTH	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	2	9	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C736	Sequence number of OTID record	8	10	MGDSEQ	 0	 0	MISC	OTID	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	3	3	YYYYYY	0		gw_otid_##	otid_seq_nu	nwis	02-JAN-2025 22:16:50
+C737	Sequence number of VIST record	8	10	MGDSEQ	 0	 0	MISC	VIST	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	3	5	YYYYYY	0		gw_vist_##	vist_seq_nu	nwis	02-JAN-2025 22:16:50
+C738	QW sample record number (QVAL record)	6	10	MGDQRN	 0	 0	MISC	QVAL	25	8	 0		Y	0			SAMPLE	RECORD	NUMBER	NUMBER	--	6	6	6	0	0	3	7	YYYYYY	0		qw_result_##	record_no	nwis	02-JAN-2025 22:16:50
+C739	Sequence number of LOGS record	8	10	MGDSEQ	 0	 0	MISC	LOGS	25	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	3	8	YYYYYY	0		gw_logs_##	logs_seq_nu	nwis	02-JAN-2025 22:16:50
+C740	Historical altitude type	10	21	CDALTP	 0	 0	CONS	ALTH	25	2	 0		Y	0	cdaltp		HISTORICAL	 ALTITUDE	   TYPE	   TYPE	--	6	6	6	2	6	2	9	YYYYYY	0		alt_datum_hist_##	alt_datum_hist_tp	nwis	02-JAN-2025 22:16:50
+C741	Begin date for use of this datum	10	31	CDALBD	 0	 0	CONS	ALTH	27	8	 0		Y	15	mmdate	BEGIN DATE	 FOR USE	 OF THIS	  DATUM	  DATUM	--	6	6	6	-1	6	2	9	YYYYYY	0		alt_datum_hist_##	alt_datum_hist_begin_dt	nwis	02-JAN-2025 22:16:50
+C742	Sequence number of AQFR record	8	10	LGSEQ	 0	 0	GEOH	AQFR	28	3	 0		Y	0				SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	5	2	YYYYYY	0		gw_aqfr_##	aqfr_seq_nu	nwis	02-JAN-2025 22:16:50
+C743	Test method code	6	25	HYRCMD	 0	 0	TEST	RSLT	51	5	 0		Y	0	hyrmcd		 TEST	METHOD	 CODE	 CODE	--	6	6	6	0	6	6	2	YYYYYY	0		gw_result_##	meth_cd	nwis	02-JAN-2025 22:16:50
+C744	Test data type	4	25	HYRDTP	 0	 0	TEST	RSLT	56	13	 0		Y	0	hyrdtp		TEST	DATA	TYPE	TYPE	--	6	6	6	29	6	6	2	YYYYYY	0		gw_result_##	data_tp	nwis	02-JAN-2025 22:16:50
+C745	Date and time TEST record last updated (UTC)	11	33	HYUPDT			TEST	TEST	126	14			N	0		 DATE/TIME	TEST RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	6	1	YYYYYY	0		test_##	test_md	nwis	02-JAN-2025 22:16:50
+C746	Date and time RSLT record last updated (UTC)	11	33	HYUPDT			TEST	RSLT	126	14			N	0		 DATE/TIME	RSLT RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	6	2	YYYYYY	0		gw_result_##	gw_result_md	nwis	02-JAN-2025 22:16:50
+C747	Date and time RSIT record last updated (UTC)	11	33	HYUPDT			TEST	RSIT	126	14			N	0		 DATE/TIME	RSIT RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	6	3	YYYYYY	0		gw_result_site_##	gw_result_site_md	nwis	02-JAN-2025 22:16:50
+C748	Record type in GEOH file	6	21	LGTYP	 0	 0	GEOH	GEOH	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	5	1	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C749	Date and time GEOH record last updated (UTC)	11	33	LGUPDT			GEOH	GEOH	61	14			N	0		 DATE/TIME	GEOH RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	5	1	YYYYYY	0		gw_geoh_##	geoh_md	nwis	02-JAN-2025 22:16:50
+C750	Record type in GEOH file	6	21	LGTYP	 0	 0	GEOH	AQFR	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	5	2	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C751	Date and time AQFR record last updated (UTC)	11	33	LGUPDT			GEOH	AQFR	61	14			N	0		 DATE/TIME	AQFR RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	5	2	YYYYYY	0		gw_aqfr_##	aqfr_md	nwis	02-JAN-2025 22:16:50
+C752	Record type in CONS file	6	21	CDRTYP	 0	 0	CONS	LIFT	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	2	5	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C753	Date and time LIFT record last updated (UTC)	11	33	CDUPDT			CONS	LIFT	65	14			N	0		 DATE/TIME	LIFT RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	5	YYYYYY	0		gw_lift_##	lift_md	nwis	02-JAN-2025 22:16:50
+C754	Record type in CONS file	6	21	CDRTYP	 0	 0	CONS	CONS	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	2	1	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C755	Date and time CONS record last updated (UTC)	11	33	CDUPDT			CONS	CONS	65	14			N	0		 DATE/TIME	CONS RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	1	YYYYYY	0		gw_cons_##	cons_md	nwis	02-JAN-2025 22:16:50
+C756	Record type in CONS file	6	21	CDRTYP	 0	 0	CONS	HOLE	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	2	2	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C757	Date and time HOLE record last updated (UTC)	11	33	CDUPDT			CONS	HOLE	65	14			N	0		 DATE/TIME	HOLE RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	2	YYYYYY	0		gw_hole_##	hole_md	nwis	02-JAN-2025 22:16:50
+C758	Record type in CONS file	6	21	CDRTYP	 0	 0	CONS	CSNG	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	2	3	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C759	Date and time CSNG record last updated (UTC)	11	33	CDUPDT			CONS	CSNG	65	14			N	0		 DATE/TIME	CSNG RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	3	YYYYYY	0		gw_csng_##	csng_md	nwis	02-JAN-2025 22:16:50
+C760	Record type in CONS file	6	21	CDRTYP	 0	 0	CONS	OPEN	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	2	4	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C761	Date and time OPEN record last updated (UTC)	11	33	CDUPDT			CONS	OPEN	65	14			N	0		 DATE/TIME	OPEN RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	4	YYYYYY	0		gw_open_##	open_md	nwis	02-JAN-2025 22:16:50
+C762	Record type in CONS file	6	21	CDRTYP	 0	 0	CONS	REPR	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	2	6	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C763	Date and time REPR record last updated (UTC)	11	33	CDUPDT			CONS	REPR	65	14			N	0		 DATE/TIME	REPR RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	6	YYYYYY	0		gw_repr_##	repr_md	nwis	02-JAN-2025 22:16:50
+C764	Record type in CONS file	6	21	CDRTYP	 0	 0	CONS	SPNG	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	2	7	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C765	Date and time SPNG record last updated (UTC)	11	33	CDUPDT			CONS	SPNG	65	14			N	0		 DATE/TIME	SPNG RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	7	YYYYYY	0		gw_spng_##	spng_md	nwis	02-JAN-2025 22:16:50
+C766	Record type in CONS file	6	21	CDRTYP	 0	 0	CONS	MPNT	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	2	8	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C767	Date and time MPNT record last updated (UTC)	11	33	CDUPDT			CONS	MPNT	65	14			N	0		 DATE/TIME	MPNT RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	8	YYYYYY	0		gw_mpnt_##	mpnt_md	nwis	02-JAN-2025 22:16:50
+C768	Record type in MISC file	6	21	MGDTYP	 0	 0	MISC	OWNR	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	1	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C769	Date and time OWNR record last updated (UTC)	11	33	MGDUPD			MISC	OWNR	63	14			N	0		 DATE/TIME	OWNR RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	1	YYYYYY	0		site_owner_##	site_owner_md	nwis	02-JAN-2025 22:16:50
+C770	Record type in MISC file	6	21	MGDTYP	 0	 0	MISC	OTID	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	3	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C771	Date and time OTID record last updated (UTC)	11	33	MGDUPD			MISC	OTID	63	14			N	0		 DATE/TIME	OTID RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	3	YYYYYY	0		gw_otid_##	otid_md	nwis	02-JAN-2025 22:16:50
+C772	Record type in MISC file	6	21	MGDTYP	 0	 0	MISC	OTDT	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	4	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C773	Date and time OTDT record last updated (UTC)	11	33	MGDUPD			MISC	OTDT	63	14			N	0		 DATE/TIME	OTDT RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	4	YYYYYY	0		gw_otdt_##	otdt_md	nwis	02-JAN-2025 22:16:50
+C774	Record type in MISC file	6	21	MGDTYP	 0	 0	MISC	VIST	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	5	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C775	Date and time VIST record last updated (UTC)	11	33	MGDUPD			MISC	VIST	63	14			N	0		 DATE/TIME	VIST RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	5	YYYYYY	0		gw_vist_##	vist_md	nwis	02-JAN-2025 22:16:50
+C776	Record type in MISC file	6	21	MGDTYP	 0	 0	MISC	QVAL	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	7	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C777	Date and time QVAL record last updated (UTC)	11	33	MGDUPD			MISC	QVAL	63	14			N	0		 DATE/TIME	QVAL RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	7	YYYYYY	0		qw_sample_##	sample_md	nwis	02-JAN-2025 22:16:50
+C778	Record type in MISC file	6	21	MGDTYP	 0	 0	MISC	LOGS	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	8	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C779	Date and time LOGS record last updated (UTC)	11	33	MGDUPD			MISC	LOGS	63	14			N	0		 DATE/TIME	LOGS RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	8	YYYYYY	0		gw_logs_##	logs_md	nwis	02-JAN-2025 22:16:50
+C780	Record type in MISC file	6	21	MGDTYP	 0	 0	MISC	NETW	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	9	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C781	Date and time NETW record last updated (UTC)	11	33	MGDUPD			MISC	NETW	63	14			N	0		 DATE/TIME	NETW RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	9	YYYYYY	0		gw_netw_##	netw_md	nwis	02-JAN-2025 22:16:50
+C782	Record type in MISC file	6	21	MGDTYP	 0	 0	MISC	SPEC	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	10	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C783	Date and time SPEC record last updated (UTC)	11	33	MGDUPD			MISC	SPEC	63	14			N	0		 DATE/TIME	SPEC RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	10	YYYYYY	0		gw_spec_##	spec_md	nwis	02-JAN-2025 22:16:50
+C784	Record type in MISC file	6	21	MGDTYP	 0	 0	MISC	MSVL	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	11	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C785	Date and time MSVL record last updated (UTC)	11	33	MGDUPD			MISC	MSVL	63	14			N	0		 DATE/TIME	MSVL RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	11	YYYYYY	0		gw_msvl_##	msvl_md	nwis	02-JAN-2025 22:16:50
+C786	Record type in MISC file	6	21	MGDTYP	 0	 0	MISC	COOP	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	12	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C787	Date and time COOP record last updated (UTC)	11	33	MGDUPD			MISC	COOP	63	14			N	0		 DATE/TIME	COOP RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	12	YYYYYY	0		gw_coop_##	coop_md	nwis	02-JAN-2025 22:16:50
+C788	Record type in MISC file	6	21	MGDTYP	 0	 0	MISC	RMKS	21	4	 0		Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	13	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C789	Date and time RMKS record last updated (UTC)	11	33	MGDUPD			MISC	RMKS	63	14			N	0		 DATE/TIME	RMKS RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	13	YYYYYY	0		gw_rmks_##	rmks_md	nwis	02-JAN-2025 22:16:50
+C790	Test Start Time	5	32	HYTTIM	 0	 0	TEST	TEST	45	4	 0		N	0	mmtime		TEST	START	TIME	TIME	--	2	2	2	-3	6	6	1	YYYYYY	0		test_##	test_start_dt	nwis	02-JAN-2025 22:16:50
+C791	Record type in MISC file	6	21	MGDTYP			MISC	QUAL	21	4			Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	6	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C792	QW sample record number (QUAL record)	6	10	MGDQRN	 0	 0	MISC	QUAL	25	8	 0		Y	0			SAMPLE	RECORD	NUMBER	NUMBER	--	6	6	6	0	0	3	6	YYYYYY	0		qw_sample_##	record_no	nwis	02-JAN-2025 22:16:50
+C793	User ID of person creating QUAL record	8	23	MGDCUI	 0	 0	MISC	QUAL	33	8	 0		N	0		 PERSON	CREATING	  QUAL	 RECORD	 RECORD	--	2	2	2	0	0	3	6	YYYYYY	0		qw_sample_##	sample_cn	nwis	02-JAN-2025 22:16:50
+C794	Date and time QUAL record created (UTC)	11	33	MGDCRD			MISC	QUAL	41	14			N	0		 DATE/TIME	QUAL RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	6	YYYYYY	0		qw_sample_##	sample_cr	nwis	02-JAN-2025 22:16:50
+C795	User ID of person updating QUAL record	8	23	MGDUUI	 0	 0	MISC	QUAL	55	8	 0		N	0		 PERSON	UPDATING	  QUAL	 RECORD	 RECORD	--	2	2	2	0	0	3	6	YYYYYY	0		qw_sample_##	sample_mn	nwis	02-JAN-2025 22:16:50
+C796	Date and time QUAL record last updated (UTC)	11	33	MGDUPD			MISC	QUAL	63	14			N	0		 DATE/TIME	QUAL RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	6	YYYYYY	0		qw_sample_##	sample_md	nwis	02-JAN-2025 22:16:50
+C797	Record type in MISC file	6	21	MGDTYP			MISC	OCNT	21	4			Y	0				RECORD	 TYPE	 TYPE	--	6	6	6	0	0	3	2	YYYYYY	0				nwis	02-JAN-2025 22:16:50
+C798	Sequence number of OCNT record	6	10	MGDQRN			MISC	OCNT	25	3			Y	0				RECORD	NUMBER	NUMBER	--	6	6	6	0	0	3	2	YYYYYY	0		site_contact_##	site_contact_nu	nwis	02-JAN-2025 22:16:50
+C799	Date and time of water-quality measurement	9	33	MGDQDT	 0	 0	MISC	QUAL	78	12	 0		Y	15	mmdate	DATE/TIME	 QUALITY	PARAMETER	MEASURED	MEASURED	--	6	6	6	-1	6	3	6	YYYYYN	0		qw_sample_##	sample_start_dt	nwis	02-JAN-2025 22:16:50
+C800	Aquifer sampled	7	24	MGDQAQ	 0	 0	MISC	QUAL	90	8	 0		N	0	saqufr			AQUIFER	SAMPLED	SAMPLED	--	2	2	2	0	6	3	6	YYYYYY	0		qw_sample_##	aqfr_cd	nwis	02-JAN-2025 22:16:50
+C801	Drainage basin code	8	10	SBASIN	 0	 0	SITE	none	280	2	 0		N	0	sbasin		DRAINAGE	 BASIN	  CODE	  CODE	--	2	2	2	0	6	1	0	YYYYNN	0		sitefile_##	basin_cd	nwis	02-JAN-2025 22:16:50
+C802	Site type code	4	22	STYPE	 0	 0	SITE	none	283	7	 0		Y	30	stype			SITE	TYPE	TYPE	--	9	9	6	58	5	1	0	YYYYYY	0		sitefile_##	site_tp_cd	nwis	02-JAN-2025 22:16:51
+C803	Agency use of site code	6	21	SUSE	 0	 0	SITE	none	303	1	 0		N	0	suse			AGENCY	 USE	 USE	--	6	2	6	7	4	1	0	YYYYNY	0		sitefile_##	agency_use_cd	nwis	02-JAN-2025 22:16:51
+C804	Flags-type of data collected (30)	9	24	SDATA	 0	 0	SITE	none	304	30	 0		N	31	sdata		 TYPE OF	  DATA	COLLECTED	COLLECTED	--	2	2	2	0	5	1	0	YYYYYY	0		sitefile_##	data_types_cd	nwis	02-JAN-2025 22:16:51
+C805	Flags-instruments at site	11	24	SINST	 0	 0	SITE	none	334	30	 0		N	32	sinst			INSTRUMENTS	  AT SITE	  AT SITE	--	2	2	2	0	5	1	0	YYYYYY	0		sitefile_##	instruments_cd	nwis	02-JAN-2025 22:16:51
+C806	Station remark fields	7	23	SREMRK	 0	 0	SITE	none	364	50	 0		N	0	sremrk			STATION	REMARKS	REMARKS	--	2	2	2	0	6	1	0	YYYYNN	0		sitefile_##	site_rmks_tx	nwis	02-JAN-2025 22:16:51
+C808	Drainage Area	8	12	SAREA	 2.590	 0	SITE	none	422	8	 0	4445678884	N	0	sarea		DRAINAGE	  AREA	(MI**2)	(KM**2)	--	2	2	2	0	5	1	0	YYYYNN	0		sitefile_##	drain_area_va	nwis	02-JAN-2025 22:16:51
+C809	Contributing drainage area	12	12	SCNTRB	 2.590	 0	SITE	none	430	8	 0	4445678884	N	53	sarea	CONTRIBUTING	  DRAINAGE	    AREA	  (MI**2)	  (KM**2)	--	2	2	2	0	5	1	0	YYYYNN	0		sitefile_##	contrib_drain_area_va	nwis	02-JAN-2025 22:16:51
+C813	Standard time zone code	8	22	SMGTOF	 0	 0	SITE	none	438	6	 0		Y	0	time_zone	STANDARD	  TIME	  ZONE	  CODE	  CODE	--	6	6	6	0	9	1	0	YYYYNY	2	PST	sitefile_##	tz_cd	nwis	02-JAN-2025 22:16:51
+C814	Daylight savings time flag	8	21	SLSTFL	 0	 0	SITE	none	444	1	 0		Y	0	slstfl	DAYLIGHT	SAVINGS	  TIME	  FLAG	  FLAG	--	6	6	6	2	6	1	0	YYYYNY	2	Y	sitefile_##	local_time_fg	nwis	02-JAN-2025 22:16:51
+C844	User ID of person creating ALTH record	8	23	CDCUID	 0	 0	CONS	ALTH	35	8	 0		N	0		 PERSON	CREATING	  ALTH	 RECORD	 RECORD	--	2	2	2	0	0	2	9	YYYYYY	0		alt_datum_hist_##	alt_datum_hist_cn	nwis	02-JAN-2025 22:16:51
+C845	Date and time ALTH record created (UTC)	11	33	CDCRDT			CONS	ALTH	43	14			N	0		 DATE/TIME	ALTH RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	9	YYYYYY	0		alt_datum_hist_##	alt_datum_hist_cr	nwis	02-JAN-2025 22:16:51
+C846	User ID of person updating ALTH record	8	23	CDUUID	 0	 0	CONS	ALTH	57	8	 0		N	0		 PERSON	UPDATING	  ALTH	 RECORD	 RECORD	--	2	2	2	0	0	2	9	YYYYYY	0		alt_datum_hist_##	alt_datum_hist_mn	nwis	02-JAN-2025 22:16:51
+C847	Date and time ALTH record last updated (UTC)	11	33	CDUPDT			CONS	ALTH	65	14			N	0		 DATE/TIME	ALTH RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	2	9	YYYYYY	0		alt_datum_hist_##	alt_datum_hist_md	nwis	02-JAN-2025 22:16:51
+C848	ALTH record ready for web flag	7	21	CDWBFG	 0	 0	CONS	ALTH	79	1	 0		N	43	gwwbfg	 ALTH	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	2	9	YYYYYY	0		alt_datum_hist_##	alt_datum_hist_web_cd	nwis	02-JAN-2025 22:16:51
+C849	Date and time PRMT record last updated (UTC)	11	33	MGDUPD			MISC	PRMT	63	14			N	0		 DATE/TIME	RMKS RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	14	YYYYYY	0		permit_##	permit_md	nwis	02-JAN-2025 22:16:51
+C850	CONS record ready for web flag	7	21	CDWBFG	 0	 0	CONS	CONS	79	1	 0		N	43	gwwbfg	 CONS	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	2	1	YYYYYY	0		gw_cons_##	cons_web_cd	nwis	02-JAN-2025 22:16:51
+C851	HOLE record ready for web flag	7	21	CDWBFG	 0	 0	CONS	HOLE	79	1	 0		N	43	gwwbfg	 HOLE	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	2	2	YYYYYY	0		gw_hole_##	hole_web_cd	nwis	02-JAN-2025 22:16:51
+C852	CSNG record ready for web flag	7	21	CDWBFG	 0	 0	CONS	CSNG	79	1	 0		N	43	gwwbfg	 CSNG	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	2	3	YYYYYY	0		gw_csng_##	csng_web_cd	nwis	02-JAN-2025 22:16:51
+C853	OPEN record ready for web flag	7	21	CDWBFG	 0	 0	CONS	OPEN	79	1	 0		N	43	gwwbfg	 OPEN	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	2	4	YYYYYY	0		gw_open_##	open_web_cd	nwis	02-JAN-2025 22:16:51
+C854	LIFT record ready for web flag	7	21	CDWBFG	 0	 0	CONS	LIFT	79	1	 0		N	43	gwwbfg	 LIFT	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	2	5	YYYYYY	0		gw_lift_##	lift_web_cd	nwis	02-JAN-2025 22:16:51
+C855	REPR record ready for web flag	7	21	CDWBFG	 0	 0	CONS	REPR	79	1	 0		N	43	gwwbfg	 REPR	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	2	6	YYYYYY	0		gw_repr_##	repr_web_cd	nwis	02-JAN-2025 22:16:51
+C856	SPNG record ready for web flag	7	21	CDWBFG	 0	 0	CONS	SPNG	79	1	 0		N	43	gwwbfg	 SPNG	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	2	7	YYYYYY	0		gw_spng_##	spng_web_cd	nwis	02-JAN-2025 22:16:51
+C857	MPNT record ready for web flag	7	21	CDWBFG	 0	 0	CONS	MPNT	79	1	 0		N	43	gwwbfg	 MPNT	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	2	8	YYYYYY	0		gw_mpnt_##	mpnt_web_cd	nwis	02-JAN-2025 22:16:51
+C858	LEV record ready for web flag	7	21	WLWBFG	 0	 0	LEV	none	84	1	 0		N	43	gwwbfg	  LEV	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	7	0	YYYYYY	0		gw_lev_##	lev_web_cd	nwis	02-JAN-2025 22:16:51
+C859	DISC record ready for web flag	7	21	DIWBFG	 0	 0	DISC	none	76	1	 0		N	43	gwwbfg	 DISC	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	4	0	YYYYYY	0		gw_disc_##	disc_web_cd	nwis	02-JAN-2025 22:16:51
+C861	OTID record ready for web flag	7	21	MGDWFG	 0	 0	MISC	OTID	77	1	 0		N	43	gwwbfg	 OTID	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	3	3	YYYYYY	0		gw_otid_##	otid_web_cd	nwis	02-JAN-2025 22:16:51
+C862	OTDT record ready for web flag	7	21	MGDWFG	 0	 0	MISC	OTDT	77	1	 0		N	43	gwwbfg	 OTDT	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	3	4	YYYYYY	0		gw_otdt_##	otdt_web_cd	nwis	02-JAN-2025 22:16:51
+C863	VIST record ready for web flag	7	21	MGDWFG	 0	 0	MISC	VIST	77	1	 0		N	43	gwwbfg	 VIST	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	3	5	YYYYYY	0		gw_vist_##	vist_web_cd	nwis	02-JAN-2025 22:16:51
+C865	LOGS record ready for web flag	7	21	MGDWFG	 0	 0	MISC	LOGS	77	1	 0		N	43	gwwbfg	 LOGS	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	3	8	YYYYYY	0		gw_logs_##	logs_web_cd	nwis	02-JAN-2025 22:16:51
+C866	NETW record ready for web flag	7	21	MGDWFG	 0	 0	MISC	NETW	77	1	 0		N	43	gwwbfg	 NETW	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	3	9	YYYYYY	0		gw_netw_##	netw_web_cd	nwis	02-JAN-2025 22:16:51
+C867	SPEC record ready for web flag	7	21	MGDWFG	 0	 0	MISC	SPEC	77	1	 0		N	43	gwwbfg	 SPEC	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	3	10	YYYYYY	0		gw_spec_##	spec_web_cd	nwis	02-JAN-2025 22:16:51
+C868	MSVL record ready for web flag	7	21	MGDWFG	 0	 0	MISC	MSVL	77	1	 0		N	43	gwwbfg	 MSVL	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	3	11	YYYYYY	0		gw_msvl_##	msvl_web_cd	nwis	02-JAN-2025 22:16:51
+C869	COOP record ready for web flag	7	21	MGDWFG	 0	 0	MISC	COOP	77	1	 0		N	43	gwwbfg	 COOP	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	3	12	YYYYYY	0		gw_coop_##	coop_web_cd	nwis	02-JAN-2025 22:16:51
+C870	RMKS record ready for web flag	7	21	MGDWFG	 0	 0	MISC	RMKS	77	1	 0		N	43	gwwbfg	 RMKS	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	3	13	YYYYYY	0		gw_rmks_##	rmks_web_cd	nwis	02-JAN-2025 22:16:51
+C871	GEOH record ready for web flag	7	21	LGWBFG	 0	 0	GEOH	GEOH	75	1	 0		N	43	gwwbfg	 GEOH	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	5	1	YYYYYY	0		gw_geoh_##	geoh_web_cd	nwis	02-JAN-2025 22:16:51
+C872	AQFR record ready for web flag	7	21	LGWBFG	 0	 0	GEOH	AQFR	75	1	 0		N	43	gwwbfg	 AQFR	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	5	2	YYYYYY	0		gw_aqfr_##	aqfr_web_cd	nwis	02-JAN-2025 22:16:51
+C873	OBS record ready for web flag	7	21	HDWBFG	 0	 0	OBS	none	68	1	 0		N	43	gwwbfg	  OBS	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	8	0	YYYYYY	0		gw_obs_##	obs_web_cd	nwis	02-JAN-2025 22:16:51
+C874	TEST record ready for web flag	7	21	HYWBFG	 0	 0	TEST	TEST	140	1	 0		N	43	gwwbfg	 TEST	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	6	1	YYYYYY	0		test_##	test_web_fg	nwis	02-JAN-2025 22:16:51
+C875	RSLT record ready for web flag	7	21	HYWBFG	 0	 0	TEST	RSLT	140	1	 0		N	43	gwwbfg	 RSLT	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	6	2	YYYYYY	0		gw_result_##	gw_result_web_fg	nwis	02-JAN-2025 22:16:51
+C876	RSIT record ready for web flag	7	21	HYWBFG	 0	 0	TEST	RSIT	140	1	 0		N	43	gwwbfg	 RSIT	RECORD	 READY	FOR WEB	FOR WEB	--	2	2	2	5	6	6	3	YYYYYY	0		gw_result_site_##	gw_result_web_fg	nwis	02-JAN-2025 22:16:51
+C877	User ID of person creating OCNT record	8	23	MGDCUI	 0	 0	MISC	OCNT	33	8	 0		N	0		 PERSON	CREATING	  OCNT	 RECORD	 RECORD	--	2	2	2	0	0	3	2	YYYYYY	0		site_contact_##	site_contact_cn	nwis	02-JAN-2025 22:16:51
+C878	Date and time OCNT record created (UTC)	11	33	MGDCRD			MISC	OCNT	41	14			N	0		 DATE/TIME	OCNT RECORD	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	2	YYYYYY	0		site_contact_##	site_contact_cr	nwis	02-JAN-2025 22:16:51
+C879	User ID of person updating OCNT record	8	23	MGDUUI	 0	 0	MISC	OCNT	55	8	 0		N	0		 PERSON	UPDATING	  OCNT	 RECORD	 RECORD	--	2	2	2	0	0	3	2	YYYYYY	0		site_contact_##	site_contact_mn	nwis	02-JAN-2025 22:16:51
+C880	Date and time OCNT record last updated (UTC)	11	33	MGDUPD			MISC	OCNT	63	14			N	0		 DATE/TIME	OCNT RECORD	  UPDATED	   (UTC)	   (UTC)	--	2	2	2	0	0	3	2	YYYYYY	0		site_contact_##	site_contact_md	nwis	02-JAN-2025 22:16:51
+C900	Station name	12	23	SNAME	 0	 0	SITE	none	70	50	 0		Y	41	sname				STATION NAME	STATION NAME	--	6	6	6	0	5	1	0	YYYYYN	0		sitefile_##	station_nm	nwis	02-JAN-2025 22:16:51
+C901	Sequence number of parent CONS record	8	10	CDCSPT	 0	 0	CONS	CSNG	25	3	 0		N	0			 PARENT	SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	2	3	YYYYYY	0		gw_csng_##	cons_seq_nu	nwis	02-JAN-2025 22:16:51
+C902	Sequence number of parent CONS record	8	10	CDOPNT	 0	 0	CONS	OPEN	25	3	 0		N	0			 PARENT	SEQUENCE	 NUMBER	 NUMBER	--	6	6	6	0	0	2	4	YYYYYY	0		gw_open_##	cons_seq_nu	nwis	02-JAN-2025 22:16:51
+C909	Latitude NAD83 in decimal degrees	8	12	SLATD	 0	 0	SITE	none	143	13	 0	9999999999	N	0		LATITUDE	 NAD83	(DECIMAL	DEGREES)	DEGREES)	--	2	2	2	0	0	1	0	YYYYYY	0		sitefile_##	dec_lat_va	nwis	02-JAN-2025 22:16:51
+C910	Longitude NAD83 in decimal degrees	9	12	SLONGD	 0	 0	SITE	none	156	14	 0	9999999999	N	0		LONGITUDE	  NAD83	(DECIMAL	DEGREES)	DEGREES)	--	2	2	2	0	0	1	0	YYYYYY	0		sitefile_##	dec_long_va	nwis	02-JAN-2025 22:16:51
+C042	Minor civil division	8	20	SMCDCD	 0	 0	SITE	none	298	5	 0		N	0	smcdcd		 MINOR	 CIVIL	DIVISION	DIVISION	--	2	2	2	0	6	1	0	YYYYYY	0		sitefile_##	mcd_cd	nwis	02-JAN-2025 22:16:46
+C505	Water level approval status	8	21	WLAGFG	 0	 0	LEV	none	415	1	 0		Y	77			   WL	APPROVAL	 STATUS	 STATUS	--	6	6	6	0	0	7	0	YYYYNY	0		gw_lev_##	lev_age_cd	nwis	02-JAN-2025 22:16:50
+C506	User ID of person creating WL approval	8	23	WLAGCN	 0	 0	LEV	none	416	8	 0		N	0		 PERSON	CREATING	   WL	APPROVAL	APPROVAL	--	2	2	2	0	0	7	0	YYYYYY	0		gw_lev_##	lev_age_cn	nwis	02-JAN-2025 22:16:50
+C507	Date and time WL approval created (UTC)	11	33	WLAGCR			LEV	none	424	14			N	0		 DATE/TIME	WL APPROVAL	  CREATED	   (UTC)	   (UTC)	--	2	2	2	0	0	7	0	YYYYYY	0		gw_lev_##	lev_age_cr	nwis	02-JAN-2025 22:16:50
+C508	User ID of person updating WL approval	8	23	WLAGMN	 0	 0	LEV	none	438	8	 0		N	0		 PERSON	UPDATING	   WL	APPROVAL	APPROVAL	--	2	2	2	0	0	7	0	YYYYYY	0		gw_lev_##	lev_age_mn	nwis	02-JAN-2025 22:16:50
+C509	Date and time WL approval modified (UTC)	11	33	WLAGMD			LEV	none	446	14			N	0		 DATE/TIME	WL APPROVAL	 MODIFIED	   (UTC)	   (UTC)	--	2	2	2	0	0	7	0	YYYYYY	0		gw_lev_##	lev_age_md	nwis	02-JAN-2025 22:16:50

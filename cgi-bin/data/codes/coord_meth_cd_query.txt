@@ -1,0 +1,23 @@
+#
+# National Water Information System
+# 2025/01/10
+#
+#
+# Date Retrieved: USGS Water Data for the Nation Help System
+#
+gw_ref_cd	gw_ref_ds
+1s	71s
+C	Calculated from land net
+D	Differentially corrected Global Positioning System.
+W	GNSS1 - Level 1 Quality Survey Grade Global Navigation Satellite System
+X	GNSS2 - Level 2 Quality Survey Grade Global Navigation Satellite System
+Y	GNSS3 - Level 3 Quality Survey Grade Global Navigation Satellite System
+Z	GNSS4 - Level 4 Quality Survey Grade Global Navigation Satellite System
+N	Interpolated from Digital MAP.
+M	Interpolated from MAP.
+L	Long range navigation system.
+G	Mapping grade GPS unit (handheld accuracy range 12 to 40 ft)
+R	Reported.
+F	Survey-grade GPSF
+S	Transit, theodolite, or other surveying method.
+U	Unknown.

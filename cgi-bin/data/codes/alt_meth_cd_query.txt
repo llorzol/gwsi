@@ -1,0 +1,22 @@
+#
+# National Water Information System
+# 2025/01/10
+#
+#
+# Date Retrieved: USGS Water Data for the Nation Help System
+#
+gw_ref_cd	gw_ref_ds
+1s	71s
+A	Altimeter.
+D	Differentially corrected Global Positioning System.
+F	Survey-grade GPSF
+I	Interferometric Synthetic Aperture Radar, airplane
+J	Light Detection And Ranging, airplane
+L	Level or other surveyed method.
+M	Interpolated from topographic map.
+N	Interpolated from Digital Elevation Model
+R	Reported method of determination.
+W	GNSS1 - Level 1 Quality Survey Grade Global Navigation Satellite System
+X	GNSS2 - Level 2 Quality Survey Grade Global Navigation Satellite System
+Y	GNSS3 - Level 3 Quality Survey Grade Global Navigation Satellite System
+Z	GNSS4 - Level 4 Quality Survey Grade Global Navigation Satellite System

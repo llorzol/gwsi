@@ -1,0 +1,13 @@
+#
+# National Water Information System
+# 2025/01/10
+#
+#
+# Date Retrieved: USGS Water Data for the Nation Help System
+#
+gw_ref_cd	gw_ref_ds
+1s	47s
+C	Data have been checked by the reporting agency.
+L	Location not accurate.
+M	Minimal data.
+U	Unchecked data.

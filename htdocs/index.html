@@ -1,1 +1,114 @@
+<!doctype html>
 
+<!-- version 1.03 -->
+<!-- version_date January 20, 2025 -->
+
+<html lang="en">
+  <head>
+    <title>U.S. Geological Survey NWIS Information for sites in Oregon</title>
+
+    <!-- meta -->
+    <!--#include virtual="includes/meta_inc.html" -->
+
+    <!-- css -->
+    <!--#include virtual="DrupalVisID/includes/meta-css.html" -->
+    <!--#include virtual="includes/css_inc.html" -->
+    <!-- end css -->
+
+  </head>
+
+  <body id="offwhite">
+
+    <!--#include virtual="DrupalVisID/includes/header_WRET.html"-->
+
+    <!-- Container -->
+    <div class="container">
+
+      <!-- Page Heading/Breadcrumbs -->
+      <div class="row mt-5">
+        <div class="col-sm-12">
+          <div class="clear fs-3 fw-bold text-black mt-2" >Oregon Water Science Center</div>
+          <div class="clear fs-4 fw-bold text-black mt-2" >NWIS Information for sites in Oregon</div>
+         </div>
+      </div>
+      <!-- End Page Heading/Breadcrumbs -->
+
+      <div class="row mt-3">
+        <div class="col-sm-12">
+          <div class="bg-success bg-gradient fs-5 fw-bold text-white text-center rounded-top ps-1 py-2">DATA EXPLORATION TOOL</div>
+        </div>
+        
+        <div id="nwisQuery" class="row">
+          <div class="col-sm-4">
+            <div class="bg-dark bg-gradient fs-6 fw-bold text-white text-start rounded-top mt-2 ps-1 py-1">NWIS Identifier</div>
+            <div class="form-floating mb-3 pe-1">
+              <input type="text" class="form-control form-select-sm" id="nwis_text" placeholder="s">
+              <label for="nwis_text">Enter site number or other identifier</label>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+              <div class="bg-dark bg-gradient fs-6 fw-bold text-white text-start rounded-top mt-2 ps-1 py-1">Search Field</div>
+              <select id="nwis_column" class="form-select form-select-sm" aria-label="Choose the type identifier entered">
+                <option id="choose" value="choose">Choose the type identifier entered</option>
+                <option id="site_no" value="site_no">Site Number</option>
+                <option id="coop_site_no" value="coop_site_no">Cooperator Site Number</option>
+                <option id="station_nm" value="station_nm">Station Name</option>
+                <option id="otid" value="otid">Other ID</option>
+              </select>
+          </div>
+
+          <div class="col-sm-4">
+              <div class="bg-dark bg-gradient fs-6 fw-bold text-white text-start rounded-top mt-2 ps-1 py-1">NWIS File Information</div>
+              <select id="nwis_output" class="form-select form-select-sm" aria-label="Choose the type file output">
+                <option id="choose" value="choose">Choose the type of file(s) output</option>
+                <option id="sitefile" value="sitefile">Site Specific Information</option>
+                <option id="general" value="sitefile">General Site Information</option>
+                <option id="construction" value="construction">Well Construction Information</option>
+                <option id="geohydrology" value="geohydrology">Geohydrology Information</option>
+                <!-- <option id="waterlevel" value="waterlevel">Get Water-Level Information</option> -->
+                <!-- <option id="discharge" value="discharge">Get Discharge Information</option> -->
+                <!-- <option id="waterquality" value="waterquality">Get Water-Quality Information</option> -->
+                <!-- <option id="wateruse" value="wateruse">Get Water-Use Information</option> -->
+                <!-- <option id="miscellaneous" value="miscellaneous">Get Miscellaneous Information</option> -->
+                <option id="all" value="all">All Above NWIS Information</option>
+              </select>
+          </div>
+        </div>
+
+        <div class="col-sm-12 mt-3 ps-1 py-1">
+            <button id="submitRequest" type="button" class="btn btn-success btn-outline-secondary fw-bold text-white mt-2 ps-1">Search</button>
+
+            <button id="clearResults" type="button" class="btn btn-success btn-outline-secondary fw-bold text-white mt-2 ps-1">Clear Results</button>
+
+            <button id="clearForm" type="button" class="btn btn-success btn-outline-secondary fw-bold text-white mt-2 ps-1">Clear Form</button>
+        </div>
+
+        <div id="nwisResults" class="col-sm-12 mt-3 mb-4 ps-1 py-1">
+        </div>
+        
+      </div>
+    </div>
+
+    <!--#include virtual="DrupalVisID/includes/footer_WRET.html"-->
+
+    <!-- Supporting scripts  -->
+    <script src="javascripts/required/jquery.min.js"></script>
+    <script src="javascripts/required/tether.min.js"></script>
+    <script src="javascripts/required/bootstrap.min.js"></script>
+    
+    <!-- Supporting local scripts  -->
+    <link rel="stylesheet" href="datatables/datatables.min.css">
+    <script src="datatables/datatables.min.js"></script>
+
+    <!-- log4js -->
+    <script src="javascripts/required/loglevel.min.js"></script>
+
+    <!-- Local scripts -->
+    <script src="javascripts/usgs/modal.js"></script>
+    <script src="javascripts/usgs/webRequest.js"></script>
+    <script src="javascripts/usgs/urlArguments.js"></script>
+    <script src="javascripts/usgs/results.js"></script>
+
+ </body>     
+</html>

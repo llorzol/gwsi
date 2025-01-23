@@ -134,8 +134,8 @@ if 'component' in params:
 debug           = False
 
 program         = "USGS NWIS Files Script"
-version         = "1.08"
-version_date    = "January 21, 2025"
+version         = "1.09"
+version_date    = "January 22, 2025"
 
 program_args    = []
 
@@ -368,7 +368,7 @@ def processFile (nwisFile, keyColumn, site_id):
 # -- Main program
 # ----------------------------------------------------------------------
 lookup_file = "data/codes/nwis_codes.txt"
-table_nmL   =  [
+table_nmL   = [
     'sitefile',
     'gw_coop',
     'gw_netw',
@@ -381,6 +381,28 @@ table_nmL   =  [
     'gw_repr',
     'gw_geoh'
 ]
+if component == 'sitefile':
+    table_nmL = ['sitefile']
+elif component == 'construction':
+    table_nmL   = [
+        'sitefile',
+        'gw_cons',
+        'gw_hole',
+        'gw_csng',
+        'gw_open',
+        'gw_repr',
+    ]
+elif component == 'general':
+    table_nmL   = [
+        'sitefile',
+        'gw_coop',
+        'gw_netw',
+        'gw_otid',
+        'gw_otdt'
+    ]
+elif component == 'geohydrology':
+    table_nmL = ['sitefile','gw_geoh']
+
 
 # Read data dictionary
 #
@@ -394,7 +416,7 @@ else:
     message = "Can not open NWIS definitions file %s" % lookup_file
     errorMessage(message)
 
-# Read NWIS codes in separate file
+# Agency codes in separate file
 #
 nwis_file = os.path.join("data", "codes", 'agency_cd_query.txt')
 
@@ -407,6 +429,8 @@ else:
     message = "Can not open NWIS agency codes definitions file %s" % nwis_file
     errorMessage(message)
 
+# Aquifer codes in separate file
+#
 nwis_file = os.path.join("data", "codes", 'aqfr_cd_query.txt')
 
 if os.path.exists(nwis_file):
@@ -420,6 +444,8 @@ else:
 
 nwis_file = os.path.join("data", "codes", 'hucs_query.txt')
 
+# HUC codes in separate file
+#
 if os.path.exists(nwis_file):
     codesD = nwisDefinitions (nwis_file, 'huc_cd', 'huc_nm', 'Basin name', ' ')
     if len(codesD) > 0:
@@ -432,6 +458,8 @@ else:
 
 nwis_file = os.path.join("data", "codes", 'nat_aqfr_query.txt')
 
+# National Aquifer codes in separate file
+#
 if os.path.exists(nwis_file):
     codesD = nwisDefinitions (nwis_file, 'nat_aqfr_cd', 'nat_aqfr_nm', 'National aquifer name', ' ')
     if len(codesD) > 0:
@@ -441,6 +469,7 @@ else:
     message = "Can not open NWIS national aquifer definitions file %s" % nwis_file
     errorMessage(message)
 
+    
 # Find site_no with other ID
 #
 #screen_logger.info('otid %s' % otid)

@@ -4,7 +4,7 @@
  * Main is a JavaScript library to provide a set of functions to manage
  *  the web requests.
  *
- * version 1.39
+ * version 1.40
  * January 24, 2025
 */
 
@@ -101,12 +101,6 @@ $(document).ready(function() {
        url.searchParams.has("nwis_column") &&
        url.searchParams.has("nwis_output")) {
 
-        // Loading message
-        //
-        message = `Submitting request for site ${nwis_text}`;
-        openModal(message);
-        fadeModal(2000);
-
         // Set selected option
         //-------------------------------------------------
         $("#nwis_text").val(url.searchParams.get("nwis_text"));
@@ -115,6 +109,12 @@ $(document).ready(function() {
         nwis_column = $('#nwis_column').val();
         $("#nwis_output").val(url.searchParams.get("nwis_output"));
         nwis_output = $('#nwis_output').val();            
+
+        // Loading message
+        //
+        message = `Submitting request for site ${nwis_text}`;
+        openModal(message);
+        fadeModal(2000);
 
         myLogger.info(`Submitting url ${url}`);
         myLogger.info(`Setting nwis_text ${nwis_text} nwis_column ${nwis_column} nwis_output ${nwis_output}`);

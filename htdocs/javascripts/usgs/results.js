@@ -4,8 +4,8 @@
  * Main is a JavaScript library to provide a set of functions to manage
  *  the web requests.
  *
- * version 1.38
- * January 23, 2025
+ * version 1.39
+ * January 24, 2025
 */
 
 /*
@@ -192,6 +192,11 @@ function submitRequest() {
 
     if(checkRequest(url.toString())) {
         nwisRequest(nwis_text, nwis_column, nwis_output)
+    }
+
+    if(jQuery("div#nwisResults").length) {
+        jQuery("div#nwisResults").hide();
+        $("div#nwisResults").html('');
     }
 }
 

@@ -134,8 +134,8 @@ if 'component' in params:
 debug           = False
 
 program         = "USGS NWIS Files Script"
-version         = "1.09"
-version_date    = "January 22, 2025"
+version         = "1.10"
+version_date    = "January 23, 2025"
 
 program_args    = []
 
@@ -340,7 +340,7 @@ def processFile (nwisFile, keyColumn, site_id):
 
                 # Check for sites with no valid location
                 #
-                if tempD[keyColumn].upper() == site_id.upper():
+                if site_id.upper() in tempD[keyColumn].upper():
                     #screen_logger.info('keyColumn %s' % tempD[keyColumn])
                     # Set empty value to None
                     #
@@ -484,6 +484,30 @@ if otid is not None:
             table_nmL = ['sitefile']
             site_no = 'xxxxxx'
             #message = "No site connected to %s in NWIS table %s" % (otid, "gw_otid_01.txt")
+            #errorMessage(message)
+        elif len(nwisInfoD) < 2:
+            if 'site_no' in nwisInfoD[0]['site_no']:
+                site_no = nwisInfoD[0]['site_no']
+        else:
+            table_nmL = ['sitefile']
+            for nwisRecord in nwisInfoD:
+                site_nosL.append(nwisRecord['site_no'])
+
+    
+# Find site_no with coop_site_no
+#
+#screen_logger.info('coop_site_no %s' % coop_site_no)
+if coop_site_no is not None:
+    nwis_file = os.path.join("data", "files", "gw_coop_01.txt")
+    if os.path.exists(nwis_file):
+        # Open file
+        #
+        nwisInfoD = processFile(nwis_file, 'coop_site_no', coop_site_no)
+
+        if len(nwisInfoD) < 1:
+            table_nmL = ['sitefile']
+            site_no = 'xxxxxx'
+            #message = "No site connected to %s in NWIS table %s" % (coop_site_no, "gw_coop_01.txt")
             #errorMessage(message)
         elif len(nwisInfoD) < 2:
             if 'site_no' in nwisInfoD[0]['site_no']:

@@ -4,8 +4,8 @@
  * Main is a JavaScript library to provide a set of functions to manage
  *  the web requests.
  *
- * version 1.37
- * January 22, 2025
+ * version 1.38
+ * January 23, 2025
 */
 
 /*
@@ -363,7 +363,7 @@ function nwisRequest(nwis_text, nwis_column, nwis_output) {
         myLogger.info(myFiles)
 
         if(myFiles) {
-            jQuery("div#nwisQuery").hide();
+            //jQuery("div#nwisQuery").hide();
             jQuery("div.nwisResults").show();
 
             let filesL = Object.keys(myFiles);
@@ -383,7 +383,7 @@ function nwisRequest(nwis_text, nwis_column, nwis_output) {
                     }
                 }
 
-                jQuery("div#nwisResults").append(`<div id="${myTable}Caption" class="fs-4 fw-bold text-center border-bottom border-2 border-black mt-3 ps-1 py-1">NWIS Table: ${myTable}</div>`);
+                jQuery("div#nwisResults").append(`<div id="${myTable}Caption" class="fs-4 fw-bold text-center border-bottom border-2 border-black mt-3 ps-1 py-1">NWIS Table: ${myTable} -- ${myRecords.length} records</div>`);
                 
                 // Build table with records
                 //

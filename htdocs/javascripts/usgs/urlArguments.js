@@ -82,14 +82,15 @@ function checkSiteId(site_id) {
       }
     myLogger.info(`Not USGS site number ${site_id}`);
 
-    // Test for OWRD well log ID
+    // Test for OWRD well log ID [allow partial strings]
     //
-    var myRe = /^([a-z]{4}){1}\s*(\d+)$/i;
-    if(myRe.test(site_id))
-      {
-        var countyNam  = site_id.substring(0,4).toUpperCase();
-        var wellId     = site_id.substring(4).trim();
-        var site_id    = countyNam + ('0000000' + wellId).slice(-7);
+    var myRe = /^([a-z]{4})\s*(\d+)*$/i;
+    if(myRe.test(site_id)) {
+        let countyNam  = site_id.substring(0,4).toUpperCase();
+        let wellId     = site_id.substring(4).trim();
+        if(wellId.length > 0) { wellId = ('0000000' + wellId).slice(-7); }
+        site_id = countyNam + wellId;
+        
         return site_id;
       }
     myLogger.info(`Not OWRD well log ID ${site_id}`);
@@ -157,10 +158,17 @@ function checkCoopSiteNo(coop_site_no) {
 
     if(!coop_site_no) { return false; }
     coop_site_no = coop_site_no.trim();
-    var myRe = /^([a-z]{4})(\d{7})$/i;
-    if(!myRe.test(coop_site_no)) { return false; }
+    var myRe = /^([a-z]{4})\s*(\d+)*$/i;
+    if(myRe.test(coop_site_no)) {
+        let countyNam  = site_id.substring(0,4).toUpperCase();
+        let wellId     = site_id.substring(4).trim();
+        if(wellId.length > 0) { wellId = ('0000000' + wellId).slice(-7); }
+        coop_site_no = countyNam + wellId;
+        
+        return coop_site_no;
+    }
 
-    return coop_site_no;
+    return null;
 }
 
 function checkOtherId(other_id) {

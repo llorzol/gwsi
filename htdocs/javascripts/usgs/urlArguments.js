@@ -3,8 +3,8 @@
  * Main is a JavaScript library to graph NwisWeb well construction information
  * for a site(s).
  *
- * version 2.06
- * January 20, 2025
+ * version 2.07
+ * January 24, 2025
  */
 
 /*

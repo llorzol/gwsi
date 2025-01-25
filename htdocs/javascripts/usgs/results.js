@@ -4,7 +4,7 @@
  * Main is a JavaScript library to provide a set of functions to manage
  *  the web requests.
  *
- * version 1.40
+ * version 1.41
  * January 24, 2025
 */
 
@@ -94,6 +94,8 @@ $(document).ready(function() {
     myLogger.info(`Current Url ${window.location.href}`);
     myLogger.info(`Current Params ${url.searchParams}`);
     myLogger.info(`Current Params ${url.searchParams.has("nwis_text")}`);
+    myLogger.info(`Current Params ${url.searchParams.has("nwis_column")}`);
+    myLogger.info(`Current Params ${url.searchParams.has("nwis_output")}`);
     
     // Url contains all arguments
     //-------------------------------------------------
@@ -121,9 +123,10 @@ $(document).ready(function() {
 
         // Submit request
         //
-        if(checkRequest(url.toString())) {
-            nwisRequest(nwis_text, nwis_column, nwis_output)
-        }
+        submitRequest();
+        //if(checkRequest(url.toString())) {
+        //    nwisRequest(nwis_text, nwis_column, nwis_output)
+        //}
     }
     
     // Url contains nwis_text and nwis_column
@@ -134,7 +137,7 @@ $(document).ready(function() {
 
         // Loading message
         //
-        message = `Loading form for a request`;
+        message = `Loading form from URL for a request`;
         openModal(message);
         fadeModal(2000);
 
@@ -175,29 +178,39 @@ $(document).ready(function() {
 // Submit request
 //
 function submitRequest() {
+    myLogger.info("submitRequest");
 
+    // Clear results for request
+    //
+    if(jQuery("div#nwisResults").length) {
+        jQuery("div#nwisResults").hide();
+        $("div#nwisResults").html('');
+    }
+
+    // Pull results from form
+    //
     nwis_text   = $('#nwis_text').val().trim();
     nwis_column = $('#nwis_column').val();
     nwis_output = $('#nwis_output').val();
     myLogger.info(`Processing NWIS nwis_text ${nwis_text} nwis_column ${nwis_column} nwis_output ${nwis_output}`);
 
+    // Refresh URL with form results
+    //
     let url = new URL(window.location.href);
     url.searchParams.set("nwis_text", nwis_text);
     url.searchParams.set("nwis_column", nwis_column);
     url.searchParams.set("nwis_output", nwis_output);
-    myLogger.info(`Url ${url} -> nwis_text ${nwis_text} nwis_column ${nwis_column} nwis_output ${nwis_output}`);
+    myLogger.info(`Submitting url ${url} -> nwis_text ${nwis_text} nwis_column ${nwis_column} nwis_output ${nwis_output}`);
 
     window.history.pushState(null, '', url.toString());
     myLogger.info("Modified Url " + window.location.href);
 
+    // Submit request if parameters are valid
+    //
     if(checkRequest(url.toString())) {
         nwisRequest(nwis_text, nwis_column, nwis_output)
     }
-
-    if(jQuery("div#nwisResults").length) {
-        jQuery("div#nwisResults").hide();
-        $("div#nwisResults").html('');
-    }
+    myLogger.info(`Submitted url ${url} -> nwis_text ${nwis_text} nwis_column ${nwis_column} nwis_output ${nwis_output}`);
 }
 
 // Reset Url and form
@@ -242,7 +255,7 @@ function checkRequest() {
 
     // Parse
     //-------------------------------------------------
-    if(url.searchParams.get("nwis_text")) {
+    if(url.searchParams.has("nwis_text")) {
         nwis_text = url.searchParams.get("nwis_text");
         myLogger.info(`Parse nwis_text ${nwis_text}`);
 
@@ -266,7 +279,7 @@ function checkRequest() {
         return false;
     }
        
-    if(url.searchParams.get("nwis_column")) {
+    if(url.searchParams.has("nwis_column")) {
         nwis_column = url.searchParams.get("nwis_column");
         myLogger.info(`Parse nwis_column ${nwis_column}`);
 
@@ -281,7 +294,7 @@ function checkRequest() {
         }
     }
         
-    if(url.searchParams.get("nwis_output")) {
+    if(url.searchParams.has("nwis_output")) {
         nwis_output = url.searchParams.get("nwis_output");
         myLogger.info(`Parse nwis_output ${nwis_output}`);
 
@@ -297,6 +310,17 @@ function checkRequest() {
     }
 
     myLogger.info(`Processing NWIS nwis_text ${nwis_text} nwis_column ${nwis_column} nwis_output ${nwis_output}`);
+
+    // Check arguments need nwis_column and nwis_output
+    //
+    if(nwis_text && (!nwis_column || !nwis_output)) {
+
+        message = "Enter search field and NWIS files(s)";
+        openModal(message);
+        fadeModal(2000);
+
+        return false;         
+     }
 
     // Check arguments need nwis_text and nwis_output
     //
@@ -326,6 +350,7 @@ function checkRequest() {
 // Retrieve information
 //
 function nwisRequest(nwis_text, nwis_column, nwis_output) {
+    myLogger.info("nwisRequest");
 
     // Build ajax requests
     //

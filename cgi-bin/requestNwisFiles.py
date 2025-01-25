@@ -134,8 +134,8 @@ if 'component' in params:
 debug           = False
 
 program         = "USGS NWIS Files Script"
-version         = "1.10"
-version_date    = "January 23, 2025"
+version         = "1.11"
+version_date    = "January 24, 2025"
 
 program_args    = []
 
@@ -474,6 +474,7 @@ else:
 #
 #screen_logger.info('otid %s' % otid)
 if otid is not None:
+    table_nmL = ['sitefile', 'gw_otid']
     nwis_file = os.path.join("data", "files", "gw_otid_01.txt")
     if os.path.exists(nwis_file):
         # Open file
@@ -482,14 +483,13 @@ if otid is not None:
 
         if len(nwisInfoD) < 1:
             table_nmL = ['sitefile']
-            site_no = 'xxxxxx'
+            site_nosL.append('xxxxxx')
             #message = "No site connected to %s in NWIS table %s" % (otid, "gw_otid_01.txt")
             #errorMessage(message)
         elif len(nwisInfoD) < 2:
             if 'site_no' in nwisInfoD[0]['site_no']:
-                site_no = nwisInfoD[0]['site_no']
+                site_nosL.append(nwisRecord['site_no'])
         else:
-            table_nmL = ['sitefile']
             for nwisRecord in nwisInfoD:
                 site_nosL.append(nwisRecord['site_no'])
 
@@ -498,6 +498,7 @@ if otid is not None:
 #
 #screen_logger.info('coop_site_no %s' % coop_site_no)
 if coop_site_no is not None:
+    table_nmL = ['sitefile', 'gw_coop']
     nwis_file = os.path.join("data", "files", "gw_coop_01.txt")
     if os.path.exists(nwis_file):
         # Open file
@@ -506,14 +507,13 @@ if coop_site_no is not None:
 
         if len(nwisInfoD) < 1:
             table_nmL = ['sitefile']
-            site_no = 'xxxxxx'
+            site_nosL.append('xxxxxx')
             #message = "No site connected to %s in NWIS table %s" % (coop_site_no, "gw_coop_01.txt")
             #errorMessage(message)
         elif len(nwisInfoD) < 2:
             if 'site_no' in nwisInfoD[0]['site_no']:
-                site_no = nwisInfoD[0]['site_no']
+                site_nosL.append(nwisRecord['site_no'])
         else:
-            table_nmL = ['sitefile']
             for nwisRecord in nwisInfoD:
                 site_nosL.append(nwisRecord['site_no'])
     

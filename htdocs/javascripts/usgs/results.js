@@ -4,8 +4,8 @@
  * Main is a JavaScript library to provide a set of functions to manage
  *  the web requests.
  *
- * version 1.41
- * January 24, 2025
+ * version 1.42
+ * January 25, 2025
 */
 
 /*
@@ -298,7 +298,7 @@ function checkRequest() {
         nwis_output = url.searchParams.get("nwis_output");
         myLogger.info(`Parse nwis_output ${nwis_output}`);
 
-        const nwisOuts = ["sitefile", "general", "construction", "geohydrology", "all"];
+        const nwisOuts = ["sitefile", "general", "construction", "geohydrology", "groundwater", "miscellaneous", "all"];
 
         if(!nwisOuts.includes(nwis_output.toLowerCase())) {
             message = 'Choose one: NWIS file options ';
@@ -427,6 +427,8 @@ function nwisRequest(nwis_text, nwis_column, nwis_output) {
                     Object.keys( rowData ).forEach( function (key, index) {
                         columns.push( {data: key, title: key} );
                     });
+                    myLogger.info('columns');
+                    myLogger.info(columns);
                     let tblReport = new DataTable(`table#${myTable}`, {
                         order: [[1, 'asc']],
                         layout: {

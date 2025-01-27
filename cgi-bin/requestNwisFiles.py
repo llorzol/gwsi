@@ -134,8 +134,8 @@ if 'component' in params:
 debug           = False
 
 program         = "USGS NWIS Files Script"
-version         = "1.11"
-version_date    = "January 24, 2025"
+version         = "1.12"
+version_date    = "January 25, 2025"
 
 program_args    = []
 
@@ -369,20 +369,40 @@ def processFile (nwisFile, keyColumn, site_id):
 # ----------------------------------------------------------------------
 lookup_file = "data/codes/nwis_codes.txt"
 table_nmL   = [
-    'sitefile',
-    'gw_coop',
-    'gw_netw',
-    'gw_otdt',
-    'gw_otid',
-    'gw_cons',
-    'gw_hole',
-    'gw_csng',
-    'gw_open',
-    'gw_repr',
-    'gw_geoh'
+        'sitefile',
+        'gw_coop',
+        'gw_otid',
+        'gw_netw',
+        'gw_spng',
+        'gw_rmks',
+        'gw_vist',
+        'gw_cons',
+        'gw_hole',
+        'gw_csng',
+        'gw_open',
+        'gw_repr',
+        'gw_lift',
+        'gw_geoh',
+        'gw_lev',
+        'gw_otdt',
+        'gw_msvl',
+        'gw_obs',
+        'gw_spec',
+        'gw_disc',
+        'gw_logs'
 ]
 if component == 'sitefile':
     table_nmL = ['sitefile']
+elif component == 'general':
+    table_nmL   = [
+        'sitefile',
+        'gw_coop',
+        'gw_otid',
+        'gw_netw',
+        'gw_spng',
+        'gw_rmks',
+        'gw_vist'
+   ]
 elif component == 'construction':
     table_nmL   = [
         'sitefile',
@@ -391,18 +411,25 @@ elif component == 'construction':
         'gw_csng',
         'gw_open',
         'gw_repr',
-    ]
-elif component == 'general':
-    table_nmL   = [
-        'sitefile',
-        'gw_coop',
-        'gw_netw',
-        'gw_otid',
-        'gw_otdt'
+        'gw_lift'
     ]
 elif component == 'geohydrology':
     table_nmL = ['sitefile','gw_geoh']
-
+elif component == 'groundwater':
+    table_nmL   = [
+        'sitefile',
+        'gw_lev'
+    ]
+elif component == 'miscellaneous':
+    table_nmL   = [
+        'sitefile',
+        'gw_otdt',
+        'gw_msvl',
+        'gw_obs',
+        'gw_spec',
+        'gw_disc',
+        'gw_logs'
+    ]
 
 # Read data dictionary
 #

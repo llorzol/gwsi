@@ -4,8 +4,8 @@
  * Main is a JavaScript library to provide a set of functions to manage
  *  the web requests.
  *
- * version 1.43
- * January 27, 2025
+ * version 1.44
+ * January 28, 2025
 */
 
 /*
@@ -409,7 +409,7 @@ function nwisRequest(nwis_text, nwis_column, nwis_output) {
                 //
                 if(myTable === 'sitefile' && myRecords.length > 1) {
                     for(let i = 0; i < myRecords.length; i++) {
-                        myRecords[i]['site_no'] = `<span id="site_${myRecords[i]['site_no']}" class="sitefile">${myRecords[i]['site_no']}</span>`;
+                        myRecords[i]['site_no'] = `<button id="site_${myRecords[i]['site_no']}" class="btn btn-secondary buttons-sitefile buttons-html5" data-bs-toggle="tooltip" title="Click to select this site"><span>${myRecords[i]['site_no']}</span></button>`;
                     }
                 }
 
@@ -470,7 +470,7 @@ function nwisRequest(nwis_text, nwis_column, nwis_output) {
 
                     jQuery(`table#${myTable}`).addClass('text-black border border-black border-2 rounded');
                     jQuery(`table#${myTable} thead tr`).addClass('bg-success');
-                    jQuery(`.sitefile`).click(function(event) {
+                    jQuery(`.buttons-sitefile`).click(function(event) {
                         let site_no = this.id.replace('site_', '');
                         myLogger.info(`Clicked site ${site_no}`)
                         let url = new URL(window.location.href);
@@ -485,13 +485,15 @@ function nwisRequest(nwis_text, nwis_column, nwis_output) {
                     // Special case for gw_cons table
                     //
                     if(myTable === 'gw_cons') {
-                        jQuery(`div#${myTable}Table`).find(".dt-buttons").append('<button id="wellConstruction" class="btn btn-secondary buttons-construction buttons-html5" tabindex="0" aria-controls="gw_cons" type="button"><span>Plot well construction</span></button>');
+                        jQuery(`div#${myTable}Table`).find(".dt-buttons").append('<button id="wellConstruction" class="btn btn-secondary buttons-construction buttons-html5" tabindex="0" aria-controls="gw_cons" type="button" data-bs-toggle="tooltip" title="View a plot of well construction"><span>Plot well construction</span></button>');
                         jQuery('#wellConstruction').click(function(event) {
                             let site_no = myRecords[0]['site_no']
                             myLogger.info(`Clicked site ${site_no} for well construction`)
-                            let url = `http://127.0.0.1/lithology/index.html?site_no=${site_no}`
+                            let url = `/lithology/index.html?site_no=${site_no}`
                             window.open(url, '_blank')
                         });
+                        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+                        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
                      }
                 }
 

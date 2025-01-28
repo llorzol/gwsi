@@ -4,8 +4,8 @@
  * Main is a JavaScript library to provide a set of functions to manage
  *  the web requests.
  *
- * version 1.42
- * January 25, 2025
+ * version 1.43
+ * January 27, 2025
 */
 
 /*
@@ -480,7 +480,19 @@ function nwisRequest(nwis_text, nwis_column, nwis_output) {
 
                         window.open(url, '_blank')
                     });
-                    myLogger.info(`Site rows ${jQuery('.sitefile').length}`);
+                    myLogger.info(`Table ${myTable} has ${myRecords.length} rows`);
+
+                    // Special case for gw_cons table
+                    //
+                    if(myTable === 'gw_cons') {
+                        jQuery(`div#${myTable}Table`).find(".dt-buttons").append('<button id="wellConstruction" class="btn btn-secondary buttons-construction buttons-html5" tabindex="0" aria-controls="gw_cons" type="button"><span>Plot well construction</span></button>');
+                        jQuery('#wellConstruction').click(function(event) {
+                            let site_no = myRecords[0]['site_no']
+                            myLogger.info(`Clicked site ${site_no} for well construction`)
+                            let url = `http://127.0.0.1/lithology/index.html?site_no=${site_no}`
+                            window.open(url, '_blank')
+                        });
+                     }
                 }
 
                 // No records message
